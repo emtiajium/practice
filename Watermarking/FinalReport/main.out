@@ -1,0 +1,39 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Digital Watermarking}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{General Concept of Watermarking}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Classification of Watermarking}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Properties of Watermark}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Application of Watermarking}{section.1.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Motivation}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Prospect of the Proposed Watermarking Scheme}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.4}{Organization of the Thesis}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Audio Watermarking}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Audio Watermarking Techniques}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{Time Domain Method}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.2}{Transform Domain Method}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.3}{Zero Watermarking Method}{section.2.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Proposed Audio Watermarking Scheme}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Background Information}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Proposed Method Based on Discrete Hartley Transform}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Watermark Embedding Process}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Attacks on the Host Audio}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.3}{Watermark Extraction Process}{section.3.2}% 21
+\BOOKMARK [0][-]{chapter.4}{Implementation of the Project Work}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Audio Files Used for Simulation}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Image Used for Simulation}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{Attacks Applied in Simulation}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{Experimental Environment}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.5}{Normalized Coefficient}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.6}{Bit Error Rate}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.7}{False Positive Error}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.8}{False Negative Error}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{Simulation Result}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Imperceptibility Analysis}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{Measuring the Robustness}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.3}{False Positive Error}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.4}{False Negative Error}{chapter.5}% 35
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 36
+\BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.2}{Future Recommendation}{chapter.6}% 38
+\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 39

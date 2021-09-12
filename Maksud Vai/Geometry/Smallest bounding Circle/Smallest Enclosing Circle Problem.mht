@@ -1,0 +1,590 @@
+Content-Type: multipart/related; start=<op.mhtml.1285678610578.ddc4766c322d9791@172.17.0.42>; boundary=----------8ai1qAtNxG9wwUewZs45vk
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Compgeometry/MyCG/CG-Applets/Center/centercli.htm
+Subject: =?utf-8?Q?Smallest=20Enclosing=20Circle=20Problem?=
+MIME-Version: 1.0
+
+------------8ai1qAtNxG9wwUewZs45vk
+Content-Disposition: inline; filename=centercli.htm
+Content-Type: text/html; name=centercli.htm
+Content-ID: <op.mhtml.1285678610578.ddc4766c322d9791@172.17.0.42>
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Compgeometry/MyCG/CG-Applets/Center/centercli.htm
+Content-Transfer-Encoding: 8bit
+
+
+<html>
+<head>
+   <meta name="Author" content="Rashid Bin Muhammad">
+   <title>Smallest Enclosing Circle Problem</title>
+   <style>
+<!--
+ li.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0in; margin-right:0in; margin-top:0in}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+   </style>
+</head>
+
+<body background="../../../../Maingif/Bck2.gif" link="#0000FF"
+ vlink="#0000FF" alink="#FF0000" >
+
+<center>
+
+<p><img SRC="../../../../Maingif/redline.gif" height=2
+ width=640></p>
+
+<h2>Smallest Enclosing Circle Problem</h2>
+
+<p><img SRC="../../../../Maingif/redline.gif" height=2 width=640></p>
+
+
+<p>&nbsp;</p>
+
+
+</center>
+
+<h3>Introduction</h3>
+<p >The minimal enclosing circle is used in planning the 
+location of a shared facility. For example, a shared facility is a hospital 
+servicing a community. Note that traditionally people consider post office as an 
+example hence post office problem (see Voronoi diagram).&nbsp; If we consider each 
+home in a community as points in the plane, finding minimal enclosing circle 
+gives a good place to put the hospital i.e., the center of the minimal circle. 
+Placing the hospital at the center of minimal circle minimizes the distance 
+between the hospital and the farthest home (point) in the community. </p>
+<p >In the military, this problem is known as the “Bomb 
+Problem”. If we suppose each target on a map as a planar point, the center of 
+the minimal circle of a map i.e., set, is a good place to drop a bomb for 
+maximum destruction. Furthermore, the radius of the minimal circle can be used 
+to calculate how much explosive is required.</p>
+<p >This problem is also useful to examine the point that lie 
+on the boundary of the minimal enclosing circle. These points are in a sense the 
+outliers of the set, and in statistics, are sometimes discarded to get a more 
+robust estimate.</p>
+<p >The simplest algorithm considers every circle defined by 
+two or three of the n points, and finds the smallest of “these” circles that 
+contains every point. There exits O(n<sup>3</sup>) such circles, and each takes 
+O(n) time to check, for a total running time of O(n<sup>4</sup>).&nbsp; Elzinga and 
+Hearn gave an O(n<sup>2</sup>) algorithm in 1972, and Shamos and Hoey (1975), 
+Preparata (1977), and Shamos (1978) discovered the first O (n logn) algorithms.
+</p>
+<p >Finally, and to everyone's surprise, in 1983 Nimrod Megiddo 
+showed that the minimal enclosing circle problem can be solve in O(n) time using 
+the prune-and-search techniques for linear programming. This landmark result is 
+one of the most beautiful in the field of computational geometry. </p>
+<h3>Problem Statement</h3>
+<p >The Minimal Enclosing Circle Problem is, simply stated, the 
+problem of finding the smallest circle that completely contains a set of points. 
+Formally, given a set S of n planar points, find the circle C of smallest radius 
+such that all points in S are contained in either C or its boundary.</p>
+<p >&nbsp;</p>
+<h2><font color="#0000FF">An <i><font size="5">O</font></i>(<i>n</i><sup>2</sup>)-time Algorithm</font></h2>
+<ol>
+  <li>Draw a circle at center, c, such that points of given set lie within 
+the circle. Clearly, this circle can be made smaller (or else we have the 
+solution).</li>
+  <li>Make a circle smaller by finding the point A farthest from the center of 
+circler, and drawing a new circle with the same center and passing through the 
+point A. These two steps produce a smaller enclosing circle. The reason that the 
+new circle is smaller is that this new circle still contains all the points of 
+given set, except now it passes through farthest point, x, rather than enclosing 
+it. </li>
+  <li>If the circle passes through 2 or more points, proceed to step 4. Otherwise, 
+make the circle smaller by moving the center towards point A, until the circle 
+makes contact with another point B from the set. </li>
+  <li>At this stage, we a circle, C, that passes through two or more points of a 
+given set. If the circle contains an interval (<i>point-free interval</i>) of 
+arc greater than half the circle's circumference on which no points lie, the 
+circle can be made smaller. Let D and E be the points at the ends of this 
+point-free interval. While keeping D and E on the circle's boundary, reduce the 
+diameter of the circle until we have either case (a) or case (b). </li>
+</ol>
+
+  <ul>
+    Case (a)&nbsp;&nbsp; The diameter is the 
+distance DE.
+<ul>
+<ul>
+    <li>We are done!</li>
+</ul>
+</ul>
+</ul>
+
+<ul>Case (b)&nbsp;&nbsp; The circle C touches 
+another point from the set, F.
+<ul>
+<ul>
+    <li>
+Check whether there exits 
+point-free arc intervals of&nbsp; length more than half the circumference of C.</li>
+    <li>
+<b>IF</b> no such point-free arc 
+intervals exit <b>THEN</b>
+<ul type="circle"><li>We are done!</li></ul>
+<li><b>Else</b></li>
+<ul type="circle"><li><b>Goto</b> step 4.</li>
+<li>In this case, 
+three points must lie on an arc less than half the circumference in length. We 
+repeat step 4 on the outer&nbsp; two of the three points on the arc.</li>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<p>&nbsp;</p>
+<h3 >Analysis</h3>
+<p >This algorithm is straight forward, but expensive to 
+implement. Step 1, 2 and 3 require linear time in the number of points in the given set. 
+In step 4 above, it takes linear time to find each new point F. However, finding 
+the point F does not guarantee the termination of the algorithm. Step 4 must be 
+repeated until the circle contains no point-free interval longer than half its 
+circumference. In the worst case, this requires (<i><font size="4">n</font></i>-2) iterations of step 4, 
+implying that the total time spent in step 4 could be on the order of the square 
+of the size of the point set. </p>
+<p>Hence, this algorithm is <i><font size="4">O</font></i>(<i>n<sup>2</sup></i>). </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p >The remaining section is divided into two parts. First part 
+describes the algorithm used in implementation and the second part presents the 
+best-known algorithm for finding minimal enclosing circle, MEC.</p>
+<p >&nbsp;</p>
+<h2><font color="#0000FF">Applet’s Algorithm</font></h2>
+<p >This algorithm is due to Pr. Chrystal (1885). </p>
+<h3>The Algorithm</h3>
+<p >Foremost, observe that the minimal enclosing circle, MEC, is 
+entirely determined by the <b>Convex Hull</b> of a given set of point. The 
+reason is the points of the set touched by the minimal enclosing circle are 
+always on the convex hull of the set. </p>
+<p >First step of the algorithm is to compute the convex hull, H, of the points in linear 
+time. Clearly, we can do this since points are kept ordered by x-coordinate. 
+Call the convex hull <b>H</b> and the number of convex hull vertices <b>h</b>. Next step is to pick any side, say S, of the convex hull. 
+The main loop of the algorithm is as follows: </p>
+<h3>Main Loop</h3>
+<ol>
+  <li >For each vertex of H other than those of S, we compute 
+  the angle subtended by S. The minimum such angle occurs at vertex v, 
+  and the value of the minimum angle is &#945; (alpha).
+  </li>
+  <ul type="square">
+  <li ><b>IF</b>&nbsp; &alpha; &nbsp;&#8805;&nbsp; 90 degrees <b>THEN</b><ul type="circle">
+  <li>We are done!</li>
+  <li>/* The minimal enclosing circle is 
+determined by the diametric circle of S */</li>
+  </ul>
+  </li>
+
+    <li ><b>IF</b> &#945; &lt; 90 degrees <b>THEN</b>
+  <ul type="circle">
+  <li><b>Goto</b> step 2 below. </li>
+  </ul>
+  </li>
+
+  </ul>
+</ol>
+<ol start="2" type="1" style="margin-bottom: 0in">
+  <li >Since &#945; &lt; 90 degrees, check the remaining 
+  vertices of the triangle formed by S and v. 
+  <ul style="margin-bottom: 0in" type="square">
+    <li><b>IF</b> no vertices are obtuse <b>THEN</b>
+    <ul style="margin-bottom: 0in" type="circle">
+      <li>We are done!</li>
+      <li>/* The MEC is determined by the vertices of S and the vertex v */</li>
+    </ul>
+    </li>
+  </ul>
+  </li>
+  <li >If one of the other angles of the triangle formed by S 
+  and v is obtuse, then set S to be the side opposite the obtuse angle and 
+  repeat the main loop of the algorithm (i.e., Goto step 1 above). </li>
+</ol>
+<p>&nbsp;</p>
+<h3>Analysis</h3>
+<p >Assuming the points are given in sorted order, the 
+algorithm initializes in the time that is linear in the number of points in the 
+set. The main loop of the algorithm requires linear time with respect to the 
+number of convex hull points, and main loop could be repeated once for each 
+diagonal of the convex hull. The number of diagonals is proportional to the 
+square of the number of convex hull points.
+For that reason in the worst case, the total time of the algorithm is 
+proportional to the number of points in the set, <b>plus</b> the cube of the 
+number of convex hull points.<br>
+However, in implementation, the running time depends on the side initially 
+chosen to start the algorithm, and the algorithm expected to perform quite well 
+in practice. </p>
+<h3>Halting Condition</h3>
+<p>It remains to prove that the algorithm will defines the minimal enclosing 
+circle of the given set of points, rather than looping forever. The proof 
+follows from the fact that during each iteration, algorithm is reducing the 
+radius of the circle being considered and&nbsp; ensuring that all the points of the 
+set are still within the circle. Therefore, the circle will eventually become 
+the minimal enclosing circle. </p>
+<p>&nbsp;</p>
+<h2><font color="#0000FF">Linear Time Algorithm</font></h2>
+<p>Nimrod Megiddo proposes the algorithm and it uses the prune-and-search 
+techniques for linear programming to find the minimal enclosing circle in <i>
+<font size="4">O</font></i>(<i><font size="4">n</font></i>) 
+time. </p>
+<h3>Prune-and-Search</h3>
+<p >The essence of Megiddo's algorithm is <b>prune-and-search</b>. 
+In a prune-and-search algorithm, a linear amount of work is done at each step to 
+reduce the input size by a constant fraction f. If this can be achieved, then 
+the total amount of work done will reduce to O(n)*(1&nbsp;+&nbsp;(1-f)&nbsp;+&nbsp;(1-f)<sup>2</sup>&nbsp;+&nbsp;...). 
+In this formula, the infinite series is geometric and sums to a constant value, 
+and so the total running time is <i><font size="4">O</font></i>(<i><font size="4">n</font></i>). For example, suppose that by inspecting 
+our set of n input elements we can discard 1/4 of them as irrelevant to the 
+solution. By repeatedly applying this inspection to the remaining elements, we 
+can reduce the input to a size which is trivial to solve, say n&#8804;3. The total 
+time taken to achieve this reduction will be proportional to 
+(n&nbsp;+&nbsp;3n/4&nbsp;+&nbsp;9n/16&nbsp;+&nbsp;...). It is easy to show that this series approaches, and 
+never exceeds, a limit of 4n. Therefore, the total running time is proportional 
+to n, as required. </p>
+<p>The idea of using the geometric series to reduce an algorithm to linear time 
+predates Megiddo's work; in particular, it had previously been used to develop 
+<i><font size="4">O</font></i>(<i><font size="4">n</font></i>) median-finding algorithms. However, he was the first to apply it to a 
+number of fundamental problems in computational geometry. </p>
+<h3>Megiddo's Linear-Time Algorithm</h3>
+<p >To find the minimal enclosing circle (MEC) of a set of 
+points, Megiddo's algorithm discards at least n/16 points at each (linear-time) 
+iteration. That is, given a set S of n points, the algorithm identifies n/16 
+points that can be removed from S without affecting the MEC of S. This procedure 
+can be repeatedly applied until some trivial base case is reached (such as n=3), 
+with the total running time proportional to (n&nbsp;+&nbsp;15n/16&nbsp;+&nbsp;225n/256&nbsp;+&nbsp;...)&nbsp;=&nbsp;16n.
+</p>
+<p>In order to find n/16 points to discard, a great deal of cleverness is 
+required. The algorithm makes heavy use of two subroutines: </p>
+<ul>
+  <li><code style="font-family: Courier New">
+<span style="font-size:10.0pt">median(S, &gt;)</span></code> 
+  <ul>
+    <li>Takes a set S of elements and a 
+metric for comparing them pairwise, and returns the median of the elements. 
+    </li>
+  </ul>
+  </li>
+  <li><code style="font-family: Courier New">
+<span style="font-size:10.0pt">MEC-center(S, L)</span></code> 
+  <ul>
+    <li>Takes a set S of points and a line 
+L, and determines which side of L the center of the MEC of S lies on. </li>
+  </ul>
+  </li>
+</ul>
+<p >As mentioned above, <code style="font-family: Courier New">
+<span style="font-size:10.0pt">median()</span></code> predates Megiddo's work, 
+whereas the algorithm described here as <code style="font-family: Courier New">
+<span style="font-size:10.0pt">MEC-center()</span></code> was presented as part 
+of his 1983 paper. To explore these procedures in detail would go beyond the 
+scope of this outline, but each uses prune-and-search to run in linear time. The 
+algorithm used by <code style="font-family: Courier New">
+<span style="font-size:10.0pt">MEC-center()</span></code> amounts to a 
+simplified version of the algorithm as a whole. </p>
+<p>Given these primitives, the algorithm for discarding n/16 input points runs 
+as follows: </p>
+<ul style="margin-bottom: 0in">
+  <li >Arbitrarily pair up the n points in S to get n/2 pairs.
+  </li>
+  <li >Construct a bisecting line for each pair of points, to 
+  get n/2 bisectors in total. </li>
+  <li >Call <code style="font-family: Courier New">
+  <span style="font-size:10.0pt">median()</span></code> to find the bisector 
+  with median slope. Call this slope m<sub>mid</sub>. </li>
+  <li >Pair up each bisector of slope &#8805; m<sub>mid</sub> with 
+  another of slope &lt; m<sub>mid</sub>, to get n/4 intersection points. Call the 
+  set of these points I. </li>
+  <li >Call <code style="font-family: Courier New">
+  <span style="font-size:10.0pt">median()</span></code> to find the point in I 
+  with median y-value. Call this y-value y<sub>mid</sub>. </li>
+  <li >Call <code style="font-family: Courier New">
+  <span style="font-size:10.0pt">MEC-center()</span></code> to find which side 
+  of the line y=y<sub>mid</sub> the MEC-center C lies on. (Without loss of 
+  generality, suppose it lies above.) </li>
+  <li >Let I' be the subset of points of I whose y-values are 
+  less than y<sub>mid</sub>. (I' contains n/8 points.) </li>
+  <li >Find a line L with slope m<sub>mid</sub> such that half 
+  the points in I' lie to L's left, half to its right. </li>
+  <li >Call <code style="font-family: Courier New">
+  <span style="font-size:10.0pt">MEC-center()</span></code> on L. Without loss 
+  of generality, suppose C lies on L's right. </li>
+  <li >Let I'' be the subset of I' whose points lie to the left 
+  of L. (I'' contains n/16 points.) </li>
+</ul>
+<p >We can now discard one point in S for each of the n/16 
+intersection points in I''. The reasoning runs as follows. After &nbsp;two calls to
+<code style="font-family: Courier New"><span style="font-size:
+10.0pt">MEC-center()</span></code>, we have found that the MEC-center C must lie 
+above y<sub>mid</sub> and to the right of L, whereas any point in I'' is below y<sub>mid</sub> 
+and to the left of L. </p>
+<p>Each point in I'' is at the meeting point of two bisector lines. One of these 
+bisectors must have slope &#8805; m<sub>mid</sub>, and therefore must never pass 
+through the quadrant where we know C to lie. Call this bisector B. Now, we know 
+which side of B C lies on, so of the two points whose bisector is B, let P<sub>C</sub> 
+be the one that lies on the same side as C, and let the other be P<sub>X</sub>.
+</p>
+<p>It is easy to show that P<sub>C</sub> must be nearer to C than P<sub>X</sub>. 
+It follows that P<sub>C</sub> cannot lie on the minimal enclosing circle, and 
+thus we can safely discard a point P<sub>C</sub> for each of the n/16 
+intersection points in I''. </p>
+<p>We have not discussed here how this algorithm can be made to deal with 
+degenerate input (parallel bisectors, collinear points, etc), but it turns out 
+that we get the same performance guarantees for such cases. The fact of the 
+matter is for degenerate input the algorithm is able to discard more than n/16 
+points. In short, Megiddo's algorithm guarantees to prune at least n/16 points 
+in each iteration independent to input.</p>
+<p>Therefore, by the argument based on the geometric series, Megiddo's algorithm 
+computes the minimal enclosing circle in linear time.</p>
+
+
+<p align="left">&nbsp;</p>
+
+
+<center>
+
+
+<p>
+<applet code="centercli.class" height=350 width=500>
+<param name="takap" value="350">
+<param name="habap" value="500">
+<param name="Np" value="12">
+</applet>
+</p>
+<h3>
+<a href="centercli.htm">Reload</a></h3>
+</center>
+
+<br>&nbsp
+<br>&nbsp
+<br>&nbsp
+<center>
+
+<p><img SRC="../../../../Maingif/redline.gif" height=2 width=640>
+</p>
+
+<p><a href="../../../compgeom.html">
+<img SRC="../../../../Maingif/back.gif" BORDER=0 width="60" height="45"></a><a href="../CG-Applets.html">
+</a>
+</p>
+
+</center>
+
+</body>
+</html>
+------------8ai1qAtNxG9wwUewZs45vk
+Content-Disposition: inline; filename=Bck2.gif
+Content-Type: image/gif; name=Bck2.gif
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/Bck2.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhMgAyALMAAOjk/+rs/Njo/vD3/OX4/tb4/tX+9OX+9QAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACwAAAAAMgAyAAAE/xAMcegYRRBydgCEIAZHQWCbeB5dZlxC
+0amEGQRDUNxAUF8FgGogHLBuhEAMOMkIQALSASea+AREZ5Sy8xRxt1v2ZAhplBRN
+t3zadEChXqxjlD2tPdSToszUDkIAAAZCJgcvFT4AB0YfgTcaUTpwJESCkRU7mQNJ
+nBJ8IRNYBUEiJhh+pAFlTotIOaRbWAIvAAUYaTlJGidXbbcYnCKmQ5NWJ4WcGTu3
+ISQhZpxlxllbBsA1IZpRLzujtomMOCBGnBwmpEFo6423trRCLH4EBh+HgDNxfmBm
+IFMxNWL0IKGGgJAt0GIoSdJD1QVO5qLIIHVOyLUeU7z5SBQPx0Q/Uf9yRLElCpm3
+EhoMxChg4N8ygDx2VYGkY8MuVWZ8MBShUoQtLXOUvOMlg56OSGp8aKlxC0uvTLRC
+MEr4JJaQKxPMlBmVZhYdiaWcjRCSZBUpQLdKTGBRT5zBmnAK0cOoxNytDzkWSfiw
+AUWInndwnRhQTyGFP7RGnBlVgZAkP2RFLV2o8sMwDbaScHCDbnG2oxSVwkjS7Aen
+FmGCnOLy5OiHdQEnmNN8NcpmOFUtj7iwUIkOFis4+UbDCxKWHFNKkGV6Yp+Jc+gu
+ldBBWBOhDFM4+P6KYTqJpjXe/UTewYxPOwAPGmCFXdWVhc+voTlXk1EFZYwqK8yQ
+OqRvVfUwo8H/BYLYRFAFIzS3DEU7UIeENovk0JJNrSwzhUolRPOETdBQFEiHg62U
+nSh9eKUDCevNoZJFq9Q1ywTXAGQCKIIwYpFBWNygVnF9KULLjAZFZ44oORw1CAhI
+0nDBNX3NqAdpw5AChUg3rfSCSiqVdVkQyGBGBBczXqKSk7qkkN8TtniEyQ07ZOUN
+FhZ96WYVKimjDVPJSYJBjKsc8cJbREAJlkRtpHDCLBQQAgKX9ChEWHlZ8QZQCRkQ
+AdEiU1gBy3xNFEdMQvChwkEdW83EyDA/mcIXgt7wNg+dPmXHUy/x8aScNlVxUE8N
+BxLEH394sTQMh3jZAgISglCRAVlTDWtQ/wvpXDDFiQYdFAMvuOxaF0EqoLFND465
+I4FRLW44wVVI5OgUdldE4gpJpYDHZRESnHTtFguRVcx6H2x1qKamzMjgc+8ltSF1
+UXJQYJZorWpQc40ItMxD6hDGZhll1kNWM4mEBsoo0mwRj0BCMdlFRi35sB4zgGjD
+EpL7rEJBCeWlwN+A/X6SzS2pqIWhqA2V4ikO//SAkXBYtHShau4oRAVKMhDmqAdl
+xXIbmgsxdcaxxBRST2+WbkDWinwNMw11vCpFSQc8uGabBOeu94Ovvp1zh0T+WHiB
+VDkQ6VcTv57Gy0FnArQzIIuaggua85iBJz0VaHOIhWKsBJDlO0Lk0FWAp0BjdJi8
+SFJnEOLI9rBNh6EihxGRLNOGcNBg8AE6vA6YxAxbEMGGSGLIcAQkmgyUQmJYy16X
+B4Ovc9AnqpqTmUTAsfSC7Gc8xwwVWWoT4w/DABEBADs=
+
+------------8ai1qAtNxG9wwUewZs45vk
+Content-Disposition: inline; filename=redline.gif
+Content-Type: image/gif; name=redline.gif
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODdhgAIEAPYAAAAAAEMDA0YDA04DA1YEBFkEBGEEBGgEBG8FBXMFBXoFBX0F
+BYQGBogGBosGBo4GBpEGBpUHB5gHB5sHB54HB6EHB6QHB6cICKoICK0ICLAICLUJ
+CbgJCbsJCcAJCcUKCsoKCswKCs4KCtAKCtMLC9cLC9sLC9wLC+AMDOIMDOUMDOgN
+DeoNDesNDewNDe4ODu8ODvAODvIODvMPD/QPD/UQEPQQEPEODt4MDNkLC9ULC8cK
+Cr0JCbMICPIREe8SEuwSEukTE+UTE+IUFN8UFNoUFNcVFdMVFc8VFc4WFsoWFsgW
+FsYWFsQWFsMXF8EXF78XF70XF7sXF7kXF7gYGLYYGLIYGLAYGK8YGK0ZGaoZGagZ
+GaYZGaUaGqIaGqEaGp8aGp4aGp0bGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACwAAAAAgAIEAAAH/oAAgoOEhYaHiImKi4yNjo+QkZKTlJWW
+l5iZmpucnZ6foKGio4sBpgECqQOrrASuBAWxBrMGB7a3CLkJCQoKC7+/DMIMDcUN
+DsgPDxDMERES0BPSFBQV1hYWFxcY3BgZGRrhGxscHB3nHukeH+wfICAh8SIiI/Uk
+JCX5JvsnJyj/KVKoULGiIIuDLRK6cPHiBYyHMWLImEhxhkWLNDJq3KixhkePNkKK
+HEmypMiNJD+q5Miy5cWXFylOvHEjYoyHMBq+WLgwYYuDQAsKHUg0YIp/OHD067cv
+h9N8OnTcI1Fv3rx473ZoZZeOh9dzYDuM60E2XDdu2NJasMbWGrW3/m+lyZ1LF5rd
+u3jz6o02gVpbbNq2YQhHeFw5c+e8qkvXTuu7x5AjS55MubLlyFbvOV0aUOiKhA0r
+zshY0ofpHz+AAAnCWoiQIbCJyC5C24iRI0eQ6E6SRIlvJUuWMGHSpLgTJ0+eQFm+
+PIrzKFKiS5cyZQqV61WyW9m+/coVLOCzZNGiZYv5LVy4dFnvxcuXL2DihwkjRtAp
+VKpYrXoFSxatW7jowosvwCwwDDHGIOOAMsxA4Ixdcvl1TTaCcfNNYeQg1sFi7bgD
+jzz02IOPPvz4A5BABBmEkEIMOQSRRDLJAFNLLKlUg0k45ojSSDZ6ROOPNMAEU4w0
+2YSTTjy5suATUAd5tgJRAxmFlFJLNfVUCVFNVZVVWIGg1Q5ceeAVD2GdM1ZZGpyF
+gVrYtMUWXHDRJadce9VpJ18SThgYN4SJk6GGinHIjmOXFWrooZRlRsJm/XQmFGgv
+iEYaSab5gJpqrAXhGmxDyEYEbUXYhptuSPD2G3DCEWcccsoxB8Vz0E0XXXXXUZFd
+Fdx1911445V3XnrrddHee/GBMV99pCSr7LLMNuvss9BGK+201FYbbSAAOw==
+
+------------8ai1qAtNxG9wwUewZs45vk
+Content-Disposition: inline; filename=back.gif
+Content-Type: image/gif; name=back.gif
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/back.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhPAAtAIcAAP///wEBABgNAQEWABwQARkeGTMWBwIoARYuAQM4Aho7AR4k
+FC4wCS0tLUwYBWAeBlEsB28tBlc3LAFFABlJAQFWARRRAS5MBwFnAAF5ARN+Ez9O
+Py13KkxRDnJSBXloCnFeIXpnKEdIR1BMRVhYWGZmZm1xbXJyco4wCbQ5DIQ8Isg/
+DZRMBrJVA5JsAK5vA4FuLoRxL4JuMIl3NpF+O89PD+ZWEs53Bep+BMFuOPFzKpB/
+Qad7bN11SACKAACbAACsAAG3ATuDOzekNwDEAAHUAQDlAEKVQkmsSWafZmuua17q
+XnXXdWboZpaHALGUAIyBIJyRKpSDPqiXJtiMA+mKBPaJAOmVAvGYANGyBOmnAMuC
+NsCjIeOzIZqKRZ+QSJKCUaGORqWWTambVLCfU66iWbenWb+wX6aZcJmhcqyoarir
+aL6xY66hd7SreLO0dNOWRdSTZ8W4aMm8cfaoe87BbtDCb8/DctXJdN/TeubZfo2N
+jbWOgIerh7aukLOysca+mOayksS7oIjTiIfqh7PNsbjquMrBkujcgvHliNTMsvLO
+sfDku87Qy+rYzdX01e7m1Orr6vLu6eb55vbz64l3NXpmJ4NrKuvn21k1BgBWAAFo
+AZmKQwGYAQG2AXddJEkmAgCmAAB5AADGAK1vBLOlWY5uA89xBtfLdIpSKgCGAK+R
+APbz5KlMDKSUS6OJdKuYeXdYGQDYAKmbU3tnKGU5Cls0B5mIRoNqKVUqBXZIFXhX
+GLemk+ukAIZXJKWVTbFUCJB5S5OENqiZVG5IE3RaI4cqCsa4cYQnGa86C5R9O9zS
+jerYz1QrBmU6DFs1CHdJFAGEBU0mA3hqAG1GEndWF3d4AkdHRwCWAwVlAwNIAHta
+N5VXRKWVa42Pjc/Nyuvq6Xk4BzJyBm1kAXlZJoU3FYtPLgCmA8yOANKpA5uHV7Oo
+eryviQFGAca6muvr6dTHcsepm0GmQbWeVLWmWn1qK/r59Y18OvX184l2NHZjJYVy
+MpuKRJyOSpaGQvP68yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJCgAAACwAAAAAPAAt
+AAcI/wABCBxIsKDBgwgTKlzIsKHDhxDbQJxI8eAaLxUzTqS0RswXjSAZcjQzZkzI
+kwchjRFjpiXKlwIhefHC0iXMk45mzJAShuWZmyEVzYgxgwZNMmbkKF065w4ePHPk
+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
+VGFpd2FuLgA7
+
+------------8ai1qAtNxG9wwUewZs45vk--

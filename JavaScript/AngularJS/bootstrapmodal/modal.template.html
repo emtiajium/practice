@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <button ng-if="modal.headerDismiss" type="button" ng-click="$dismiss()" class="close">&times;</button>
+    <h4 ng-if="modal.headerTitle" ng-bind="modal.headerTitle" class="modal-title"></h4>
+</div>
+
+<div class="modal-body">
+    <div ng-repeat="item in modal.bodyText" class="radio">
+        <label> {{item}}
+            <input type="radio" name="packageName" ng-model="modal.selectedItem" value="{{item}}"/>
+        </label>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" ng-click="modal.footerActionButton.actionActivity(modal.selectedItem, $dismiss, modal.returnDataToParentController)" class="btn btn-primary" ng-bind='modal.footerActionButton.text'></button>
+    <button type="button" ng-click="$dismiss()" class="btn btn-primary" ng-bind='modal.footerDismissButton.text'></button>
+</div>

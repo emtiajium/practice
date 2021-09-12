@@ -1,0 +1,19 @@
+Problems List of KnuthMorrisPratt(KMP) Algorithm
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+1. LOJ 1255 - Substring Frequency
+2. LOJ 1258 - Making Huge Palindromes
+3. LOJ 1334 - Genes in DNA
+4. UVa 12040	Again Lucky Numbers
+5. RunningLetters  Link: SRM 401 Div 2 1000
+6. 11475 - Extend to Palindrome Link: http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2470A
+ 
+7. Needle in the Haystack  Link: http://www.spoj.pl/problems/NHAY/
+8. Period  Link: http://www.spoj.pl/problems/PERIOD/
+9. Abnormal 89's  Link: http://uva.onlinejudge.org/external/118/11888.html7212.
+10. Find String Roots Link: http://www.spoj.pl/problems/FINDSR/
+11. 10298 - Power Strings Link: http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1239D.
+ 
+12. Password  Link: http://codeforces.com/contest/127/problem/D
+13. Martian Strings  Link: http://codeforces.com/contest/149/problem/E
+14. Test  Link: http://codeforces.com/contest/25/problem/E
+15. Remove The String  Link: http://www.spoj.pl/problems/PSTRING/

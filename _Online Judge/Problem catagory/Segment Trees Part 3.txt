@@ -1,0 +1,16 @@
+Problems List of Segment Trees Part 3
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+LightOJ 1103 CastleWalls(LIS Concept)
+LiveArchive 4976 Defense Lines(Lis concept)
+LightOJ 1188 FastQueries
+SPOJ 1684 FrequentValues
+http://www.codechef.com/IOPC2012/problems/IOPC1207 (GM Plants+ 3D to 1D)
+LightOJ 1187 Lining Up Students
+LightOJ 1267 Pointsin Rectangle II (2D Segment Tree)
+LightOJ 1266 Points In Rectangle
+LightOJ 1089 PointsInSegments
+LightOJ 1120 Rectangle Union(Line Sweep + Segment Tree)
+Code-Force-Round-6-E  Exposition
+LightOJ 1081 Squre Queries(2D Segment Tree)
+LightOJ 1339 Strongest Community
+11790 - Murcia's Skyline(LIS Concept)

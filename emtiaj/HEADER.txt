@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<iostream>
+#include<ctype.h>
+#include<string.h>
+#include<stdlib.h>
+#include<math.h>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<sstream>
+#include<stack>
+#include<queue>
+#include<map>
+#include<set>
+using namespace std;
+
+//const double PI=2*acos(0.0);
+const int SIZE=100005;
+typedef __int64 LL;
+#define SLL(a) scanf("%I64d",&a)
+#define PLL(a) printf("%I64d",a)
+
+int t,cases;
+
+int main()
+{
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
+    #endif
+    return 0;
+}

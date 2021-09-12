@@ -1,0 +1,17 @@
+		
+double sqr(double a){return a*a;}
+
+// Intersection point of three lines. Each line devides one angle half.
+P Incenter(P p1,P p2,P p3)
+{
+    P re;
+    double a,b,c;
+
+    a = sqrt(sqr(p2.x-p3.x)+sqr(p2.y-p3.y));
+    b = sqrt(sqr(p1.x-p3.x)+sqr(p1.y-p3.y));
+    c = sqrt(sqr(p2.x-p1.x)+sqr(p2.y-p1.y));
+    re.x = (a*p1.x+b*p2.x+c*p3.x)/(a+b+c);
+    re.y = (a*p1.y+b*p2.y+c*p3.y)/(a+b+c);
+
+    return re;
+}

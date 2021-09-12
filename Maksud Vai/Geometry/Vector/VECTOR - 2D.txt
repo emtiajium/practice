@@ -1,0 +1,8 @@
+
+typedef int CDT;
+typedef struct{CDT x,y;}P;
+
+P MakeV(P a,P b){P r; r.x=b.x-a.x; r.y=b.y-a.y; return r;}
+CDT Dot(P a,P b){ return a.x*b.x+a.y*b.y;}
+CDT Cross(P a,P b){return a.x*b.y - a.y*b.x;}
+CDT ABSV(P a){return sqrt(a.x*a.x + a.y*a.y);}

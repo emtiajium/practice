@@ -1,0 +1,23 @@
+<!doctype html>
+
+<head>
+    <title>Data Table Demo</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.32/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="main.controller.js"></script>
+    <script src="dataTable.directive.js"></script>
+
+</head>
+
+<body ng-app="dataTableDemo">
+
+    <div ng-controller="MainController">
+        <table my-custom-table></table>
+    </div>
+</body>

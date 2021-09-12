@@ -1,0 +1,7 @@
+Matrix Reloaded (10524)
+Integral Determinant (684)
+Solving Systems of Linear Equations (10109)
+Square (11542)
+Back to Kernighan-Ritchie (10828)
+Stupid Sequence (11319)
+Polynomial coefficients (10105)

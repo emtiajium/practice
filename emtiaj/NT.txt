@@ -1,0 +1,118 @@
+Problems list of Number Theory Part 1
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+
+UVa Problems:
+**160 Factors and Factorials
+**294 Divisor
+**543 Goldbach's Conjecture (10^6)
+**10311 - Goldbach and Euler (10^8)
+**583 Prime Factors
+406 Prime Cuts
+**686 Goldbach's Conjecture II
+**914 Jumping Champion
+**10042 Smith Numbers
+**10061  How many zero's and how many digits ?
+**10235 Simply Emirp
+**10299 Relatives
+**10392  Factoring Large Numbers
+**10394 Twin Primes
+**10533 Digit Primes
+10539 Almost Prime Numbers
+**10699 Count the factors
+**10738 Riemann vs Mertens
+**10780  Again Prime? No Time.
+**10789 Prime Frequency
+10852 Less Prime
+11064 Number Theory
+11415 Count the Factorials
+**11466  Largest Prime Divisor
+// me
+516 Prime land
+967 Circular
+**11353 A Different kind of Sorting
+LightOJ Problems:
+1045 
+1014 
+1028 
+1035 
+1045 
+1054 
+1067 
+1090 
+1098 
+1109 
+1213 
+1214 
+1245 
+1282 
+1336 
+1340 
+1341
+
+Problems List of Number Theory Part 2
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+
+LOJ:
+1054
+1067
+1102
+1306
+1007
+1138
+1259
+1278
+1289
+1319
+1306
+
+UVa:
+10236 The Fibonacci Primes
+10329 Combinatorial Expression
+10680 LCM
+**10789 Prime Frequency
+**10924 Prime Words
+**10948 The primary problem.
+11191 Perfect Square
+**11347 Multifactorials
+11408 Count DePrimes
+11440 Help Mr. Tomisu 
+10090 Marbles
+
+TJU:
+3618
+1233
+1375
+1476
+1528
+1637
+1698
+1730
+1748
+1991
+2218
+2308
+2502
+2520
+2526
+2601
+2648
+2658
+2859
+2901
+2916
+3043
+3076
+3150
+3232
+3237
+3238
+3259
+3261
+3262
+3288
+3293
+3467
+3483
+3496
+3599
+3618

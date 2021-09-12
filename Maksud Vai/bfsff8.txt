@@ -1,0 +1,36 @@
+#include<queue>
+#include<algorithm>
+using namespace std;
+
+
+void BFS(int y,int x)
+{
+	int rrr[] = {-1,-1,-1,0,0,1,1,1};
+	int ccc[] = {-1,0,1,-1,1,-1,0,1};
+	int i,r,c,cr,cc,l;
+	
+	queue<int>Q;
+
+	Q.push(y);
+	Q.push(x);
+
+	//ini col,dis ; 
+	l = 8;	//loop
+	while(!Q.empty())
+	{
+		cr = Q.front();	Q.pop();
+		cc = Q.front(); Q.pop();
+	
+		for(i=0;i<l;i++)
+		{
+			r = cr+rrr[i];
+			c = cc+ccc[i];
+			if( r>-1 && c>-1 && r<R && c < C )
+			{
+				dis[r][c]=dis[cr][cc]+1;
+				Q.push(r);
+				Q.push(c);	
+			}
+		}
+	}
+}

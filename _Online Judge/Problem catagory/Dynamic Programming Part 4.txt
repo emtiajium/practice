@@ -1,0 +1,33 @@
+Problems List of Dynamic Programming Part 4
+By Forhad Ahmed and Nafis Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+SRM 165 Div 2 1000-------> Short Palindrome(String Min Length+Lex.)
+SRM 285 Div 2 500-------> Sentence Splitting
+TCHS SRM 17 500----------> ScrabFortune
+SRM 358 Div 2 1000-------> Same Digits
+TJU 2610-----------------> Sum of Different Prime
+SRM 330 Div 1 500--------> PrefixFree Subset
+TJU 1130-----------------> The Tower of Babylon
+MatrixChain
+SRM 301 Div 2 1000-------> Correcting Parenthesis
+SRM 533 Div 1 250--------> Casket of Star
+Uva 11420----------------> Chest of Drawer
+SRM 340 Div 2 1000-------> CsCourses
+SRM 242 Div 1 500--------> Dice Throws
+Edit Distance
+SRM 497 Div 2 1000-------> Make Square
+SRM 439 Div 2 1000-------> Palindrome Factory
+TJU 2816-----------------> BookSelf
+LOJ 1013-----------------> Love Calculator
+LOJ 1071-----------------> Baker Vai
+SRM 208 Div 1 1000-------> Star Adventure
+SRM 229 Div 1 500--------> Business Plan
+TCC Round 4 Div 1 250----> Chess Matric
+SRM 197 Div 2 1000-------> Quick Sum
+UVa 11569----------------> Lovely Hint
+TCHS SRM 25 500----------> Lucky Fives
+UVa 10453 ---------------> Make Palindrome
+TCHS SRM 54 500----------> Segment Display
+SRM 273 Div 1 500--------> Snake Turbo
+TCHS SRM 11 1000---------> String Beads(Easy+7D)
+SRM 428 Div 2 1000------> The Distionary
+http://www.codechef.com/problems/COINS

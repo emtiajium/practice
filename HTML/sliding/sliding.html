@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="responsiveslides.css" />
+  <link rel="stylesheet" href="themes.css" />
+  <script src="jquery.min.js"></script>
+  <script src="responsiveslides.min.js"></script>
+  <script>
+    $(function () {
+
+      // Slideshow 1
+      $("#slides1").responsiveSlides({
+        auto: true,
+        pagination: true,
+        nav: true,
+        fade: 500,
+        maxwidth: 800
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="rslides_container">
+      <ul id="slides1" class="rslides">
+        <li>
+          <img src="1.jpg" alt="" />
+          <p class="caption">14 th december</p>
+        </li>
+        <li>
+          <img src="2.jpg" alt="" />
+          <p class="caption">google map</p>
+        </li>
+        <li>
+          <img src="3.jpg" alt="" />
+          <p class="caption">rain in cuet</p>
+        </li>
+		<li>
+          <img src="4.jpg" alt="" />
+          <p class="caption">14 th december</p>
+        </li>
+		<li>
+          <img src="5.jpg" alt="" />
+          <p class="caption">14 th december</p>
+        </li>
+		<li>
+          <img src="6.jpg" alt="" />
+          <p class="caption">14 th december</p>
+        </li>
+      </ul>
+    </div>
+    
+    <a href="http://responsive-slides.viljamis.com/">View ResponsiveSlides.js documentation</a>
+
+  </div>
+
+  <!-- Don't include the script below on your own page, it's used for viljamis.com analytics -->
+  <script>
+    var _gaq=[['_setAccount','UA-27143570-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+</body>
+</html>

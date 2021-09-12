@@ -1,0 +1,16 @@
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\bin\Debug\Goodreads.exe.config
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\bin\Debug\Goodreads.exe
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\bin\Debug\Goodreads.pdb
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.csprojResolveAssemblyReference.cache
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.GoodreadsForm.resources
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.Properties.Resources.resources
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.csproj.GenerateResource.Cache
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.exe
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.pdb
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\bin\Debug\Goodreads.exe.manifest
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\bin\Debug\Goodreads.application
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.exe.manifest
+c:\users\emtiaj\documents\visual studio 2012\Projects\Goodreads\Goodreads\obj\Debug\Goodreads.application
+D:\PROGRAMMING TASK\C#\Goodreads\Goodreads\bin\Debug\Goodreads.exe.config
+D:\PROGRAMMING TASK\C#\Goodreads\Goodreads\obj\Debug\Goodreads.exe
+D:\PROGRAMMING TASK\C#\Goodreads\Goodreads\obj\Debug\Goodreads.pdb

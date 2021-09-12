@@ -1,0 +1,19 @@
+c:\users\ronok\documents\visual studio 2010\Projects\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.exe
+c:\users\ronok\documents\visual studio 2010\Projects\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.pdb
+c:\users\ronok\documents\visual studio 2010\Projects\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ronok\documents\visual studio 2010\Projects\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.exe
+c:\users\ronok\documents\visual studio 2010\Projects\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.pdb
+D:\Programming\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.exe
+D:\Programming\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.pdb
+D:\Programming\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.exe
+D:\Programming\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.pdb
+D:\PROGRAMMING TASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.exe
+D:\PROGRAMMING TASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.pdb
+D:\PROGRAMMING TASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.exe
+D:\PROGRAMMING TASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.pdb
+D:\PROGRAMMING TASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.csprojResolveAssemblyReference.cache
+D:\PROGRAMMINGtASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.exe
+D:\PROGRAMMINGtASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.pdb
+D:\PROGRAMMINGtASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.exe
+D:\PROGRAMMINGtASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\bin\Debug\ChatAndFileServerSystem.pdb
+D:\PROGRAMMINGtASK\OS\ChatAndFileServerSystem\ChatAndFileServerSystem\obj\x86\Debug\ChatAndFileServerSystem.csprojResolveAssemblyReference.cache

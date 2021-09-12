@@ -1,0 +1,8 @@
+{
+"name":"ramadan",
+"description": "my first webapp",
+"launch_path":"/index.html",
+"icons":{
+"128":"/imag/inco.png"
+}
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- saved from url=(0070)file:///D:/PROGRAMMING%20TASK/_Online%20Judge/ACM-2009/v100/10044.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Problem F: Erdös Numbers</title>
+<meta name="description" content="Problem F: Erdös Numbers">
+<meta name="keywords" content="htmlatex">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<link rel="STYLESHEET" href="file:///D:/PROGRAMMING%20TASK/_Online%20Judge/ACM-2009/v100/htmlatex.css">
+</head>
+<body lang="EN" bgcolor="#FFFFFF">
+
+<h1><br clear="ALL"><center><table bgcolor="#0060F0"><tbody><tr><td><b><font size="5" color="#C0FFFF">&nbsp;<a name="SECTION0001000000000000000000">
+Problem F: Erdös Numbers</a>&nbsp;</font></b></td></tr></tbody></table></center>
+</h1>
+
+<p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001001000000000000000">
+Background</a>&nbsp;</font>
+</h2>
+The Hungarian Paul Erdös (1913-1996, speak as ``Ar-dish'') not only was one
+of the strangest mathematicians of the 20th century, he was also one of the
+most famous. He kept on publishing widely circulated papers up to a very high
+age and every mathematician having the honor of being a
+co-author to Erdös is well respected.
+
+<p>
+Not everybody got the chance to co-author a paper with Erdös, so many people
+were content if they managed to publish a paper with somebody who had
+published a scientific paper with Erdös. This gave rise to the 
+so-called <em>Erdös numbers</em>. 
+An author who has jointly published with Erdös had Erdös
+number 1. An author who had not published with Erdös but with somebody with
+Erdös number 1 obtained Erdös number 2, and so on.  
+
+</p><p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001002000000000000000">
+Problem</a>&nbsp;</font>
+</h2>
+Today, nearly everybody wants to know which Erdös number he or she
+has. Your task is to write a program which computes Erdös numbers
+for a given set of scientists.
+
+<p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001003000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+The first line of the input contains the number of scenarios.
+
+<p>
+The input for each scenario consists of a paper database and a list of names. 
+It begins with the line
+
+</p><p>
+
+<i>P N</i>
+
+</p><p>
+where <i>P</i> and <i>N</i> are  natural numbers. Following this line are
+<i>P</i> lines containing descriptions of papers (this is the paper database). A
+paper appears on a line by itself and is specified in the following way: 
+</p><pre>Smith, M.N., Martin, G., Erdos, P.: Newtonian forms of prime factors matrices
+</pre>
+Note that umlauts like `ö' are simply written as `o'. After the <i>P</i> papers
+follow <i>N</i> lines with names. Such a name line has the following format:
+<pre>Martin, G.
+</pre>
+
+<p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001004000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+For every scenario you are to print a line containing a string 
+``<tt>Scenario </tt><i>i</i>" (where <i>i</i> is the number of the scenario) and
+the author names together with their Erdös number of all authors in the 
+list of names. The authors should appear in the same order as they appear 
+in the list of names.
+The Erdös number is based on the papers in the paper database of this
+scenario. Authors which do not have any relation to Erdös via the papers
+in the database have Erdös number ``<tt>infinity</tt>".
+
+<p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001005000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<pre>1
+4 3
+Smith, M.N., Martin, G., Erdos, P.: Newtonian forms of prime factor matrices 
+Erdos, P., Reisig, W.: Stuttering in petri nets
+Smith, M.N., Chen, X.: First oder derivates in structured programming
+Jablonski, T., Hsueh, Z.: Selfstabilizing data structures
+Smith, M.N.
+Hsueh, Z.
+Chen, X.
+</pre>
+
+<p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001006000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<pre>Scenario 1
+Smith, M.N. 1
+Hsueh, Z. infinity
+Chen, X. 2
+</pre>
+
+<p>
+<br></p><hr>
+<address>
+<i>Miguel Revilla</i>
+<br><i>2000-11-19</i>
+</address>
+
+
+
+</body></html>

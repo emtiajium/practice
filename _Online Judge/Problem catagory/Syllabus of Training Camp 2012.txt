@@ -1,0 +1,93 @@
+Syllabus of Training Camp 2012
+By Forhad Ahmed and Asadur Rahman in SUST Programming Training Camp 2012 (Files) · Edit Doc
+String Simulation: (3 Days)
+LightOJ: 1338
+UVa: 11734, 11541, 401, 353, 11530, 11233, 11743, 11716, 11713, 11362, 11572, 11697, 263, 10010, 10279, 457, 445
+TJU: 1263, 2522, 1394
+ 
+Number Theory: (10 days)
+Prime Number Generate (Using Seive Method)
+Primality Test
+Prime Factorization
+Euler Totient  Function
+Number of Divisors
+Relative Prime
+Sum Of Divisors(Sigma Function)
+Logarithmic Exponentiation
+Extended GCD Algorithm
+Modular Arithmetic
+Fermat’s Little Theorem
+Chinese Remainder Theorem
+ 
+Problem List Number Theory:
+UVa Problems: 160, 294, 543, 583, 406, 686, 884,914, 10042, 10061, 10235, 10299, 10392, 10394, 10533, 10539, 10699, 10738, 10780, 10789, 10852, 11064, 11415, 11466
+LightOJ Problems: 1045, 1014, 1028, 1035, 1045, 1054, 1067, 1090, 1098, 1109, 1213, 1214, 1245, 1282, 1336, 1340, 1341
+ 
+Standard Template Library: (1 Day)
+String
+Vector
+Map
+Set
+Algorithm
+ 
+ 
+ 
+Graph: (10 Days)
+Graph  Representation (List + Matrix)
+BFS
+DFS
+Topological Sort
+Dijkstra Shortest Path
+Floyd Warshall
+BellManFord
+Set Operation
+MST(Kruskal & Prims)
+Strongly Connected Components
+Articulation Point and Bridge, Bi Conn. Comp.
+2-SAT
+ 
+DP: (15 Days)
+Standard Problem
+Coin Change
+SubSetSum
+LIS and LCS
+MCM
+Assembly Line Scheduling
+0-1 Knapsack
+Digit Dp
+String Related DP
+Bit Mask Basic
+BitMask DP
+Counting
+State Space Problem
+ 
+Geometry: (7 Days)
+Analytical Geometry
+Bisection
+Vector Concept (2D,3D)
+Line Segment Intersection
+Convex Hull
+ 
+ 
+ 
+String Algorithm: (3 Days)
+KMP
+Z-Algorithm
+Trie
+Aho-Corasick
+Suffix Array
+ 
+ 
+Advance Data Structure: (10 Days)
+Segment  Tree 
+Range Minimum Query 
+Binary Indexed Tree 
+Lowest Common Ancestor
+ 
+
+//Tutorial Link:
+ http://www.codechef.com/wiki/tutorial-number-theory
+http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=primeNumbers
+http://comeoncodeon.wordpress.com
+http://e-maxx.ru/algo/                 (English Translation By Google Chrome)
+http://theoremoftheweek.wordpress.com

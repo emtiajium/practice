@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Breath First Search - Lecture by Rashid Bin Muhammad, PhD.</title>
+<meta name="Author" content="Rashid Bin Muhammad, PhD.">
+<style type="text/css">
+.style1 {
+				font-size: large;
+}
+.style2 {
+				font-size: large;
+				margin-left: 40px;
+}
+.style3 {
+				font-size: large;
+				margin-left: 80px;
+}
+.style4 {
+				font-size: large;
+				text-align: center;
+}
+.style5 {
+				margin-left: 80px;
+}
+.style6 {
+				text-align: center;
+}
+.style7 {
+				color: #FF0000;
+				font-family: "Blackadder ITC";
+				font-size: x-large;
+}
+.style8 {
+				font-size: x-large;
+				color: #800000;
+}
+.style9 {
+				font-family: "Blackadder ITC";
+				text-align: right;
+}
+.style10 {
+				font-size: large;
+				margin-left: 120px;
+}
+.style11 {
+				font-size: large;
+				color: #800000;
+}
+</style>
+</head>
+
+<body bodylink="blue" alink="#FF0000" background="breadthSearch_files/Bck2.gif" link="#0000FF" vlink="#0000FF">
+
+<p class="style6">
+<font size="4">
+<img src="breadthSearch_files/redline.gif" height="2" width="640/"></font></p>
+
+<h1 class="style6">Breadth-First Search Traversal Algorithm</h1>
+<p class="style6">
+<font size="4">
+<img src="breadthSearch_files/redline.gif" height="2" width="640/"></font></p>
+
+<p class="style1"><span class="style7">B</span>readth-first search is a way to find all the vertices 
+reachable from the a given source vertex, <em>s</em>. Like depth first search, 
+BFS traverse a connected component of a given graph and defines a spanning tree. Intuitively, the basic idea of the 
+breath-first search is this: send a wave out from source <em>s</em>. The wave hits all 
+vertices 1 edge from <em>s</em>. From there, the wave hits all vertices 2 edges from 
+<em>s</em>. 
+Etc. We use FIFO queue Q to maintain the wavefront: <em>v</em> is in Q if and only if 
+wave has hit <em>v</em> but has not come out of <em>v</em> yet. </p>
+<p class="style1">&nbsp;</p>
+<p class="style8"><strong>Overall Strategy of BFS Algorithm</strong></p>
+<p class="style1">Breadth-first search starts at a given vertex <em>s</em>,
+ which is at level 0. 
+In the first stage, we visit all the vertices that are at the distance 
+of&nbsp;one edge away. When we visit there, we paint as "visited," the 
+vertices adjacent 
+to the start vertex <em>s</em> - these vertices are placed into level 1. In the 
+second stage, we visit all the new vertices we can reach at the distance of two 
+edges away from the source vertex s. These new vertices, which are adjacent to 
+level 1 vertices and not previously assigned to a level, are placed into level 
+2, and so on. The BFS traversal terminates when every vertex has been visited.</p>
+<p class="style1">To keep track of progress, breadth-first-search colors each 
+vertex. Each vertex of the graph is in one of three states:</p>
+<p class="style3">1. Undiscovered;<br>
+2. Discovered but not fully explored; and<br>
+3. Fully explored.</p>
+<p class="style1">The state of a vertex, <em>u</em>, is stored in a color variable as 
+follows:</p>
+<p class="style3">1. color[<em>u</em>] = White - for the "undiscovered" state,<br>
+2. color [<em>u</em>] = Gray - for the "discovered but not fully explored" 
+state, and<br>
+3. color [<em>u</em>] = Black - for the "fully explored" state.</p>
+<p class="style1">The BFS(G, <em>s</em>) algorithm develops a breadth-first search tree 
+with the source vertex, <em>s</em>, as its root. The parent or predecessor of any other 
+vertex in the tree is the vertex from which it was first discovered. For each 
+vertex, <em>v</em>, the parent of <em>v</em> is placed in the variable 	π[<em>v</em>]. Another 
+variable, d[<em>v</em>], computed by BFS contains the number of tree edges on the path 
+from <em>s</em> to <em>v</em>. The breadth-first search uses a FIFO queue, Q, to store gray vertices.</p>
+<p class="style1">&nbsp;</p>
+<p class="style8"><strong>Algorithm: Breadth-First Search Traversal</strong></p>
+<p class="style2"><strong>BFS(V, E, </strong> <em><strong>s</strong></em>)</p>
+<p class="style2">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>for</strong> each 
+<em>u</em> 
+in V − {<em>s</em>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▷ for each vertex u in V[G] except s.<br>
+2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<strong>do</strong> 
+color[<em>u</em>] ← WHITE<br>
+3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+d[<em>u</em>] ← infinity<br>
+4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+π[<em>u</em>] ← NIL<br>
+5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color[<em>s</em>] ← GRAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+▷ Source 
+vertex discovered<br>
+6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d[<em>s</em>] ← 
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+▷ initialize<br>
+7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; π[<em>s</em>] ← 
+NIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+▷ initialize<br>
+8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q ← 
+{}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+▷ Clear 
+queue Q<br>
+9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENQUEUE(Q, <em>s</em>)<br>
+10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>while</strong> Q is 
+non-empty<br>
+11.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<strong>do</strong> <em>u</em> ← 
+DEQUEUE(Q)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+▷ That is, u = head[Q]<br>
+12.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<strong>for</strong> each <em>v</em> adjacent to <em>u</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+▷ for loop for every node along with edge.<br>
+13.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+<strong>do if</strong> color[<em>v</em>] ← WHITE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+▷ if color is white you've never seen it before<br>
+14.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+<strong>then</strong>&nbsp; color[<em>v</em>] ← GRAY<br>
+15.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ d[<em>v</em>] 
+← d[<em>u</em>] + 1<br>
+16.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ π[<em>v</em>] 
+← 
+<em>u</em><br>
+17.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ ENQUEUE(Q, 
+<em>v</em>)<br>
+18.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+DEQUEUE(Q)<br>
+19.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color[<em>u</em>] ← BLACK</p>
+<p class="style1">&nbsp;</p>
+
+<p class="style1">&nbsp;</p>
+<p class="style1"><span class="style8"><strong>Example</strong></span>: The following figure (from CLRS) illustrates the progress of 
+breadth-first search on the undirected sample graph.</p>
+<p class="style1"><strong>a</strong>. After initialization (paint every vertex white, set d[<em>u</em>] to 
+infinity for each vertex <em>u</em>,&nbsp; and set the parent of every vertex to be NIL), 
+the source vertex is discovered in line 5. Lines 8-9 initialize Q to contain 
+just the source vertex <em>s</em>.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs1.gif" border="0" height="91" width="199"></font></p>
+<p class="style1"><strong>b</strong>. The algorithm discovers all vertices 1 edge from <em>s</em> i.e., 
+discovered all vertices (<em>w</em> and <em>r</em>) at level 1.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs2.gif" border="0" height="87" width="228"></font></p>
+<p class="style1"><strong>c</strong>. </p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs3.gif" border="0" height="89" width="240"></font></p>
+<p class="style1"><strong>d</strong>. The algorithm discovers all vertices 2 edges from <em>s</em> i.e., 
+discovered all vertices (<em>t</em>, <em>x</em>, and <em>v</em>) at level 2.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs4.gif" border="0" height="92" width="245"></font></p>
+<p class="style1"><strong>e</strong>.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs5.gif" border="0" height="91" width="241"></font></p>
+<p class="style1"><strong>f</strong>.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs6.gif" border="0" height="92" width="245"></font></p>
+<p class="style1"><strong>g</strong>. The algorithm discovers all vertices 3 edges from <em>s</em> i.e., 
+discovered all vertices (<em>u</em> and <em>y</em>) at level 3.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs7.gif" border="0" height="91" width="219"></font></p>
+<p class="style1"><strong>h</strong>.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs8.gif" border="0" height="91" width="206"></font></p>
+<p class="style1"><strong>i</strong>. The algorithm terminates when every vertex has been fully 
+explored.</p>
+<p class="style4"><font size="4"><img src="breadthSearch_files/bfs9.gif" border="0" height="93" width="194"></font></p>
+<p class="style1">&nbsp;</p>
+<p class="style8"><strong>Analysis</strong></p>
+<ul>
+				<li>
+				<p class="style1">The while-loop in breadth-first search is executed at most |V| times. The 
+reason is that every vertex enqueued at most once. So, we have O(V).</p>
+				</li>
+				<li>
+				<p class="style1">The for-loop inside the while-loop is executed at most |E| 
+times if G is a directed graph or 2|E| times if G is undirected. The reason is 
+that every vertex dequeued at most once and we examine (<em>u</em>, <em>v</em>) only when 
+				<em>u</em> is dequeued. Therefore, every edge examined at most once if directed, at most twice 
+if undirected. So, we have O(E).</p>
+				</li>
+</ul>
+<p class="style1">Therefore, the total running time for breadth-first search 
+traversal is O(V + E).</p>
+<p class="style1">&nbsp;</p>
+<p class="style1"><strong>Lemma 22.3</strong> (CLRS)&nbsp;&nbsp;&nbsp; At any time during the execution 
+of BFS suppose that Q contains the vertices {<em>v</em><sub>1</sub>, <em>v</em><sub>2</sub>, ..., 
+<em>v</em><sub><em>r</em></sub>} with <em>v</em><sub>1</sub> at the head and <em>v</em><sub><em>r</em></sub> at the tail. Then d[<em>v</em><sub>1</sub>] ≤ 
+d[<em>v</em><sub>2</sub>] ≤ ... ≤ d[<em>v</em><sub><em>r</em></sub>] ≤ d[<em>v</em><sub>1</sub>] + 1.</p>
+<p class="style1">Let<em> v</em> be any vertex in V[G].&nbsp; If <em>v</em> is reachable from 
+<em>s</em> 
+then let δ(<em>s</em>, <em>v</em>) be the minimum number of edges in E[G] that must be traversed to 
+go from vertex <em>s</em> to vertex <em>v</em>. If <em>v</em> is not reachable from 
+<em>s</em> then let δ(<em>s</em>,<em> v</em>) = ∞.</p>
+<p class="style1"><strong>Theorem 22.5</strong> (CLRS)&nbsp;&nbsp;&nbsp; If BFS is run on graph G from a source vertex
+<em>s</em> 
+in V[G] then for all <em>v</em> in V[G], d[<em>v</em>] = δ(<em>s</em>,<em> v</em>) and if 
+<em>v</em> ≠ <em>s</em> is reachable from <em>s</em> then one of the 
+shortest paths from <em>s</em> to <em>v</em> is a shortest path from <em>s</em> 
+to π[<em>v</em>] followed by the edge from π[<em>v</em>] to <em>v</em>.</p>
+<p class="style1">BFS builds a tree called a breadth-first-tree containing all 
+vertices reachable from <em>s</em>. The set of edges in the tree (called tree 
+edges) contain (π[<em>v</em>], <em>v</em>) for all <em>v</em> where π[<em>v</em>] ≠ 
+NIL.</p>
+<p class="style1">If <em>v</em> is reachable from <em>s</em> then there is a unique path of tree 
+edges from <em>s</em> to <em>v</em>. Print-Path(G, <em>s</em>, <em>v</em>) prints the vertices along that path in 
+O(|V|) time.</p>
+<p class="style2">Print-Path(G, <em>s</em>, <em>v</em>)</p>
+<p class="style3"><strong>if</strong> <em>v</em> = <em>s</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t<strong>hen</strong> print <em>s</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>else&nbsp;&nbsp; if</strong> π[<em>v</em>] 
+← 
+NIL<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<strong>then</strong>&nbsp; print "no path exists from " <em>s</em> "to" <em>v</em>"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<strong>else</strong>&nbsp;&nbsp; Print-Path(G, <em>s</em>, π[<em>v</em>])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+print <em>v</em></p>
+<p>&nbsp;</p>
+<p class="style8"><strong>Algorithms based on BFS</strong></p>
+<p class="style1">Based upon the BFS, there are O(V + E)-time algorithms for the 
+following problems:</p>
+<ul class="style5">
+				<li>
+				<p class="style1">Testing whether graph is connected.</p>
+				</li>
+				<li>
+				<p class="style1">Computing a spanning forest of graph.</p>
+				</li>
+				<li>
+				<p class="style1">Computing, for every vertex in graph, a path 
+				with the minimum number of edges between start vertex and 
+				current vertex or reporting that no such path exists.</p>
+				</li>
+				<li>
+				<p class="style1">Computing a cycle in graph or reporting that 
+				no such cycle exists.</p>
+				</li>
+</ul>
+<p class="style1">&nbsp;</p>
+<p class="style1">In our course, we will use BFS in the following:</p>
+<ul class="style5">
+				<li>
+				<p class="style1">Prim's MST algorithm. (CLRS, Chapter 23.)</p>
+				</li>
+				<li>
+				<p class="style1">Dijkstra's single source shortest path 
+				algorithm. (CLRS, Chapter 24.)</p>
+				</li>
+</ul>
+<p class="style1">&nbsp;</p>
+<p class="style1">&nbsp;</p>
+<p class="style8"><strong>Some Applications of BFS</strong></p>
+<p class="style1">&nbsp;</p>
+<p class="style8"><strong>1. Bipartite Graph</strong></p>
+<p class="style1">We define bipartite graph as follows: A bipartite graph is an 
+undirected graph G = (V, E) in which V can be partitioned into two sets V<sub>1</sub> 
+and V<sub>2</sub> such that (<em>u</em>, <em>v</em>) E implies either <em>u</em> 
+in V<sub>1</sub> and <em>v</em> in V<sub>2</sub> or <em>u</em> in V<sub>2</sub> 
+and <em>v</em> in V<sub>1</sub>. That is, all edges go between the two sets V<sub>1</sub> 
+and V<sub>2</sub>.<br>
+In other to determine if a graph G = (V, E) is bipartite, we perform a BFS on it 
+with a little modification such that whenever the BFS is at a vertex <em>u</em> 
+and encounters a vertex <em>v</em> that is already 'gray' our modified BSF 
+should check to see if the depth of both <em>u</em> and <em>v</em> are even, or 
+if they are both odd. If either of these conditions holds which implies d[<em>u</em>] 
+and d[<em>v</em>] have the same parity, then the graph is not bipartite. Note 
+that this modification does not change the running time of BFS and remains O(V + 
+E).<br>
+Formally, to check if the given graph is bipartite, the algorithm traverse the 
+graph labeling the vertices 0, 1, or 2 corresponding to unvisited, partition 1 
+and partition 2 nodes. If an edge is detected between two vertices in the same 
+partition, the algorithm returns.</p>
+<p class="style1">&nbsp;</p>
+<p class="style3"><strong>ALGORITHM: BIPARTITE (G, S)</strong></p>
+<p class="style10"><strong>For</strong> each vertex <em>u</em> in V[G] − {<em>s</em>}<br>
+&nbsp;&nbsp; <strong>do</strong> color[<em>u</em>] ← WHITE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d[<em>u</em>] ← ∞<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; partition[<em>u</em>] ← 0<br>
+color[<em>s</em>] ← GRAY<br>
+partition[<em>s</em>] ← 1<br>
+d[s] ← 0<br>
+Q ← [<em>s</em>]<br>
+<strong>while</strong> Queue 'Q' is non-empty<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>do</strong> <em>u</em> ← head [Q]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>for</strong> each <em>v</em> 
+in Adj[<em>u</em>] do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>if</strong> partition [<em>u</em>] ← partition [<em>v</em>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>then</strong>&nbsp;&nbsp; return 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>else</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>if</strong> color[<em>v</em>] ← WHITE then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>then</strong> color[v] ← gray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+d[<em>v</em>] = d[<em>u</em>] + 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+partition[<em>v</em>] ← 3 − partition[<em>u</em>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+ENQUEUE (Q, <em>v</em>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEQUEUE (Q)<br>
+Color[<em>u</em>] ← BLACK<br>
+Return 1</p>
+<p class="style11"><strong>Correctness</strong></p>
+<p class="style1">As Bipartite (G, S) traverse the graph it labels the vertices 
+with a partition number consisted with the graph being bipartite. If at any 
+vertex, algorithm detects an inconsistency, it shows with an invalid return 
+value. Partition value of <em>u</em> will always be a valid number as it was 
+enqueued at some point and its partition was assigned at that point. At line 19, 
+partition of <em>v</em> will unchanged if it already set, otherwise it will be 
+set to a value opposite to that of vertex <em>u</em>.</p>
+<p class="style11"><strong>Analysis</strong></p>
+<p class="style1">The lines added to BFS algorithm take constant time to execute 
+and so the running time is the same as that of BFS which is O(V + E).</p>
+<p class="style1">&nbsp;</p>
+<p class="style8"><strong>2. Diameter of Tree</strong></p>
+<p class="style1">The diameter of a tree T = (V, E) is the largest of all 
+shortest-path distance in the tree and given by max[dist(<em>u</em>,<em> v</em>)]. 
+As we have mentioned that BSF can be use to compute, for every vertex in graph, 
+a path with the minimum number of edges between start vertex and current vertex. 
+It is quite easy to compute the diameter of a tree. For each vertex in the tree, 
+we use BFS algorithm to get a shortest-path. By using a global variable length, 
+we record the largest of all shortest-paths.</p>
+<p class="style3"><strong>ALGORITHM: TREE_DIAMETER (T)</strong></p>
+<p class="style10">maxlength ← 0<br>
+<strong>for</strong> s ← 0 <strong>to</strong> s &lt; |V[T]|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>do</strong> temp ← BSF(T, S)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>if</strong> 
+maxlength &lt; temp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+maxlength ← temp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+increment s by 1<br>
+return maxlength</p>
+<p class="style1">&nbsp;</p>
+<p class="style11"><strong>Analysis</strong></p>
+<p class="style1">This will clearly takes O(V(V + E)) time.</p>
+<center><font size="4"><img src="breadthSearch_files/redline.gif" height="2" width="640/">
+
+</font>
+
+<p>
+
+<a href="http://www.personal.kent.edu/%7Ermuhamma/Algorithms/algorithm.html"> 
+
+<font size="4"> 
+
+<img src="breadthSearch_files/back.gif" border="0" height="47" width="49/"></font></a></p>
+
+
+</center>
+
+
+<p class="style9">March 13, 2010.</p>
+
+
+
+
+</body></html>

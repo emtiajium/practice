@@ -1,0 +1,4 @@
+Case 1: GCD 6 LCM 36
+Case 2: GCD 1 LCM 1035
+Case 3: GCD 3 LCM 9
+Case 4: GCD 1 LCM 1035

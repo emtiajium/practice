@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- saved from url=(0046)http://uva.onlinejudge.org/external/5/567.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Risk</title>
+<meta name="description" content="Risk">
+<meta name="keywords" content="htmlatex">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+
+<link rel="STYLESHEET" href="http://uva.onlinejudge.org/external/5/htmlatex.css">
+<style id="wrc-middle-css" type="text/css">.wrc_whole_window{	display: none;	position: fixed; 	z-index: 2147483647;	background-color: rgba(40, 40, 40, 0.9);	word-spacing: normal !important;	margin: 0px !important;	padding: 0px !important;	border: 0px !important;	left: 0px;	top: 0px;	width: 100%;	height: 100%;	line-height: normal !important;	letter-spacing: normal !important;	overflow: hidden;}.wrc_bar_window{	display: none;	position: fixed; 	z-index: 2147483647;	background-color: rgba(60, 60, 60, 1.0);	word-spacing: normal !important;	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	margin: 0px !important;	padding: 0px !important;	border: 0px !important;	left: 0px;	top: 0px;	width: 100%;	height: 40px;	line-height: normal !important;	letter-spacing: normal !important;	color: white !important;	font-size: 13px !important;}.wrc_middle {	display: table-cell;	vertical-align: middle;	width: 100%;}.wrc_middle_main {	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	font-size: 14px;	width: 600px;	height: auto;    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-body.jpg) repeat-x left top;	background-color: rgb(39, 53, 62);	position: relative;	margin-left: auto;	margin-right: auto;	text-align: left;}.wrc_middle_tq_main {	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	font-size: 16px;	width: 615px;	height: 460px;    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-sitecorrect.png) no-repeat;	background-color: white;	color: black !important;	position: relative;	margin-left: auto;	margin-right: auto;	text-align: center;}.wrc_middle_logo {    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/logo.jpg) no-repeat left bottom;    width: 140px;    height: 42px;    color: orange;    display: table-cell;    text-align: right;    vertical-align: middle;}.wrc_icon_warning {	margin: 20px 10px 20px 15px;	float: left;	background-color: transparent;}.wrc_middle_title {    color: #b6bec7;	height: auto;    margin: 0px auto;	font-size: 2.2em;	white-space: nowrap;	text-align: center;}.wrc_middle_hline {    height: 2px;	width: 100%;    display: block;}.wrc_middle_description {	text-align: center;	margin: 15px;	font-size: 1.4em;	padding: 20px;	height: auto;	color: white;	min-height: 3.5em;}.wrc_middle_actions_main_div {	margin-bottom: 15px;	text-align: center;}.wrc_middle_actions_blue_button div {	display: inline-block;	width: auto;	cursor: Pointer;	margin: 3px 10px 3px 10px;	color: white;	font-size: 1.2em;	font-weight: bold;}.wrc_middle_actions_blue_button {	-moz-appearance: none;	border-radius: 7px;	-moz-border-radius: 7px/7px;	border-radius: 7px/7px;	background-color: rgb(0, 173, 223) !important;	display: inline-block;	width: auto;	cursor: Pointer;	border: 2px solid #00dddd;	padding: 0px 20px 0px 20px;}.wrc_middle_actions_blue_button:hover {	background-color: rgb(0, 159, 212) !important;}.wrc_middle_actions_blue_button:active {	background-color: rgb(0, 146, 200) !important;	border: 2px solid #00aaaa;}.wrc_middle_actions_grey_button div {	display: inline-block;	width: auto;	cursor: Pointer;	margin: 3px 10px 3px 10px;	color: white !important;	font-size: 15px;	font-weight: bold;}.wrc_middle_actions_grey_button {	-moz-appearance: none;	border-radius: 7px;	-moz-border-radius: 7px/7px;	border-radius: 7px/7px;	background-color: rgb(100, 100, 100) !important;	display: inline-block;	width: auto;	cursor: Pointer;	border: 2px solid #aaaaaa;	text-decoration: none;	padding: 0px 20px 0px 20px;}.wrc_middle_actions_grey_button:hover {	background-color: rgb(120, 120, 120) !important;}.wrc_middle_actions_grey_button:active {	background-color: rgb(130, 130, 130) !important;	border: 2px solid #00aaaa;}.wrc_middle_action_low {	font-size: 0.9em;	white-space: nowrap;	cursor: Pointer;	color: grey !important;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action_low:hover {	color: #aa4400 !important;}.wrc_middle_actions_rest_div {	padding-top: 5px;	white-space: nowrap;	text-align: center;}.wrc_middle_action {	white-space: nowrap;	cursor: Pointer;	color: red !important;	font-size: 1.2em;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action:hover {	color: #aa4400 !important;}</style><script id="wrc-script-middle_window" type="text/javascript" language="JavaScript">var g_inputsCnt = 0;var g_InputThis = new Array(null, null, null, null);var g_alerted = false;/* we test the input if it includes 4 digits   (input is a part of 4 inputs for filling the credit-card number)*/function is4DigitsCardNumber(val){	var regExp = new RegExp('[0-9]{4}');	return (val.length == 4 && val.search(regExp) == 0);}/* testing the whole credit-card number 19 digits devided by three '-' symbols or   exactly 16 digits without any dividers*/function isCreditCardNumber(val){	if(val.length == 19)	{		var regExp = new RegExp('[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}');		return (val.search(regExp) == 0);	}	else if(val.length == 16)	{		var regExp = new RegExp('[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}');		return (val.search(regExp) == 0);	}	return false;}function CheckInputOnCreditNumber(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'text')	{		if(is4DigitsCardNumber(value))		{			var cont = true;			for(i = 0; i < g_inputsCnt; i++)				if(g_InputThis[i] == self)					cont = false;			if(cont && g_inputsCnt < 4)			{				g_InputThis[g_inputsCnt] = self;				g_inputsCnt++;			}		}		g_alerted = (g_inputsCnt == 4);		if(g_alerted)			g_inputsCnt = 0;		else			g_alerted = isCreditCardNumber(value);	}	return g_alerted;}function CheckInputOnPassword(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'password')	{		g_alerted = (value.length > 0);	}	return g_alerted;}function onInputBlur(self, bRatingOk, bFishingSite){	var bCreditNumber = CheckInputOnCreditNumber(self);	var bPassword = CheckInputOnPassword(self);	if((!bRatingOk || bFishingSite == 1) && (bCreditNumber || bPassword) )	{		var warnDiv = document.getElementById("wrcinputdiv");		if(warnDiv)		{			/* show the warning div in the middle of the screen */			warnDiv.style.left = "0px";			warnDiv.style.top = "0px";			warnDiv.style.width = "100%";			warnDiv.style.height = "100%";			document.getElementById("wrc_warn_fs").style.display = 'none';			document.getElementById("wrc_warn_cn").style.display = 'none';			if(bFishingSite)				document.getElementById("wrc_warn_fs").style.display = 'block';			else				document.getElementById("wrc_warn_cn").style.display = 'block';			warnDiv.style.display = 'table';		}	}}</script></head>
+<body lang="EN" bgcolor="#FFFFFF">
+
+<h1><br clear="ALL"><center><table bgcolor="#0060F0"><tbody><tr><td><b><font size="5" color="#C0FFFF">&nbsp;<a name="SECTION0001000000000000000000">
+Risk</a>&nbsp;</font></b></td></tr></tbody></table></center>
+</h1>
+
+<p>
+Risk is a board game in which several opposing players attempt to conquer
+the world. The
+gameboard consists of a world map broken up into hypothetical countries.
+During a player's turn,
+armies stationed in one country are only allowed to attack only countries
+with which they share a
+common border. Upon conquest of that country, the armies may move into
+the newly conquered country.
+
+</p><p>
+
+</p><p>
+<br>
+During the course of play, a player often engages in a sequence of conquests
+with the goal of
+transferring a large mass of armies from some starting country to a
+destination country. Typically,
+one chooses the intervening countries so as to minimize the total number of
+countries that need to
+be conquered. Given a description of the gameboard with 20 countries each
+with between 1 and 19
+connections to other countries, your task is to write a function that takes
+a starting country and a
+destination country and computes the minimum number of countries that must
+be conquered to
+reach the destination. You do not need to output the sequence of countries,
+just the number of
+countries to be conquered including the destination. For example, if
+starting and destination
+countries are neighbors, then your program should return one.
+
+</p><p>
+
+</p><p>
+<br>
+The following connection diagram illustrates the first sample input.
+
+</p><p>
+</p><div align="CENTER">
+<img src="./Risk_files/p567.gif">
+</div>
+
+<p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+Input to your program will consist of a series of country configuration
+test sets. Each test set will
+consist of a board description on lines 1 through 19. The representation
+avoids listing every national
+boundary twice by only listing the fact that country <i>I</i> borders country <i>J</i> when <i>I</i> &lt; <i>J</i>. Thus, the <i>I</i>th
+line, where <i>I</i> is less than 20, contains an integer <i>X</i> indicating how many
+``higher-numbered"
+countries share borders with country <i>I</i>, then <i>X</i> distinct integers <i>J</i> greater
+than <i>I</i> and not exceeding
+20, each describing a boundary between countries <i>I</i> and <i>J</i>. Line 20 of the
+test set contains a single
+integer (
+<!-- MATH: $1 \le N \le 100$ -->
+<img width="102" height="32" align="MIDDLE" border="0" src="./Risk_files/567img1.gif" alt="$1 \le N \le 100$">)
+indicating the number of country pairs that follow.
+The next <i>N</i> lines each
+contain exactly two integers (
+<!-- MATH: $1 \le A,B \le 20; A \ne B$ -->
+<img width="170" height="32" align="MIDDLE" border="0" src="./Risk_files/567img2.gif" alt="$1 \le A,B \le 20; A \ne B$">)
+indicating the starting and ending countries for a possible conquest.
+
+<p>
+
+</p><p>
+<br>
+There can be multiple test sets in the input file; your program should
+continue reading and
+processing until reaching the end of file. There will be at least one
+path between any two given countries in every country configuration.
+
+</p><p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+For each input set, your program should print the following message
+``<tt>Test Set #</tt><i>T</i>" where <i>T</i> is the
+number of the test set starting with 1 (left-justified starting in column 11).
+
+<p>
+The next <i>N</i><sub><i>T</i></sub> lines each
+will contain the result for the corresponding test in the test set - that is,
+the minimum number of
+countries to conquer. The test result line should contain the start country
+code <i>A</i> right-justified in
+columns 1 and 2; the string ``<tt> to </tt>" in columns 3 to 6; the destination country code <i>B</i> right-justified in
+columns 7 and 8; the string ``<tt>: </tt>" in columns 9 and 10; and a single integer indicating the minimum
+number of moves required to traverse from country <i>A</i> to country <i>B</i> in the
+test set left-justified
+starting in column 11. Following all result lines of each input set, your
+program should print a single blank line.
+
+</p><p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<pre>1 3
+2 3 4
+3 4 5 6
+1 6
+1 7
+2 12 13
+1 8
+2 9 10
+1 11
+1 11
+2 12 17
+1 14
+2 14 15
+2 15 16
+1 16
+1 19
+2 18 19
+1 20
+1 20
+5
+1 20
+2 9
+19 5
+18 19
+16 20
+4 2 3 5 6
+1 4
+3 4 10 5
+5 10 11 12 19 18
+2 6 7
+2 7 8
+2 9 10
+1 9
+1 10
+2 11 14
+3 12 13 14
+3 18 17 13
+4 14 15 16 17
+0
+0
+0
+2 18 20
+1 19
+1 20
+6
+1 20
+8 20
+15 16
+11 4
+7 13
+2 16
+</pre>
+
+<p>
+
+</p><h2><font color="#0070E8"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<pre>Test Set #1
+ 1 to 20: 7
+ 2 to  9: 5
+19 to  5: 6
+18 to 19: 2
+16 to 20: 2
+
+Test Set #2
+ 1 to 20: 4
+ 8 to 20: 5
+15 to 16: 2
+11 to  4: 1
+ 7 to 13: 3
+ 2 to 16: 4
+</pre>
+
+<p>
+
+</p><p>
+<br></p><hr>
+<address>
+<i>Miguel A. Revilla</i>
+<br><i>1998-03-10</i>
+</address>
+
+
+
+</body></html>

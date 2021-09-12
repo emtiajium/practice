@@ -1,0 +1,9 @@
+Nim Game
+By Jishnu Banerjee in SUST Programming Training Camp 2012 (Files) · Edit Doc
+1.Stone Game --- http://uva.onlinejudge.org/external/101/10165.html
+2.Incredible Chess --- http://www.lightoj.com/volume_showproblem.php?problem=1186
+3.Left Right --- http://www.lightoj.com/volume_showproblem.php?problem=1192
+4.Matrix Game --- http://www.lightoj.com/volume_showproblem.php?problem=1247
+5.Misere Nim --- http://www.lightoj.com/volume_showproblem.php?problem=1253
+6.Crazy Calender --- http://www.lightoj.com/volume_showproblem.php?problem=1393
+7.catAndRabbit -- SRM 558 DIV 2 900

@@ -1,0 +1,7 @@
+yesh
+ja boltisilam
+eki string niye jate bar bar na call na kore sheta bondho korsi
+mone kor 10 length er string
+to first 5 ta char niye onek bhabe "aaaa" banano jay
+taile prottek gula theke same call hobe onek
+tai current je porjonto string ta process korsi tar modhe jate same string niye eka dhik call na hoy sheta bondho korsi

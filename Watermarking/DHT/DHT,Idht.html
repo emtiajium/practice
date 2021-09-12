@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0176)https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions-introduction-to-digital-signal-processing-a-computer-laboratory-textbook/content/Chapter%206/ex654.m -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+      	<script type="text/javascript" async="" src="./DHT,Idht_files/ahy.js"></script><script src="./DHT,Idht_files/aquant.js" async="" type="text/javascript"></script><script type="text/javascript" src="./DHT,Idht_files/jquery-latest.js"></script><style type="text/css"></style>
+      <!-- START OF GLOBAL NAV -->
+  <link rel="stylesheet" href="./DHT,Idht_files/sitewide.css" type="text/css">
+  <link rel="stylesheet" href="./DHT,Idht_files/mlc.css" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/matlabcentral/css/ie6down.css" type="text/css" rel="stylesheet">
+  <![endif]-->
+
+      
+      
+<meta name="keywords" content="file exchange, matlab answers, newsgroup access, link exchange, matlab blog, matlab central, simulink blog, matlab community, matlab and simulink community">
+<meta name="description" content="File exchange, MATLAB Answers, newsgroup access, Links, and Blogs for the MATLAB &amp; Simulink user community">
+<link rel="stylesheet" href="./DHT,Idht_files/fileexchange.css" type="text/css">
+<link rel="stylesheet" type="text/css" media="print" href="./DHT,Idht_files/print.css">
+<title> File Exchange - MATLAB Central</title>
+<script src="./DHT,Idht_files/application.js" type="text/javascript"></script>
+<link href="./DHT,Idht_files/application.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./DHT,Idht_files/application(1).css" media="all" rel="stylesheet" type="text/css">
+<link href="./DHT,Idht_files/mw_font.css" media="all" rel="stylesheet" type="text/css">
+<script src="./DHT,Idht_files/application(2).js" type="text/javascript"></script>
+<link href="http://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions-introduction-to-digital-signal-processing-a-computer-laboratory-textbook/content/Chapter%206/ex654.m" rel="canonical">
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="Search File Exchange" href="https://www.mathworks.com/matlabcentral/fileexchange/search.xml">
+
+
+<!-- BEGIN Adobe DTM -->
+<script src="./DHT,Idht_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js"></script><script src="./DHT,Idht_files/mbox-contents-95c6a4d9c82a8d20476522984666120b54192e9b.js"></script><style>.mboxDefault { visibility:hidden; }</style>
+<!-- END Adobe DTM -->  <script src="./DHT,Idht_files/s-code-contents-73da148cb454c4f6e395aa8df704854c99540662.js"></script><style type="text/css" id="ki-rrr-rb"></style><style type="text/css" id="ki-rrr-rj"></style></head>
+    <body>
+      <div id="header">
+  <div class="wrapper">
+  <!--put nothing in left div - only 11px wide shadow --> 
+    <div class="main">
+        	<div id="logo"><a href="https://www.mathworks.com/matlabcentral/?s_tid=gn_mlc_logo" title="MATLAB Central Home"><img src="./DHT,Idht_files/mlclogo-whitebgd.gif" alt="MATLAB Central"></a></div>
+      
+        <div id="headertools">      
+
+
+<script language="JavaScript1.3" type="text/javascript">
+
+function submitForm(query){
+
+	choice = document.forms['searchForm'].elements['search_submit'].value;
+	
+	if (choice == "entire1" || choice == "contest" || choice == "matlabcentral" || choice == "blogs"){
+	
+	   var newElem = document.createElement("input");
+	   newElem.type = "hidden";
+	   newElem.name = "q";
+	   newElem.value = query.value;
+	   document.forms['searchForm'].appendChild(newElem);
+	      
+	   submit_action = '/search/site_search.html';
+	}
+	
+	switch(choice){
+	   case "matlabcentral":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "matlabcentral";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 0;
+	      break
+	   case "fileexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/fileexchange/";
+	      selected_index = 1;
+	      break
+	   case "answers":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/answers/";
+	      selected_index = 2;
+	      break
+	   case "cssm":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search_string";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+		  submit_action = "/matlabcentral/newsreader/search_results";
+	      selected_index = 3;
+	      break
+	   case "linkexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/linkexchange/";
+	      selected_index = 4;
+	      break
+	   case "blogs":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "blogs_en";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 5;
+	      break
+	   case "trendy":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/trendy";
+	      selected_index = 6;
+	      break
+	   case "cody":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/cody/";
+	      selected_index = 7;
+	      break
+	   case "contest":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "contest_en";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 8;
+	      break
+	   case "entire1":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+			newElem.value = "entire_site_en";
+	      document.forms['searchForm'].appendChild(newElem);
+	      
+	      selected_index = 9;
+	      break
+	   default:
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+			newElem.value = "entire_site_en";
+	      document.forms['searchForm'].appendChild(newElem);
+	   
+	      selected_index = 9;
+	      break
+	}
+
+	document.forms['searchForm'].elements['search_submit'].selectedIndex = selected_index;
+	document.forms['searchForm'].elements['query'].value = query.value;
+	document.forms['searchForm'].action = submit_action;
+}
+
+</script>
+
+
+  <form name="searchForm" method="GET" action="" style="margin:0px; margin-top:5px; font-size:90%" onsubmit="submitForm(query)">
+          <label for="search">Search: </label>
+        <select name="search_submit" style="font-size:9px ">
+         	 <option value="matlabcentral">MATLAB Central</option>
+          	<option value="fileexchange" selected="">&nbsp;&nbsp;&nbsp;File Exchange</option>
+          	<option value="answers">&nbsp;&nbsp;&nbsp;Answers</option>
+            <option value="cssm">&nbsp;&nbsp;&nbsp;Newsgroup</option>
+          	<option value="linkexchange">&nbsp;&nbsp;&nbsp;Link Exchange</option>
+          	<option value="blogs">&nbsp;&nbsp;&nbsp;Blogs</option>
+          	<option value="trendy">&nbsp;&nbsp;&nbsp;Trendy</option>
+          	<option value="cody">&nbsp;&nbsp;&nbsp;Cody</option>
+          	<option value="contest">&nbsp;&nbsp;&nbsp;Contest</option>
+          <option value="entire1">MathWorks.com</option>
+        </select>
+<input type="text" name="query" size="10" class="formelem" value="">
+<input type="submit" value="Go" class="formelem gobutton">
+</form>
+
+		  <ol id="access2">
+  <li class="first">
+    <a href="https://www.mathworks.com/accesslogin/createProfile.do?uri=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Ffileexchange%2F38829-matlab-solutions-introduction-to-digital-signal-processing-a-computer-laboratory-textbook%2Fcontent%2FChapter%25206%2Fex654.m" id="create_account_link">Create Account</a>
+  </li>
+  <li>
+    <a href="https://www.mathworks.com/accesslogin/index_fe.do?uri=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Ffileexchange%2F38829-matlab-solutions-introduction-to-digital-signal-processing-a-computer-laboratory-textbook%2Fcontent%2FChapter%25206%2Fex654.m" id="login_link">Log In</a>
+  </li>
+</ol>
+
+
+      </div>
+	  
+        <div id="globalnav">
+        <!-- from includes/global_nav.html -->
+        <ol>
+                <li class=";">
+                        <a href="https://www.mathworks.com/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="https://www.mathworks.com/matlabcentral/answers/?s_tid=gn_mlc_an">Answers</a> 
+                </li>
+                <li class=";">
+                        <a href="https://www.mathworks.com/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsgroup</a> 
+                </li>
+                <li class=";">
+                        <a href="https://www.mathworks.com/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a> 
+                </li>
+                <li class=";">
+                        <a href="https://www.mathworks.com/matlabcentral/trendy/?s_tid=gn_mlc_tnd">Trendy</a> 
+                </li>
+                <li class=";">
+                        <a href="https://www.mathworks.com/matlabcentral/cody/?s_tid=gn_mlc_cody">Cody</a> 
+                </li>
+                <li class=";">
+                        <a href="https://www.mathworks.com/matlabcentral/contest/?s_tid=gn_mlc_cn">Contest</a> 
+                </li>
+                <li class="icon mathworks">
+                        <a href="https://www.mathworks.com/?s_tid=gn_mlc_main">MathWorks.com</a> 
+                </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div id="middle">
+  <div class="wrapper">
+
+    <div id="mainbody" class="columns2">
+  
+  
+
+  <div class="manifest">
+
+      <div id="download_zip_button">
+            <div class="btnCont ctaBtn ctaBlueBtn btnSmall">
+              <div class="btn download"><a href="https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/38829/versions/9/download/zip" class="link--download  nologin" title="Download Now">Download Zip</a></div>
+            </div>
+          </div>
+
+      <p class="license">
+      Code covered by the <a href="https://www.mathworks.com/matlabcentral/fileexchange/view_license?file_info_id=38829" popup="new_window height=500,width=640,scrollbars=yes">BSD License</a>
+      <a href="https://www.mathworks.com/matlabcentral/fileexchange/help_license#bsd" class="info notext preview_help" onclick="window.open(this.href,&#39;small&#39;,&#39;toolbar=no,resizable=yes,status=yes,menu=no,scrollbars=yes,width=600,height=550&#39;);return false;">&nbsp;</a>
+  </p>
+
+
+
+  
+  <h3 class="highlights_title">Highlights from <br>
+    <a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-" class="manifest_title">MatLab Solutions: "Introduction to Digital Signal Processing: A Computer Laboratory Textbook".</a>
+  </h3>
+  <ul class="manifest">
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/AD_DA.m" class="function" title="Function">AD_DA(x,Xmin,Xmax,Levels)</a><span class="description">This function represents an A/D converter in series with a D/A converter
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/conv_DHT.m" class="function" title="Function">conv_DHT(x,y)</a><span class="description">Linear Convolution calculated via the Discrete Hartley Transform (DHT).
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/conv_DHT2.m" class="function" title="Function">conv_DHT2(x,h)</a><span class="description">Linear Convolution Calculated via the Discrete Hartley Transform (DHT).
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/decimator.m" class="function" title="Function">decimator(x,h,K)</a><span class="description">This function performs decimation on the input signal x[n]
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/diffft.m" class="function" title="Function">diffft(x)</a><span class="description">Decimation-In-Frequency (DIF) FFT.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/fastconv.m" class="function" title="Function">fastconv(x,y)</a><span class="description">Compute a linear (or circular, depending on relative signal lengths) convolution via DFT's.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/fastconv2.m" class="function" title="Function">fastconv2(x,y)</a><span class="description">Compute a linear convolution via DFT's.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/fastconv3.m" class="function" title="Function">fastconv3(x,y,nx,ny)</a><span class="description">Compute a linear convolution via DFT's.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/fastconvreal.m" class="function" title="Function">fastconvreal(x,y)</a><span class="description">Compute the linear convolution of 2 real sequences via FFT's.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/fastconvreal2.m" class="function" title="Function">fastconvreal2(x,y,nx,ny)</a><span class="description">Compute the linear convolution of 2 real sequences via FFT's.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/fft241.m" class="function" title="Function">fft241(x,y)</a><span class="description">This function calculates the DFT's of two real N-point sequences, by means of
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/fftreal.m" class="function" title="Function">fftreal(x)</a><span class="description">This function calculates the FFT of an N-point real signal x[n] by use
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/fraction_delay.m" class="function" title="Function">fraction_delay(x, h, N)</a><span class="description">This function induces a fractional sample delay by 1/N to the input signal x.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/fraction_delay3.m" class="function" title="Function">fraction_delay3(x, h1, M, L)</a><span class="description">This function induces a fractional sample delay by M/L to the input signal x.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/fraction_sample.m" class="function" title="Function">fraction_sample(x,h,M,N)</a><span class="description">Fractional Sampling Rate Conversion function by a factor of M/N.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ifft241.m" class="function" title="Function">ifft241(X,Y)</a><span class="description">This function calculates the IDFT's of 2 given complex DFT sequences of common length N,
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ifftreal.m" class="function" title="Function">ifftreal(X)</a><span class="description">This function computes the ifft of an N-point complex DFT sequence which corresponds
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ifftreal2.m" class="function" title="Function">ifftreal2(X)</a><span class="description">This function computes the ifft of an N-point complex DFT sequence which corresponds
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/interpolator.m" class="function" title="Function">interpolator(x,h,L)</a><span class="description">This function performs interpolation on the input signal x[n]
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/method2_idft.m" class="function" title="Function">method2_idft(X)</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/method3_idft.m" class="function" title="Function">method3_idft(X)</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/my_CTFT.m" class="function" title="Function">my_CTFT(x,dt,freq_type)</a><span class="description">Continuous Time Fourier Transform Approximation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_CZT.m" class="function" title="Function">my_CZT(x,M,W,A)</a><span class="description">Fast chirp z-transform (CZT) computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_Co_IDCT.m" class="function" title="Function">my_Co_IDCT(X)</a><span class="description">Inverse Discrete Cosine Transform Computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_DCT.m" class="function" title="Function">my_DCT(x)</a><span class="description">Discrete Cosine Transform Computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_DCT_2D.m" class="function" title="Function">my_DCT_2D(X)</a><span class="description">Two-dimensional DCT computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_DFT.m" class="function" title="Function">my_DFT(x)</a><span class="description">This function calculates the DFT of the input signal x.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_DFT2.m" class="function" title="Function">my_DFT2(x)</a><span class="description">Direct DFT Computation using the definition formula.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_DHT.m" class="function" title="Function">my_DHT(x)</a><span class="description">This function calculates the Discrete Hartley Transform of a real
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_DHT2.m" class="function" title="Function">my_DHT2(x,time_ind)</a><span class="description">This function calculates the Discrete Hartley Transform of a real
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_DHT3.m" class="function" title="Function">my_DHT3(x)</a><span class="description">This function calculates the Discrete Hartley Transform of a real
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/my_DTFT.m" class="function" title="Function">my_DTFT(x,n)</a><span class="description">DTFT Computation using the definition formula.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/my_DTFT2.m" class="function" title="Function">my_DTFT2(x,n,w)</a><span class="description">DTFT Computation using the definition formula.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/my_DTFT3.m" class="function" title="Function">my_DTFT3(x,n1)</a><span class="description">DTFT Computation using the definition formula.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/my_DTFT4.m" class="function" title="Function">my_DTFT4(x,n)</a><span class="description">DTFT Computation using the matrix multiplication method.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_FFT_2D.m" class="function" title="Function">my_FFT_2D(X)</a><span class="description">Two-dimensional DFT computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_IDCT.m" class="function" title="Function">my_IDCT(X)</a><span class="description">Inverse Discrete Cosine Transform Computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_IDCT_2D.m" class="function" title="Function">my_IDCT_2D(X)</a><span class="description">Two-dimensional Inverse DCT computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_IDFT.m" class="function" title="Function">my_IDFT(X)</a><span class="description">This function calculates the Inverse DFT of the input signal X.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_IFFT_2D.m" class="function" title="Function">my_IFFT_2D(X)</a><span class="description">Two-dimensional Inverse FFT computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/my_Re_IDCT.m" class="function" title="Function">my_Re_IDCT(X)</a><span class="description">Discrete Cosine Transform Computation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/my_conv.m" class="function" title="Function">my_conv(x,h,nx,nh)</a><span class="description">This function computes the linear convolution of input signals x[n] and h[n].
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/my_conv2.m" class="function" title="Function">my_conv2(x,h,nx,nh)</a><span class="description">This function computes the linear convolution of input signals x[n] and h[n].
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/my_downsample.m" class="function" title="Function">my_downsample(x,M)</a><span class="description">This function performs downsampling to input row vector x
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Spectrogram/my_spectrogram.m" class="function" title="Function">my_spectrogram(x,Fs,N,M,w...</a><span class="description">This function calculates the spectrogram of the input signal x.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/my_upsample.m" class="function" title="Function">my_upsample(x,N)</a><span class="description">This function performs upsampling to input row vector x
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/overlap_add.m" class="function" title="Function">overlap_add(x,h,half_segm...</a><span class="description">Linear Convolution computation by use of overlap-and-add method.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/overlap_save.m" class="function" title="Function">overlap_save(x,h,segment_...</a><span class="description">Linear Convolution computation via the Overlap-and-Save method.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/overlap_save2.m" class="function" title="Function">overlap_save2(x,h,segment...</a><span class="description">Linear Convolution computation via the Overlap-and-Save method. Version 2.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/radix2fft.m" class="function" title="Function">radix2fft(x)</a><span class="description">Radix-2, Decimation-In-Time (DIT), FFT Computation function.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/radix4fft.m" class="function" title="Function">radix4fft(x)</a><span class="description">Radix-4, Decimation-In-Time (DIT), FFT Computation function.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/shiftdown.m" class="function" title="Function">shiftdown(x,n)</a><span class="description">This function shifts down (up) the contents of a column vector
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/shiftright.m" class="function" title="Function">shiftright(x,n)</a><span class="description">This function shifts to the right (left) the contents of a row vector
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/splitradixfft.m" class="function" title="Function">splitradixfft(x)</a><span class="description">Split-Radix, Decimation-In-Time (DIT),FFT Computation function.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/uniform_quantizer.m" class="function" title="Function">uniform_quantizer(x,L,max...</a><span class="description">This function implements a uniform quantizer of L levels.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/zero_phase_dft.m" class="function" title="Function">zero_phase_dft(x)</a><span class="description">This function is an implementation of the "zero phase DFT" of a given
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/zero_phase_dtft.m" class="function" title="Function">zero_phase_dtft(x,M)</a><span class="description">This function is an implementation of the "zero phase DTFT" of a given
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex213.m" class="script" title="Script">ex213.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex437.m" class="script" title="Script">ex437.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex436.m" class="script" title="Script">ex436.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex435.m" class="script" title="Script">ex435.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex433.m" class="script" title="Script">ex433.m</a><span class="description">Exercise 4.3.3. Upsampling.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex432.m" class="script" title="Script">ex432.m</a><span class="description">Exercise 4.3.2. Aliasing in Downsampling.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex431.m" class="script" title="Script">ex431.m</a><span class="description">Exercise 4.3.1. Downsampling.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex424.m" class="script" title="Script">ex424.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex423.m" class="script" title="Script">ex423.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex422.m" class="script" title="Script">ex422.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex5110.m" class="script" title="Script">ex5110.m</a><span class="description">Exercise 5.1.10. Stability.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex5111.m" class="script" title="Script">ex5111.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex513.m" class="script" title="Script">ex513.m</a><span class="description">Exercise 5.1.3. Producing Pole/Zero Plots.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex518.m" class="script" title="Script">ex518.m</a><span class="description">Exercise 5.1.8. Finding System Functions from Poles and Zeros.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex519.m" class="script" title="Script">ex519.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex521.m" class="script" title="Script">ex521.m</a><span class="description">Exercise 5.2.1. Finding the Inverse z-Transform.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex5210.m" class="script" title="Script">ex5210.m</a><span class="description">Exercise 5.2.10. Convolution.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex522.m" class="script" title="Script">ex522.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex524.m" class="script" title="Script">ex524.m</a><span class="description">Exercise 5.2.4. Computing the Inverse z-Transform.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex525.m" class="script" title="Script">ex525.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex527.m" class="script" title="Script">ex527.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex528.m" class="script" title="Script">ex528.m</a><span class="description">Exercise 5.2.8. Modulation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex541a.m" class="script" title="Script">ex541a.m</a><span class="description">Exercise 5.4.1.a. Sketching the Magnitude Response.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex541b.m" class="script" title="Script">ex541b.m</a><span class="description">Exercise 5.4.1.b. Sketching the Magnitude Response.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex542a.m" class="script" title="Script">ex542a.m</a><span class="description">Exercise 5.4.2.a. Sketching Magnitude Responses from Pole/Zero Plots.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex542b.m" class="script" title="Script">ex542b.m</a><span class="description">Exercise 5.4.2.b. Sketching Magnitude Responses from Pole/Zero Plots.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex542c.m" class="script" title="Script">ex542c.m</a><span class="description">Exercise 5.4.2.c. Sketching Magnitude Responses from Pole/Zero Plots.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex542d.m" class="script" title="Script">ex542d.m</a><span class="description">Exercise 5.4.2.d. Sketching Magnitude Responses from Pole/Zero Plots.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex542e.m" class="script" title="Script">ex542e.m</a><span class="description">Exercise 5.4.2.e. Sketching Magnitude Responses from Pole/Zero Plots.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex544.m" class="script" title="Script">ex544.m</a><span class="description">Exercise 5.4.4. Poles and Zeros at Infinity.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex545a.m" class="script" title="Script">ex545a.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex545b.m" class="script" title="Script">ex545b.m</a><span class="description">Exercise 5.4.5.b.  Determining Poles and Zeros from the DTFT.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%205/ex546.m" class="script" title="Script">ex546.m</a><span class="description">Exercise 5.4.6. Interaction of Poles and Zeros.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex421.m" class="script" title="Script">ex421.m</a><span class="description">Exercise 4.2.1. Quantization.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex415.m" class="script" title="Script">ex415.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex414.m" class="script" title="Script">ex414.m</a><span class="description">Exercise 4.1.4. Commercial D/A Converters.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex611.m" class="script" title="Script">ex611.m</a><span class="description">Exercise 6.1.1. Some Simple DFT Properties.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex612.m" class="script" title="Script">ex612.m</a><span class="description">Exercise 6.1.2. Direct DFT Evaluation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex613.m" class="script" title="Script">ex613.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex614.m" class="script" title="Script">ex614.m</a><span class="description">Exercise 6.1.4. Spatial Aliasing.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex621.m" class="script" title="Script">ex621.m</a><span class="description">Exercise 6.2.1. Introduction to Circular Shifting.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex622.m" class="script" title="Script">ex622.m</a><span class="description">Exercise 6.2.2. Circular Convolution.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex623.m" class="script" title="Script">ex623.m</a><span class="description">Exercise 6.2.3. Circular and Linear Convolutions.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex624.m" class="script" title="Script">ex624.m</a><span class="description">Exercise 6.2.4. Linear Convolutions via Circular Convolutions.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex625.m" class="script" title="Script">ex625.m</a><span class="description">Exercise 6.2.5. Circular Shift.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex626.m" class="script" title="Script">ex626.m</a><span class="description">Exercise 6.2.6. Circular Modulation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex631.m" class="script" title="Script">ex631.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex632.m" class="script" title="Script">ex632.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex633.m" class="script" title="Script">ex633.m</a><span class="description">Exercise 6.3.3. Computational Complexity of the FFT.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex634.m" class="script" title="Script">ex634.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex635b.m" class="script" title="Script">ex635b.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex635c.m" class="script" title="Script">ex635c.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex636.m" class="script" title="Script">ex636.m</a><span class="description">Exercise 6.3.6. FFT for Real Input Sequences.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex637.m" class="script" title="Script">ex637.m</a><span class="description">Exercise 6.3.7. Goertzel's Algorithm.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex641.m" class="script" title="Script">ex641.m</a><span class="description">Exercise 6.4.1. Evaluating Linear Convolutions Using the DFT.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex642.m" class="script" title="Script">ex642.m</a><span class="description">Exercise 6.4.2. Overlap-and-Add Method.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex643.m" class="script" title="Script">ex643.m</a><span class="description">Exercise 6.4.3. Extracting Good Values from Circular Convolutions.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex644.m" class="script" title="Script">ex644.m</a><span class="description">Exercise 6.4.4. Overlap and Save Method.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex645.m" class="script" title="Script">ex645.m</a><span class="description">Exercise 6.4.5. Use of the DFT for Deconvolution.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex651.m" class="script" title="Script">ex651.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex653.m" class="script" title="Script">ex653.m</a><span class="description">Exercise 6.5.3. The Discrete Cosine Transform (DCT).
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex654.m" class="script" title="Script">ex654.m</a><span class="description">Exercise 6.5.4. The Discrete Hartley Tranform.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex655.m" class="script" title="Script">ex655.m</a><span class="description">Exercise 6.5.5. Transform Coding.</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/ex656.m" class="script" title="Script">ex656.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex438.m" class="script" title="Script">ex438.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex413.m" class="script" title="Script">ex413.m</a><span class="description">Exercise 4.1.3. Ideal Reconstruction (Frequency Domain).
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex412.m" class="script" title="Script">ex412.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%204/ex411.m" class="script" title="Script">ex411.m</a><span class="description">Exercise 4.1.1. Ideal Sampling (Frequency Domain).
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex333.m" class="script" title="Script">ex333.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex332.m" class="script" title="Script">ex332.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex331.m" class="script" title="Script">ex331.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/hartley.m" class="script" title="Script">hartley.m</a><span class="description">Relation of Hartley Transform with DFT:
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex324.m" class="script" title="Script">ex324.m</a><span class="description">Exercise 3.2.4. Filtering a Sinusoid and a Random Sequence.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex323.m" class="script" title="Script">ex323.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex322.m" class="script" title="Script">ex322.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex321.m" class="script" title="Script">ex321.m</a><span class="description">Exercise 3.2.1. Digital Filters.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex319.m" class="script" title="Script">ex319.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex318.m" class="script" title="Script">ex318.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex317.m" class="script" title="Script">ex317.m</a><span class="description">Exercise 3.1.7. The Modulation Property.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex316.m" class="script" title="Script">ex316.m</a><span class="description">Exercise 3.1.6. The Shift Property.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex315.m" class="script" title="Script">ex315.m</a><span class="description">Exercise 3.1.5. Periodicity of the Discrete-Time Fourier Transform.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex314.m" class="script" title="Script">ex314.m</a><span class="description">Exercise 3.1.4. Hermitian Symmetry.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex312.m" class="script" title="Script">ex312.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex3111.m" class="script" title="Script">ex3111.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex3110.m" class="script" title="Script">ex3110.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/ex311.m" class="script" title="Script">ex311.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%203/bench_dtft.m" class="script" title="Script">bench_dtft.m</a><span class="description">This routine compares the time needed to execute various DTFT implementations. 
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex249.m" class="script" title="Script">ex249.m</a><span class="description">Exercise 2.4.9. Gaussian Random Sequences.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex248.m" class="script" title="Script">ex248.m</a><span class="description">Exercise 2.4.8. Random Sequences.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex247.m" class="script" title="Script">ex247.m</a><span class="description">Exercise 2.4.7. Cross-Correlation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex246.m" class="script" title="Script">ex246.m</a><span class="description">Exercise 2.4.6. Autocorrelation.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex245.m" class="script" title="Script">ex245.m</a><span class="description">Exercise 2.4.5. Nonlinear Difference Equations.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex236.m" class="script" title="Script">ex236.m</a><span class="description">Exercise 2.3.6. Beginning and End Points.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex235.m" class="script" title="Script">ex235.m</a><span class="description">Exercise 2.3.5. More Convolution.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex234.m" class="script" title="Script">ex234.m</a><span class="description">Exercise 2.3.4. Convolving Sequences.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex233.m" class="script" title="Script">ex233.m</a><span class="description">Exercise 2.3.3. Introduction to Graphical Convolution.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex232.m" class="script" title="Script">ex232.m</a></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex231.m" class="script" title="Script">ex231.m</a><span class="description">Exercise 2.3.1. The Convolution Sum.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/test_fastconv3.m" class="script" title="Script">test_fastconv3.m</a><span class="description">This program tests function fastconv3.m to ensure its proper functionality.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/test_idct.m" class="script" title="Script">test_idct.m</a><span class="description">Test fot my_DCT.m and my_IDCT.m scripts.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/test_idct2D.m" class="script" title="Script">test_idct2D.m</a><span class="description">Testing the my_DCT.m and my_IDCT.m on an image
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%206/test_ifft241.m" class="script" title="Script">test_ifft241.m</a><span class="description">Test custom function: ifft241.m
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex217.m" class="script" title="Script">ex217.m</a><span class="description">Exercise 2.1.7. Characteristics of Signals.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex216.m" class="script" title="Script">ex216.m</a><span class="description">Exercise 2.1.6. The Geometric Series.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Chapter%202/ex214.m" class="script" title="Script">ex214.m</a><span class="description">Exercise 2.1.4. Time Axis Alteration.
+</span></li>
+      <li class="manifest"><a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/content/Spectrogram/spectro_demo.m" class="script" title="Script">spectro_demo.m</a><span class="description">Short-Time Fourier Transform (Spectrogram) Demo.
+</span></li>
+    <li class="manifest_allfiles">
+      <a href="https://www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions---introduction-to-digital-signal-processing--a-computer-laboratory-textbook-/all_files" id="view_all_files">View all files</a>
+    </li>
+  </ul>
+
+</div>
+
+
+  <table cellpadding="0" cellspacing="0" class="details file contents">
+    <tbody><tr>
+      <th class="maininfo">
+        
+  <div id="thumbnail" style="padding-bottom: 3px;">
+    <a href="https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/38829/versions/9/screenshot.jpg" border="0"><img itemprop="image" src="./DHT,Idht_files/screenshot.jpg" width="100" alt="image thumbnail"></a>
+  </div>
+
+
+<div id="details">
+  <h1 itemprop="name">MatLab Solutions: "Introduction to Digital Signal Processing: A Computer Laboratory Textbook".</h1>
+  <p id="author">
+    by 
+    <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <span itemprop="name"><a href="https://www.mathworks.com/matlabcentral/profile/authors/1734254-ilias-konsoulas" class="author_inline results_author" data-cp-link-id="1">Ilias Konsoulas</a>
+
+</span></span></p><div class="profile mlc_author_popover" data-cp-popup-id="1" vocab="http://schema.org/" typeof="Person">
+  <h3 class="profile__name" property="name"><a href="https://www.mathworks.com/matlabcentral/profile/authors/1734254-ilias-konsoulas">Ilias Konsoulas <span>(view profile)</span></a></h3>
+
+    <div class="profile__image">
+      <a href="https://www.mathworks.com/matlabcentral/profile/authors/1734254-ilias-konsoulas"><img src="./DHT,Idht_files/1734254.jpg"></a>
+    </div>
+  <div class="profile__stats" typeof="CreativeWork">
+    
+  <ul>
+    <li property="fileExchange">
+      <span class="icon-fileexchange"></span> <a href="https://www.mathworks.com/matlabcentral/fileexchange/?term=authorid%3A128396"><span property="fileExchange_count">11</span> files</a>
+    </li>
+    <li property="downloads">
+      <span class="icon-download"></span> <span property="downloads_count">360</span> downloads
+    </li>
+      <li property="rating">
+
+        <div class="rating" title="4.1461">
+          <div class="rate_scale">
+            <div class="rated" property="aggregateRating" style="width: 82.922%">4.1461</div>
+          </div>
+        </div>
+
+      </li>
+  </ul>
+
+  </div>
+</div>
+
+    
+  <p></p>
+  <p>&nbsp;</p>
+  <p>
+    <span id="submissiondate">
+      29 Oct 2012
+    </span>
+      <span id="date_updated">(Updated 
+        <span itemprop="datePublished" content="2013-11-25">25 Nov 2013</span>)
+      </span>
+  </p>
+
+  <p id="summary">These files are the MatLab solutions of  exercises contained in the above DSP lab textbook. </p>
+
+
+  
+</div>
+
+        
+      </th>
+    </tr>
+    <tr>
+      <td class="file">
+        <table cellpadding="0" cellspacing="0" border="0" class="fileview section">
+          <tbody><tr class="title">
+            <th><span class="heading">ex654.m</span></th>
+          </tr>
+          <tr>
+            <td>
+              <iframe id="content_iframe" style="width: 100%; min-height: 600px; border: none; visibility: visible; height: 1322px;" onload="initIframe(this.id)" sandbox="allow-popups allow-same-origin" src="./DHT,Idht_files/index.html"></iframe>
+              <script>
+                function getDocHeight(doc) {
+                    doc = doc || document;
+                    // stackoverflow.com/questions/1145850/
+                    var body = doc.body, html = doc.documentElement;
+                    var height = Math.max( body.scrollHeight, body.offsetHeight,
+                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+                    return height;
+                }
+                function initIframe(id) {
+                  var ifrm = document.getElementById(id);
+                  var doc = ifrm.contentDocument ? ifrm.contentDocument :
+                      ifrm.contentWindow.document;
+                  disableAbsoluteLinks(doc);
+                  setIframeHeight(ifrm, doc);
+                }
+                function disableAbsoluteLinks(doc) {
+                  $(doc).find('a[href^="http"],a[href^="https"]').attr('target', '_TOP');
+                }
+                function setIframeHeight(ifrm, doc) {
+                    ifrm.style.visibility = 'hidden';
+                    ifrm.style.height = "10px"; // reset to minimal height ...
+                    // IE opt. for bing/msn needs a bit added or scrollbar appears
+                    ifrm.style.height = getDocHeight( doc ) + 25 + "px";
+                    ifrm.style.visibility = 'visible';
+                }
+              </script>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+
+  </tbody></table>
+  <script src="./DHT,Idht_files/show.js" type="text/javascript"></script>
+
+<p id="contactus"><a href="https://www.mathworks.com/company/feedback/">Contact us</a></p>
+<!-- Quantcast Tag -->
+<script>
+(function(){
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/aquant.js?a=p-zfNtLVVEHXE-1";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem,scpt);
+}());
+var smarttagdata={qacct: 'p-zfNtLVVEHXE-1',
+orderid: '',
+revenue: '',
+};
+</script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-zfNtLVVEHXE-1.gif?labels=_fp.event.Default;" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/&gt;
+</noscript>
+<!-- End Quantcast tag -->
+<!-- BEGIN Google Code for UK and .COM Domains-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1023777138;
+var google_conversion_label = "SVIBCMq3xwIQ8rKW6AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./DHT,Idht_files/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./DHT,Idht_files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no">&lt;img height="1" width="1" border="0" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?frame=0&amp;random=1444151493875&amp;cv=8&amp;fst=1444151493875&amp;num=1&amp;fmt=1&amp;label=SVIBCMq3xwIQ8rKW6AM&amp;guid=ON&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=1&amp;u_tz=360&amp;u_java=true&amp;u_nplug=6&amp;u_nmime=8&amp;frm=0&amp;url=https%3A//www.mathworks.com/matlabcentral/fileexchange/38829-matlab-solutions-introduction-to-digital-signal-processing-a-computer-laboratory-textbook/content/Chapter%25206/ex654.m&amp;ref=https%3A//www.google.com.bd/" /&gt;</iframe>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?value=0&amp;label=SVIBCMq3xwIQ8rKW6AM&amp;guid=ON&amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+<!-- END Google Code for UK and .COM Domains-->
+
+      	
+      
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+</div>
+<!-- footer.html -->
+<!-- START OF FOOTER -->
+
+<div id="mlc-footer">
+  <script type="text/javascript">
+function clickDynamic(obj, target_url, tracking_code) {
+	var pos=target_url.indexOf("?");
+	if (pos<=0) { 
+		var linkComponents = target_url + tracking_code;
+		obj.href=linkComponents;
+	} 
+}
+</script>
+  <div class="wrapper">
+    <div>
+      <ul id="matlabcentral">
+        <li class="copyright first">© 1994-2015 The MathWorks, Inc.</li>
+        <li class="first"><a href="https://www.mathworks.com/company/aboutus/policies_statements/patents.html?s_tid=gf_pat" title="patents" rel="nofollow">Patents</a></li>
+        <li><a href="https://www.mathworks.com/company/aboutus/policies_statements/trademarks.html?s_tid=gf_trd" title="trademarks" rel="nofollow">Trademarks</a></li>
+        <li><a href="https://www.mathworks.com/company/aboutus/policies_statements/?s_tid=gf_priv" title="privacy policy" rel="nofollow">Privacy Policy</a></li>
+        <li><a href="https://www.mathworks.com/company/aboutus/policies_statements/piracy.html?s_tid=gf_pir" title="preventing piracy" rel="nofollow">Preventing Piracy</a></li>
+        <li class="last"><a href="https://www.mathworks.com/matlabcentral/termsofuse.html?s_tid=gf_com_trm" title="Terms of Use" rel="nofollow">Terms of Use</a></li>
+        <li class="icon"><a href="https://www.mathworks.com/company/rss/" title="RSS" class="rssfeed" rel="nofollow"><span class="text">RSS</span></a></li>
+        <li class="icon"><a href="https://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" title="LinkedIn" class="linkedin" rel="nofollow" target="_blank"></a></li>
+        <li class="icon"><a href="https://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=https://plus.google.com/117177960465154322866?prsrc=3" title="Google+" class="google" rel="nofollow" target="_blank"><span class="text">Google+</span></a></li>
+        <li class="icon"><a href="https://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" title="Facebook" class="facebook" rel="nofollow" target="_blank"><span class="text">Facebook</span></a></li>
+        		<li class="last icon"><a href="https://www.mathworks.com/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" title="Twitter" class="twitter" rel="nofollow" target="_blank"><span class="text">Twitter</span></a></li>        
+        
+      </ul>
+      <ul id="mathworks">
+        <li class="first sectionhead">Featured MathWorks.com Topics:</li>
+        <li class="first"><a href="https://www.mathworks.com/products/new_products/latest_features.html" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_new&#39;)">New Products</a></li>
+        <li><a href="https://www.mathworks.com/support/" title="support" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_support&#39;)">Support</a></li>
+        <li><a href="https://www.mathworks.com/help" title="documentation" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_doc&#39;)">Documentation</a></li>
+        <li><a href="https://www.mathworks.com/services/training/" title="training" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_training&#39;)">Training</a></li>
+        <li><a href="https://www.mathworks.com/company/events/webinars/" title="Webinars" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_webinars&#39;)">Webinars</a></li>
+        <li><a href="https://www.mathworks.com/company/newsletters/" title="newsletters" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_newsletters&#39;)">Newsletters</a></li>
+        <li><a href="https://www.mathworks.com/programs/trials/trial_request.html?prodcode=ML&s_cid=MLC_trials" title="MATLAB Trials">MATLAB Trials</a></li>
+        
+        		<li class="last"><a href="https://www.mathworks.com/company/jobs/opportunities/index_en_US.html" title="Careers" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_careers&#39;)">Careers</a></li>
+                 
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+
+
+      
+      
+<!-- BEGIN Adobe DTM -->
+<script type="text/javascript">
+try {
+_satellite.pageBottom();
+} catch (e) {
+//something went wrong
+}
+</script>
+<!-- END Adobe DTM -->
+  
+
+     
+<!-- BEGIN Qualaroo --> 
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+			var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+			s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/ahy.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+<!-- END Qualaroo --> 
+
+    
+
+</body></html>

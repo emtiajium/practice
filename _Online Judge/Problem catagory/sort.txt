@@ -1,0 +1,27 @@
+**11804 Argentina
+123 Searching quickly
+156 Ananagrams
+195 Anagram
+**263 Number Chains
+**299 Train Swapping
+340 Mastermind Hints
+400 Unix Is
+450 Little Black Book
+482 Permutation Arrays
+555 Bridge Hands
+612 DNA Sorting
+755 487-3279
+**10008 What’s Cryptanalysis?
+**10041 Vito’s family
+**10062 Tell Me The Frequencies
+10132 File Fragmentation
+10194 Football (aka Soccer)
+**10420 List of Conquers
+10763 Foreign Exchange
+10785 The Mad Numerologist
+10905 A Children’s Game
+11224 Let’s Swim
+**11321 Sort! Sort! And Sort!
+11362 Phone List
+11369 Shopaholic
+11389 The Bus Driver Problem

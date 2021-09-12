@@ -1,0 +1,40 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Digital Watermarking}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}General Concept of Watermarking}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Classification of Watermarking}{3}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Properties of Watermark}{4}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Application of Watermarking}{4}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Motivation}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Prospect of the Proposed Watermarking Scheme}{6}{section.1.3}
+\contentsline {section}{\numberline {1.4}Organization of the Thesis}{6}{section.1.4}
+\contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Audio Watermarking}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Audio Watermarking Techniques}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Time Domain Method}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Transform Domain Method}{8}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Zero Watermarking Method}{9}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}Proposed Audio Watermarking Scheme}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Background Information}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Proposed Method Based on Discrete Hartley Transform}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Watermark Embedding Process}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Attacks on the Host Audio}{14}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Watermark Extraction Process}{15}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Implementation of the Project Work}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Audio Files Used for Simulation}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Image Used for Simulation}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Attacks Applied in Simulation}{17}{section.4.3}
+\contentsline {section}{\numberline {4.4}Experimental Environment}{22}{section.4.4}
+\contentsline {section}{\numberline {4.5}Normalized Coefficient}{22}{section.4.5}
+\contentsline {section}{\numberline {4.6}Bit Error Rate}{23}{section.4.6}
+\contentsline {section}{\numberline {4.7}False Positive Error}{23}{section.4.7}
+\contentsline {section}{\numberline {4.8}False Negative Error}{23}{section.4.8}
+\contentsline {chapter}{\numberline {5}Simulation Result}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Imperceptibility Analysis}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Measuring the Robustness}{26}{section.5.2}
+\contentsline {section}{\numberline {5.3}False Positive Error}{31}{section.5.3}
+\contentsline {section}{\numberline {5.4}False Negative Error}{31}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Recommendation}{33}{section.6.2}
+\contentsline {chapter}{Bibliography}{34}{chapter*.6}

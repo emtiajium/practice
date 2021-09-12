@@ -1,0 +1,25 @@
+Addition
+
+ 424 - Integer Inquiry 
+ 713 - Adding Reversed Numbers
+ 10013 - Super long sums
+ 495 - Fibonacci Freeze
+ 485 - Pascal's Triangle of Death
+
+Subtraction
+
+ 11448 - Who Said Crisis?
+ 11879 - Multiple of 17 
+
+Product
+
+ 10106 - Product
+ 623 - 500!
+
+Division
+
+ 10494 - If We Were a Child Again
+ 1226 - Numerical surprises
+ 11879 - Multiple of 17
+ Ones (10127)
+ 

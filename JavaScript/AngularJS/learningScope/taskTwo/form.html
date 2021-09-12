@@ -1,0 +1,21 @@
+<form id="main-form" name="main-form">
+    <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input class="form-control" id="first-name" name="name" ng-model="data.firstName">
+        <p>My first name: {{data.firstName}}</p>
+    </div>
+
+    <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input class="form-control" id="last-name" name="last-name" ng-model="data.lastName">
+        <p>My last name: {{data.lastName}}</p>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" id="email" name="email" ng-model="data.email">
+        <p>My email: {{data.email}}</p>
+    </div>
+
+    <button type="button" id="btn-submit-form" class="btn btn-default" data-toggle="modal" data-target="#myModal">Submit</button>
+</form>

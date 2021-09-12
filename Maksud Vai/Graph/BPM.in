@@ -1,0 +1,19 @@
+bool BPM(int u)
+{
+    int v,i;
+
+    for(i=0;i<(int)V[u].size();i++)
+    {
+        v=V[u][i];
+        if(col[v])
+        {
+            col[v]=0;
+            if(par[v]==-1 || BPM(par[v]))
+            {
+                par[v]=u;
+                return true;
+            }
+        }
+    }
+    return false;
+}

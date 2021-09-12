@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0070)file:///D:/PROGRAMMING%20TASK/_Online%20Judge/ACM-2009/v109/10959.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>Problem B: The Party, Part I</title>
+
+<meta content="The Party, Part I" name="description">
+<meta content="main" name="keywords">
+<meta content="document" name="resource-type">
+<meta content="global" name="distribution"><link href="file:///D:/PROGRAMMING%20TASK/_Online%20Judge/ACM-2009/v109/b_files/main.css" rel="STYLESHEET">
+<meta content="MSHTML 6.00.2600.0" name="GENERATOR"></head>
+<body lang="EN">
+<h1><a name="SECTION00020000000000000000">Problem B: The Party, Part I</a></h1>
+<p>Don Giovanni likes to dance--especially with girls! And everyone else in the 
+party enjoyed the dance, too. Getting a chance to dance with the host (that is 
+Don Giovanni) is the greatest honour; failing that, dancing with someone who has 
+danced with the host or will dance with the host is the second greatest honour. 
+This can go further. Define the Giovanni number of a person as follows, at the 
+time after the party is over and therefore who has danced with whom is 
+completely known and fixed: 
+</p><ol>
+  <li>No one has a negative Giovanni number. 
+  </li><li>The Giovanni number of Don Giovanni is 0. 
+  </li><li>If a person <i>p</i> is not Don Giovanni himself, and has danced with 
+  someone with Giovanni number <i>n</i>, and has not danced with anyone with a 
+  Giovanni number smaller than <i>n</i>, then <i>p</i> has Giovanni number 
+  <i>n</i>+1. 
+  </li><li>If a person's Giovanni number cannot be determined from the above rules 
+  (he/she has not danced with anyone with a finite Giovanni number), his/her 
+  Giovanni number is <img height="8" alt="tex2html_wrap_inline98" src="./Problem B  The Party, Part I_files/p10959a.gif" width="15" align="bottom">. Fortunately, you will not need 
+  this rule in this problem. </li></ol>Your job is to write a program to compute 
+Giovanni numbers. 
+<p>
+</p><h2><a name="SECTION00021000000000000000">Input</a></h2>
+<b>
+The input begins with a single positive integer on a line by itself indicating
+the number of the cases following, each of them as described below.
+This line is followed by a blank line, and there is also a blank line between
+two consecutive inputs.
+</b>
+<p>
+</p><p>
+</p><p>The first line has two numbers <i>P</i> and <i>D</i>; this means there are 
+<i>P</i> persons in the party (including Don Giovanni) and <i>D</i> dancing 
+couples (P &#8804; 1000
+<!--IMG height=26 alt=tex2html_wrap_inline108 src="p10959b.gif" 
+width=63 align=middle--> and <img height="29" alt="tex2html_wrap_inline110" src="./Problem B  The Party, Part I_files/p10959c.gif" width="129" align="middle">.) Then <i>D</i> lines follow, 
+each containing two distinct persons, meaning the two persons has danced. 
+Persons are represented by numbers between 0 and <i>P</i>-1; Don Giovanni is 
+represented by 0. 
+</p><p>As noted, we design the input so that you will not need the <img height="8" alt="tex2html_wrap_inline98" src="./Problem B  The Party, Part I_files/p10959a.gif" width="15" align="bottom"> rule in 
+computing Giovanni numbers. 
+</p><p>We have made our best effort to eliminate duplications in listing the dancing 
+couples, e.g., if there is a line ``4 7'' among the <i>D</i> lines, then this is 
+the only occurrence of ``4 7'', and there is no occurrence of ``7 4''. But just 
+in case you see a duplication, you can ignore it (the duplication, not the first 
+occurrence). 
+</p><p>
+</p><h2><a name="SECTION00022000000000000000">Output</a></h2>
+<b>
+For each test case, the output must follow the description below.
+The outputs of two consecutive cases will be separated by a blank line.
+</b>
+<p>
+</p><p>
+</p><p>Output <i>P</i>-1 lines. Line <i>i</i> is the Giovanni number of person 
+<i>i</i>, for <img height="26" alt="tex2html_wrap_inline126" src="./Problem B  The Party, Part I_files/p10959d.gif" width="106" align="middle">. Note that it is <i>P</i>-1 because we skip Don Giovanni 
+in the output. 
+</p><p>
+</p><h2><a name="SECTION00023000000000000000">Sample Input</a></h2>
+<p></p><pre>1
+
+5 6
+0 1
+0 2
+3 2
+2 4
+4 3
+1 2
+</pre>
+<p>
+</p><h2><a name="SECTION00024000000000000000">Sample Output</a></h2>
+<p></p><pre>1
+1
+2
+2
+</pre>
+<p><br>
+<!--HR>
+<A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/Dance.java">Solution 
+in Java</A><BR><A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/dance.cc">Solution in 
+C++</A><BR><A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/dance.0.in">Test 
+Input 0</A>/<A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/dance.0.out">Test 
+Output 0</A><BR><A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/dance.1.in">Test 
+Input 1</A>/<A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/dance.1.out">Test 
+Output 1</A><BR><A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/dance.2.in">Test 
+Input 2</A>/<A 
+href="http://www.cs.queensu.ca/~acmteam/qipc/2002/problems/dance.2.out">Test 
+Output 2</A><BR>
+<ADDRESS></ADDRESS-->
+</p></body></html>

@@ -1,0 +1,48 @@
+ 11461 - Square Numbers
+ 10783 - Odd Sum
+ 11854 - Egypt
+ 11172 - Relational Operator
+ 10055 - Hashmat the Brave 
+ 11479 - Is this the easiest p
+ 11727 - Cost Cutting
+ 11332 - Summing Digits
+ 11777 - Automate the Grade
+ 11689 - Soda Surpler
+ 11805 - Bafana Bafana
+ 11677 - Alarm Clock
+ 11650 - Mirror Clock
+ 11984 - A Change in Thermal Unit
+ 10071 - Back to High School Physics	
+ 11715 - Car
+ 11875 - Brick Game
+ 11636 - Hello World!
+ 11417 - GCD
+ 11547 - Automatic Answer
+ 11219 - How old are you?
+ 100 - The 3n + 1 problem
+ 10327 - Flip Sort
+ 11716 - Digital Fortress
+ 900 - Brick Wall Patterns
+ 10079 - Pizza Cutting
+ 11530 - SMS Typing
+ 11734 - Big Number of Teams will Solve This
+ 11713 - Abstract Names
+ 10370 - Above Average
+ 10921 - Find the Telephone
+ 458 - The Decoder
+ 10924 - Prime Words
+ 10424 - Love Calculator
+ 10346 - Peter's Smokes
+ 10696 - f91
+ 11743 - Credit Check
+ 10494 - If We Were a Child Again
+ 299 - Train Swapping
+ 10035 - Primary Arithmetic
+ 11934 - Magic Formula
+ 11428 - Cubes
+ 10591 - Happy Number
+ 11192 - Group Reverse
+ 11541 - Decoding
+ 11150 - Cola
+ 10931 - Parity
+ 10784 - Diagonal

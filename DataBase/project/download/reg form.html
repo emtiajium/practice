@@ -1,0 +1,122 @@
+<!doctype>
+<html>
+<head>
+	<title>jsPDF</title>
+	<style type="text/css">
+		* { padding: 0; margin: 0; }
+		body {
+			padding: 30px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1 {
+			margin-bottom: 1em;
+			border-bottom: 1px solid #ccc;
+		}
+		
+		h2 {
+			margin-bottom: 1em;
+			border-bottom: 1px solid #ccc;
+		}
+		
+		pre {
+			border: 1px dotted #ccc;
+			background: #f7f7f7;
+			padding: 10px;
+			margin-bottom: 1em;
+		}
+        
+        h1 {
+            margin-bottom: 0.7em;
+        }
+        
+        h2 {
+            margin-top: 1em;
+        }
+	</style>
+	<script type="text/javascript" src="js/jspdf.js"></script>
+</head>
+
+<body>
+<h1>Admit Card</h1>
+<a href="javascript:demo1()">Print Course Registration Form</a>
+
+<script type="text/javascript">
+
+function demo1() {
+	var doc = new jsPDF();
+	doc.setFontSize(22);
+	doc.setFontType("bold");
+	doc.text(11, 15, 'Chittagong University of Engineering & Technology');
+	doc.setFontType("normal");
+	doc.setFontSize(16);
+	doc.text(80,25,'Chittagong - 4349');
+	doc.text(70,35,'Course Registration Form');
+	doc.setLineWidth(.8);
+	doc.line(10, 100, 10, 215); // vertical line
+	doc.line(55, 100, 55, 215); // vertical line
+	doc.line(160, 100, 160, 215); // vertical line
+	doc.line(200, 100, 200, 215); // vertical line
+	
+	doc.line(10, 40, 200, 40); // horizontal line
+	doc.text(10,52,'Student No. ');
+	doc.text(45,51,'.................');
+	doc.text(53,56,'Year');
+	doc.text(75,51,'..................');
+	doc.text(75,56,'Dept. Code');
+	doc.text(105,51,'.................');
+	doc.text(110,56,'Roll No');
+	doc.text(10,68,'Name of the Student: ');
+	doc.text(10,78,'Department:');
+	doc.text(70,78,'Level:');
+	doc.text(110,78,'Term:');
+	doc.text(150,78,'Session:');
+	doc.line(10, 81, 200, 81); // horizontal line
+	doc.text(10,91,'Name of the Hall: ');
+	doc.line(10, 100, 200, 100); // horizontal line
+	doc.text(20,110,'Course No');
+	doc.text(90,110,'Course Title');
+	doc.text(164,110,'Credit Hours');
+	doc.line(10, 115, 200, 115); // horizontal line
+	doc.line(10, 125, 200, 125); // horizontal line
+	doc.line(10, 135, 200, 135); // horizontal line
+	doc.line(10, 145, 200, 145); // horizontal line
+	doc.line(10, 155, 200, 155); // horizontal line
+	doc.line(10, 165, 200, 165); // horizontal line
+	doc.line(10, 175, 200, 175); // horizontal line
+	doc.line(10, 185, 200, 185); // horizontal line
+	doc.line(10, 195, 200, 195); // horizontal line
+	doc.line(10, 205, 200, 205); // horizontal line
+	doc.line(10, 215, 200, 215); // horizontal line
+	doc.text(10,230,'Credit Hours Taken(Current Term) ');
+	doc.rect(100, 223, 25, 10); // empty square
+	//doc.text(105,232,'.................');
+	doc.text(140,245,'........................................');
+	doc.text(140,251,'Signature of the Student');
+	doc.text(140,258,'Date: ');
+	doc.text(20,280,'............')
+	doc.text(20,285,'Provost');
+	doc.text(90,280,'............');
+	doc.text(90,285,'Advisor');
+	doc.text(160,280,'..........');
+	doc.text(160,285,'Head');
+
+	// Output as Data URI
+	
+	doc.output('datauri');
+}
+</script>
+
+
+<script type="text/javascript">
+// Google Analytics
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2746979-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

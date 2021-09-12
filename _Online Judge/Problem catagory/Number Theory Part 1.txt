@@ -1,0 +1,45 @@
+Problems list of Number Theory Part 1
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+UVa Problems:
+160
+ 294 
+543
+ 583 
+406 
+686
+884
+914
+10042 
+10061 
+10235 
+10299 
+10392 
+10394 
+10533 
+10539 
+10699 
+10738 
+10780 
+10789 
+10852 
+11064 
+11415 
+11466
+LightOJ Problems:
+1045 
+1014 
+1028 
+1035 
+1045 
+1054 
+1067 
+1090 
+1098 
+1109 
+1213 
+1214 
+1245 
+1282 
+1336 
+1340 
+1341

@@ -1,0 +1,23 @@
+template<class T>T sqr(T a){return a*a;}
+const double OO=9e10;
+const double ERR=1e-6;
+typedef double CDT;
+typedef struct{CDT x,y,z;}P;
+P MV(P a,P b){P r; r.x=b.x-a.x; r.y=b.y-a.y; r.z=b.z-a.z; return r;}
+CDT D(P a,P b){ return a.x*b.x+a.y*b.y+a.z*b.z;}
+P C(P a,P b){P r; r.x=a.y*b.z-a.z*b.y; r.y=a.z*b.x-a.x*b.z; r.z=a.x*b.y-a.y*b.x; return r;}
+double ABS(P a){return sqrt(a.x*a.x+a.y*a.y+a.z*a.z);}
+P VADD(P a,P b){a.x+=b.x;a.y+=b.y;a.z+=b.z;return a;}
+P VSUB(P a,P b){a.x-=b.x;a.y-=b.y;a.z-=b.z;return a;}
+P VMUL(P a,double mm){a.x*=mm;a.y*=mm;a.z*=mm;return a;}
+
+
+
+// Sgment ab to Point c
+double Segment_to_Point_Distance(P a,P b,P c){
+    if(D(MV(a,b),MV(a,c))<0)    return ABS(MV(a,c));
+    if(D(MV(b,a),MV(b,c))<0)    return ABS(MV(b,c));
+    return ABS(C(MV(a,b),MV(a,c)))/ABS(MV(a,b));
+}
+
+

@@ -1,0 +1,38 @@
+LL M; ///Mod
+typedef vector<vector<LL> >Mat;
+
+/// Mat a,b. Dimention d.
+Mat Pro(Mat a,Mat b,int d)
+{
+    LL i,j,k,cur;
+    vector<LL>v(d,0LL);
+    Mat c;
+
+    for(i=0;i<d;i++)
+    {
+        for(j=0;j<d;j++)
+        {
+            cur=0;
+            for(k=0;k<d;k++)    cur = (cur + (a[j][k]*b[i][k])%M) % M;
+            v[j]=cur;
+        }
+        c.PB(v);
+    }
+
+    return c;
+}
+
+/// pow(a,n) Dimention d.
+Mat ProP(Mat a,LL n,LL d)
+{
+    if(n==1)    return a;
+    Mat b;
+    vector<LL>v(d,0);
+    LL i,j;
+
+    b = ProP(a,n/2,d);
+    b = Pro(b,b,d);
+    if(n&1) b = Pro(a,b,d);
+
+    return b;
+}

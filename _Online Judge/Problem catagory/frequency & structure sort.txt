@@ -1,0 +1,14 @@
+
+frequency & structure sort
+
+
+What's Cryptanalysis?  10008
+Tell me the frequencies! 10062
+Word Length and Frequency 10293
+Prime Frequency  10789
+Frequent values 11235
+Letter Frequency 11577
+Factorial Frequencies  324
+What's The Frequency, Kenneth?  499
+11353 A Different kind of Sorting
+11321 Sort! Sort!! And Sort!!! 

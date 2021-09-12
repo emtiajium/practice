@@ -1,0 +1,14 @@
+Problems List of Digit DP
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+TCHS SRM 26 1000 
+SRM 510 Div 1 250
+SRM 300 div 1 500
+SRM 255 Div 1 500
+LightOJ 1068
+LightOJ 1140
+UVa 12241
+http://codeforces.com/contest/205/problem/C
+LightOJ 1032 - Fast Bit Calculations
+LightOJ 1105 - Fi Binary Number(Digit DP + Binary Search)
+LightOJ 1205 (Digit DP Concept)
+SRM 302 Div 1 500 (Digit DP Concept + Binary Search)

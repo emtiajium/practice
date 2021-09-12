@@ -1,0 +1,34 @@
+Problems List of BitMask + DP
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+Firenet TJU 1306
+Nuts for nuts	 UVa 10944
+Mega Man Mission	UVa 11795
+Lottery UVa 10325
+Assignment	 SPOJ 423
+Bottle on self	 SRM 491 Div 2 1000
+Casket of Star	 SRM 533 Div 2 500
+Collecting Gold	 LightOJ 1057
+Collection Marble	SRM 397 Div 2 1000
+Company Messages	TCO 05 Round 4 Div 1 250
+Crazy Components	SRM 363 Div 2 1000
+Deeper Blue	 TJU 2047 
+Divisibility	 TCHS SRM 16 1000
+Divisible Perm	 SRM 279 Div 1 500
+Dog Field	 TCHS SRM 44 1000
+GraphClique	 TCHS SRM 47 500
+Help the Winners	UVa 12030
+How Many Cycle	 Code Force Round 11 D
+How Many String	 SRM 161 Div 2 1000
+Subset Sum	 Spoj 3749
+KiloManX	 SRM 181 Div 1 1000
+Kings tour	 TCHS SRM 46 1000
+Locked the door	 TCHS SRM 53 1000
+Looking for order	Code Force Round 8
+CMarbles regrouping	SRM 387 Div 2 1000
+Marriage Ceremony	LOJ 1011
+Power Adapter	 SRM 393 Div 2 1000
+Power Plant	 SRM 364 Div 2 1000
+Seperate Connection	TCO 06 Online Round 250
+Switch the light	UVa 11974
+Taxi Manager	 SRM 347 Div 2 1000
+WarHouse	 TCHS SRM 18 1000

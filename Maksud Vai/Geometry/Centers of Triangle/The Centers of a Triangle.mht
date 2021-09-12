@@ -1,0 +1,580 @@
+Content-Type: multipart/related; start=<op.mhtml.1009974085229.d4e5e318344803da@172.17.0.42>; boundary=----------441wmDcKh0VJfu8KyI7hr5
+Content-Location: http://www.jimloy.com/geometry/centers.htm
+Subject: =?utf-8?Q?The=20Centers=20of=20a=20Triangle?=
+MIME-Version: 1.0
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=centers.htm
+Content-Type: text/html; charset=en_US; name=centers.htm
+Content-ID: <op.mhtml.1009974085229.d4e5e318344803da@172.17.0.42>
+Content-Location: http://www.jimloy.com/geometry/centers.htm
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//SQ//DTD HTML 2.0 HoTMetaL + extensions//EN" "hmpro6.dtd">
+<HTML> 
+  <HEAD> 
+	 <TITLE>The Centers of a Triangle</TITLE> 
+  </HEAD> 
+  <BODY BGCOLOR="#FFFFEF"> 
+	 <P><A HREF="../math/math.htm">Return to my Mathematics pages</A><BR>
+		<A HREF="..">Go to my home page</A> </P> <HR NOSHADE="NOSHADE"> 
+	 <H2>The Centers of a Triangle</H2> 
+	 <P>&copy; Copyright 2000, Jim Loy</P> 
+	 <P><IMG SRC="center.gif" ALIGN="left" ALT="incenter and incircle"
+		WIDTH="159" HEIGHT="100"><B>Incenter:</B> The three angle bisectors of a
+		triangle meet in one point called the incenter. It is the center of the
+		incircle, the circle inscribed in the triangle. The area of the triangle is sr,
+		where s=(a+b+c)/2, and r is the radius of the incircle.</P> <HR> 
+	 <P><IMG SRC="center0.gif" ALIGN="right" ALT="circumcenter and circumcircle"
+		WIDTH="169" HEIGHT="169"><B>Circumcenter:</B> The three perpendicular bisectors
+		of the sides of a triangle meet in one point called the circumcenter. It is the
+		center of the circumcircle, the circle circumscribed about the triangle. The
+		area of the triangle is abc/4R=2R^2sinAsinBsinC, where R is the radius of the
+		circumcircle, and ^2 means squared. The distance between the incenter and the
+		circumcenter is sqr(R(R-2r)). If the triangle is obtuse, then the circumcenter
+		is outside the triangle. If it is a right triangle, then the circumcenter is
+		the midpoint of the hypotenuse.</P> <HR> 
+	 <P><IMG SRC="center1.gif" ALIGN="left" ALT="centroid" WIDTH="164"
+		HEIGHT="94"><B>Centroid:</B> The three medians (the lines drawn from the
+		vertices to the bisectors of the opposite sides) meet in the centroid or center
+		of mass (center of gravity). The centroid divides each median in a ratio of
+		2:1.</P> <HR> 
+	 <P><IMG SRC="center2.gif" ALIGN="right" ALT="othocenter"
+		WIDTH="165" HEIGHT="95"><B>Orthocenter:</B>The three altitudes of a triangle
+		meet in one point called the orthocenter. If the triangle is obtuse, the
+		orthocenter is outside the triangle. If it is a right triangle, the orthocenter
+		is the vertex which is the right angle.</P> <HR> 
+	 <P><IMG SRC="center3.gif" ALIGN="left" ALT="Euler line" WIDTH="163"
+		HEIGHT="91"><B>Euler line:</B> The orthocenter O, centroid C, and circumcenter
+		X all lie on a line, the Euler Line (if the triangle is equilateral, all four
+		centers are the same point). The incenter does not lie on this line, unless the
+		triangle is isosceles. The orthocenter is twice as far from the centroid as the
+		circumcenter is.</P><HR> 
+	 <P><IMG SRC="center12.gif" ALT="Ceva's theorem" ALIGN="RIGHT" WIDTH="217"
+		HEIGHT="115" BORDER="0"><B>Ceva's Theorem:</B> Three cevians (a cevian is a
+		line segment connecting a vertex with the opposite side), AX, BY, CZ, meet in a
+		point iff (if and only if) (AZ/BZ)(BX/CX)(CY/AY) = 1. The proof is not
+		particularly easy.</P> 
+	 <P>Try this on some of the above. It is particularly simple to use it on
+		the centroid.</P><HR> 
+	 <P><B>Addendum:</B></P> 
+	 <P><IMG SRC="center4.gif" ALT="another center?" ALIGN="left" WIDTH="277"
+		HEIGHT="129" BORDER="0"><B>Question #1:</B> Let's find the point P within a
+		triangle ABC, so that if we draw lines from P to the three vertices, we get
+		three equal (area) triangles. Is this P perhaps a different center of the
+		triangle, from those mentioned above? The answer to this and other questions is
+		at the bottom of this page.</P> <HR> 
+	 <P><IMG SRC="center7.gif" ALT="Gergonne point" ALIGN="right" WIDTH="175"
+		HEIGHT="149" BORDER="0"><B>Gergonne point:</B> Another center of a triangle is
+		the Gergone point. The lines connecting the tangent points of the incircle to
+		the opposite vertices meet in this point.</P> 
+	 <P><IMG SRC="center8.gif" ALT="Fermat point" ALIGN="left" WIDTH="214"
+		HEIGHT="223" BORDER="0"><B>Fermat point:</B> Another center is the Fermat point
+		(also called the isogonic center or the Rorricelli point). This is the point
+		which minimizes the sum of the distances from the three vertices. This problem
+		is called Fermat's problem or Steiner's problem. The three angles at this
+		point, between the vertices, are all 120 degrees. This point has many practical
+		uses, as it is often a good idea to minimize distances, so save money.
+		Telephone lines between three cities, using the minimum amount of wire, will be
+		three lines which meet at the Fermat point. More points result in connections
+		between Fermat points. The Fermat point can be constructed by constructing
+		equilateral triangles on each side of the triangle, and connecting their
+		farthest vertices with the opposite vertex of the original triangle.</P> 
+	 <P><IMG SRC="center5.gif" ALT="congruent isoscelizer point" ALIGN="right"
+		WIDTH="148" HEIGHT="124"><B>Congruent isoscelizer point:</B> Another center is
+		the "congruent isoscelizer point." An isoscelizer is a line which makes an
+		angle into an isosceles triangle. Any point in a triangle produces three
+		isoscelizers. In 1989, P. Yff proved that there is one unique such point, which
+		makes all three isoscelizers equal in length.</P> 
+	 <P><IMG SRC="center6.gif" ALT="Lemoine point" ALIGN="left" WIDTH="213"
+		HEIGHT="181" BORDER="0"><B>Lemoine point:</B> Another center is the Lemoine
+		point. A line through a vertex of a triangle is isogonal to another such line
+		if it is the reflection of that line about the angle bisector through that
+		vertex. A symmedian line is isogonal to the median from that vertex. The three
+		symmedian lines of a triangle meet in the Lemoine point (also called the
+		symmedian point or the Grebe point). The isogonal lines of any three lines
+		through the three vertices which meet in a point (like any of those above) also
+		meet in a point.</P> 
+	 <P><IMG SRC="center9.gif" ALT="Spieker center" ALIGN="right" WIDTH="147"
+		HEIGHT="123" BORDER="0"><B>Spieker center:</B> The incenter of the median
+		triangle is the Spieker center. It is the center of mass (center of gravity or
+		centroid) of the perimeter of the original triangle.</P> 
+	 <P>There are other, more complicated points related to triangles. Also see
+		<A HREF="../geometry/9point.htm">The Nine Point Circle</A>; the nine point
+		center is on the Euler line, as is the tangential triangle circumcenter. The
+		incircle and the nine-point circle are tangent at the Feuerbach point.</P><HR> 
+	 <P><B>Question #2:</B> In triangle ABC, the angle bisector of A meets the
+		altitude from B, and the median from C in one point P. Does the triangle have
+		to be equilateral? The answer to this and other questions is at the bottom of
+		this page.</P><HR> 
+	 <P><B>Answers:</B></P> 
+	 <P><B>Answer #1:</B> In our diagram, area A1=A2. They have a common base
+		(CP) and must have equal heights. Therefore A3=A4, as they have a common base
+		(PX) and have the same heights as A1 and A2 respectively. So A1+A3=A2+A4. Then
+		CP must bisect AB at X, as triangles ACX and BCX have the same area and the
+		same height (from C to AB) and their bases must be equal. Similarly, AP bisects
+		BC and BP bisects AC. So P is the centroid, as described above. And all six
+		small triangles in that diagram (see centroid above) are of equal area.</P> 
+	 <P><IMG SRC="center11.gif" ALT="question #3" ALIGN="right" WIDTH="217"
+		HEIGHT="107"><B>Answer #2:</B> No, here is an example that is not an
+		equilateral triangle.</P><HR NOSHADE="NOSHADE"> 
+	 <P><A HREF="../math/math.htm">Return to my Mathematics pages</A><BR>
+		<A HREF="..">Go to my home page</A> </P> </BODY>
+</HTML>
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center.gif
+Content-Type: image/gif; name=center.gif
+Content-Location: http://www.jimloy.com/geometry/center.gif
+Content-Transfer-Encoding: Base64
+
+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
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center0.gif
+Content-Type: image/gif; name=center0.gif
+Content-Location: http://www.jimloy.com/geometry/center0.gif
+Content-Transfer-Encoding: Base64
+
+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
++clb/vKYz7zmN895D0QAAAA7
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center1.gif
+Content-Type: image/gif; name=center1.gif
+Content-Location: http://www.jimloy.com/geometry/center1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhpABeALMAACgoKEJCQkpKSlJSUl5eXnd3d5iYmLGxsb29vcrKytbW1t7e
+3ufn5+/v7/f39////yH5BAEAAA8ALAAAAACkAF4AAAT+8MlJq7046827/2AojmRp
+nmiqrmybOY4rz3T9KIRh73zvHYEBgeErGnmNAqBQyB2f0BUucCgYEgJidMv9AAkK
+hWDhsHbP6Epy2XgYChKsNk2PTg8ShiAhKevqgEZfChMHBDFxWYGLNmsFbX0EeBN+
+jJYudxVymoqXniYOgxZMFpWfpyEMSo8WCwKEFggCkKi1GgkDAQgYb4hqkrbBpV8L
+GA0CuxiGtMK2qgAGzBXLGQ3Azba4uhoO1xnU2J+hAQTFt53V3uGMz9EcpBzg64Ha
+yRt6fBzWk/N04+Ueev0gIK3flnYFjQ3gp0+dwShYtn2QlfAbwYdRHBhYYs6DqQ/+
+x+xhLNLOlwcxHT8IHOkDy54R8FK9ZLlD45I5IPCRWElzRkkShkzmnNnThct8I7ox
+FMGzaAqbBXBeUAJA5IRNJXQ6TfFTQ4EDDhYEQDrBzImmW0cc7fDnQYIAFVzBMqE1
+rQioUj0AqIB2ZwGhdjksIAANcAdVFEKqqBuYA4IgZEMcwCkPRczG1TZGzUpWKQsx
+czG3IkDFsEepWFdcFj3h8YDIIRzkXZ0CNOsJDTTnTSUBwYA8RFnQDjy49AnCAJLD
+cfNXhm3RrmGraLCQxvCiuW/SODCgYu1XxEmDpfFxxvWRQII7H2NDwVinjpgc8G55
+uc8qAAgUzcTAwIABBuz+dgJjKoRVhQA5GIAORqLgdmABCpg2QlArOKCAIeRcEUN5
+/TiSkAMJFCBAAQjQ55FDJDSQgAEEIHgAGZwIKEwmGyygoCQydpDaCCqKOOJkpnGI
+TYMdNGCIAAaEBoJZIjBw4IgJmJhIjp94eFeIUEp4wXMeLXBgDlGCIGQtNJagwI2T
+BWTfBiCymGECWp5DJSNEDnikASldoJgGKrL4I4ygMImKlSyAKGIBcCpz0QUMYPnj
+nCDs6EkC4pGngIiSSOMZBQaKOACiUiaF4iL/KHlfi3he1YmBpIEZqgmVLYJQEQ0g
+cCicTLTZ6otxrrDPJfVAYSGmS7T4FaBFxJrGP3n+GuEkVUtI58OvgMx6RKcIGkDF
+gxFCoSwXwRphIYZghtLdA4aOWOIR1J7BLK0rtigJoBza6CKkLHx7hLU79CjAo0JJ
+KoGRxppKQ7sQ5WLVfT6CmsF56GKJaK8p6MvDu+R5iekVJhKIwZn3NjIqD/y2oOub
+FD9AoQdOomrwCisXsZYLfRrLKwgIeyRxoi54XANeLTTacJojUGQmmq+C0JdPShiQ
+MgfYfhqmCYKS0DKSzdKl3gwzn8Dqm0lrBJcFXJ5Q661Pb7B0hbp5HS85N4cgQAB7
+WfCGyZf+mHQGPi/WdNpqhGgzsknVTUHfKPT3X4BnNWfUv9Jy8Oy/X+HbgeH+hRxS
+g5FoW721122LqXG2U7OAObojmyzxukw5ztXfH4zbqoY0nC5wDf2FPFTkIcjyuZ7x
+ukj4DKdDfPCRED59t9mh8+lo5YCbgLlcGa0eatkiFDce3086fATmaxdhL47vrNk7
+ZBhg62oUDQAAyZ5nEIzkyxJgX2TzlLxdbhfJ1c3d3hfbmWmMNxrj4CZ4x4rexapG
+B5Blimzg8UB0JiA0yhGNEbejw9VSRQECPiA7UYma9zzhwfjZKkv1i2AGtHeh2ZXu
+E4gLxLBc1AaIPSYATYDb8E4Rs1q0DEBYMFgZkpMhBIThiEhMohKXyMQmOvGJScRC
+kqBIxSpa0YpvI0dKXhpAtwD864tgDKMYx0jGMprxjGb0IhrXyMY2uvGLdIPGBRzQ
+gDra8Y54zKMe98jHPvrxj4AMpCAHScg6KvA2iEykIhfJyJ5EAAAAOw==
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center2.gif
+Content-Type: image/gif; name=center2.gif
+Content-Location: http://www.jimloy.com/geometry/center2.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhpQBfALMAABwcHCkpKTExMT09PUpKSl5eXn9/f6SkpMHBwc7OztbW1t7e
+3ufn5+/v7/f39////yH5BAEAAA8ALAAAAAClAF8AAAT+8MlJq7046827/2AojmRp
+nmiqrmzrvnAsi44z33gOKoWh/0DgYSAoMILIZKthEDQLB6V0OuINDgrBgXCker+X
+YUHxyCag4PSXCSg0JFkFgquuJ60EN1ygcKDtgDliCgpXe2RzXYGLLkxObw9DC2V8
+D35RjJkqVpgSDAQ+cRKJmqUkDoMWCAIIopZQNqayHQxNBpAVfgUJlRIHAT6zwhgJ
+BAMIGoVNZAtNWsPQE6gDBZMbQwEJQwQIB3rRwrVauBoMA21ORw1/4KbFxx/rAAMJ
+FN7k7YHT1R4OcwIACJBb1ykfIHEH8GVo5gRBgGf2vhms8w5Zh2ncHGQxMMCaBIL+
+E9Xs87jhjJYuWeYEm3Av5BeECi8wOFCk3oQ4qyx+ZOdSyRx4HPwZOxDrJh9d5Fr2
+RILKCcmFtp4eKmNoQgNuS4MgLJqhwTYEXCm4khQxbFYZc7ByOHNF0QVXn1Y++KTz
+bIymBtxiEDeGg6sHOcvajbF1g9ArZt/2eiWR7uAXaetiUBD1w1+qBb0lfnyKZt4N
+XgeotbzYV8cJjjmjKKwBQYErMTdcngtKsOoSkTfwJVOl9ChWqEffBoFXb64hiEvM
+ZoxL83AQCwpo2QxH+mcTyzEHt/mcAwLR3C+ELiCZRPZIpyUYkNtdvGfjFFzD3uQ7
++EoFBHi3txA9OQaGfa3+cB5gwKnH3n6AgZcBRmC1MCBScOSH4EfvZcBDOi8MqJ2B
+E/ZHFAbjhedgfRWQVYaE7X1HgIjxDRUbffrtVRuHz3mF4QUMGRAjDBr+ZhF+Ow7m
+YWIMUsdCj8zRyNk2LEpg0nU4ILkhkI85AiUFM9UEhJToWWNAQUtxcsFhH25Jokwz
+kpJVKvxVhgSXBCJzyVJWKlSkEnBCqOZEYlpg0gHw/QCndnNOxCaWTzQZxKBdAkZH
+O3Xm8lOZVDAa1ytgCtOnWG5+wWicjgaqyaEUilZepWdqgFShs0RKAVsJ2fGpdnuW
+AmsFuwUya5esZrJPjNP4B8iulyrFCExiWScqGLv+xgkSIxVRMN6psqYaVAFuGFvH
+SPG9FmspzWL2bB3IevJEkIyE26W2X0QrQbCUmqJuXON6wW11N2pqrQc5satEudOC
+oy5jDPCkhLuOzifwvh4UcoC/P9ybI7r6UizCEDxkqgOydxo0sCegOBdEbmUo69LH
+PgqHQ3FziaHowhbTgK3IOGxF5oswH3mFyjHklqNUIaHM0gAGFGBkCsV1fJbQIBvA
+Mwtb/bksnwyLsErRR+NGADdZ7nIb0+8WsDW1JuC1wKRZB121CIVgm/YHCCXQ6ddr
+XzwAUClE9tV+YAc34wk2GiDft+31PYFDA8TcgYfnTkiJ4mVbZ4KKWwiLoOGvRiU+
+go3YOuW4UZCf8MuBHERXhKmfi1U3Ceas/p1oCqc+1QwItOGBjUQEKDvoN/iRTekF
+PGT57o9HGQABG3wXADBTO465BQYAQK0D0QeEBSHYZ6/99tx37/334Icv/viEONQK
++ehvjzh8DhAQgGhbxy///PTXb//9+Oev//78zw9//wCsHxFIZ4kGGPCACEygAhfI
+wAY68IEQjKAEJ0jBChrwbcTLoAY3yMEO/iACAAA7
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center3.gif
+Content-Type: image/gif; name=center3.gif
+Content-Location: http://www.jimloy.com/geometry/center3.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhowBbALMAACQkJD09PUpKSlJSUlpaWmtra4uLi62trb29vcrKytbW1t7e
+3ufn5+/v7/f39////yH5BAEAAA8ALAAAAACjAFsAAAT+8MlJq7046827/2AojmRp
+npPjoGzrvvCjEEZs3zh+BEPB5MCg0NMwBAyMQm3IbApngYMkIfg5r9jWjqBIKbPg
+MKh4bFSoVrF6PYFKLY4vex7edjFour5JNpgzcUt7gzhuHXmEiS4Odh6BipAnSWUg
+CAJ/kZkfCQMBCCINBG+apIA7BQskBwSYpa4Sk34fKxSho6+lnJ4gAAAWq624kIwB
+qGO9FrbCmbHBHAYFtBXAy4q6nyELAgkYytV7xMYiBQUa1N9zzSNUqQ8IA73bEt7o
+alS7I48PBgPcDpxLztXL4sCIuBHUqFiQ10AAtoFXYkkTwWDAmwIPJxwoty8aRCf+
+VOSZgEYLgLMGvh4wEPkxSMFiaUgoYJnSQk2SLYFI1FAAAL4L+iSYhFNzJbecN0Ie
+zWDggIMFAZaeqUKhwK0pHCXgRPripY9nExIEuEBvSoCJD/pRMMrVxc4QNSkI1Cjv
+nwBBE7a2NaF0RBILFTNSSEAgnmBYLPeK8BoTxIHGHdGG0Kv4w4ICRyR7YCBVwsw7
+JdhW/oCAR2cQDiAHNUFudAcyX0mkvvAO8ojPrjVcjqL5g5V3E8qeaJ2btunhvXoJ
+mnsCd/HgBm2zEO2C+PPdTnFQZuE8d2m1hQSAfmG9MmzpLVa/6L4Xe28XBwagR1Ge
+6w7wOYTDYN+yz3wX28X+IEdOhgihzWkxIPJRI0PUd4N63/ThDA5UjJeDgt8UOASE
+OHD4CoNMxPcfDBi+IqETFV3l0oCvaNhEgEGUqAmITcyE4Ip4ZXIiFg4yIWMihEUB
+BjtgxKHiIOFYyAQDDQxoiXIKxKUDK5Cog0UcAlC1DxcqGYBMEPrRcY0YYhUjgwBn
+SDnlhGqE006HRmgATTtW2TREmGJYmYMAAajZhngTBMDmEMyR2clhHfr5wGqKMoHn
+FW46oSiGALxHKJV5YiaLpGSJUgEBNzrqaRhjYuEnc4RNM4AThW54yptXqBnYBdBw
+w4ARI8LwaA56mmoBjA9Q0ctBTWxkqQ19iSElf3r+UOdSdGqghImHdAALw1vKfumO
+fJE4m1SWoYqxa7UePQgtIa0O4q1bmh4bxoGlWFtCsokQ1+ewwSaXY56JocAYJBVK
+QMwoDABwpBjygoAtIQ5oK8ECBOQVLhjrjmBJvww7LMEBNXCcCDQnnIfOACAnwqxl
+mGWHDgIA5BpGjx18N3Ep5Oyrx8kaiDzQTA9gBAnMGLj3EagqBeByFjhbIPNHhC0X
+lSJAQwfTRz318kMCyWW1R9IPCP0cIUAv/bXJgFZQEAAFJKDA2my37fbbcMct99x0
+12333XjnfTc5jTlAQABZBi744IQXbvjhiCeu+OKMN+7443zu60ADlFdu+eUZmGeu
++eacd+7556CHLvrolLs79umoOxEBAAA7
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center12.gif
+Content-Type: image/gif; name=center12.gif
+Content-Location: http://www.jimloy.com/geometry/center12.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh2QBzALMAAAQEBC0tLRCcSlZWVmdnZwAA/39/f6CgoLm5ucrKytbW1t7e
+3ufn5+/v7/f39////yH5BAEAAA8ALAAAAADZAHMAAAT+8MlJq7046827/2AojmRp
+nmiqruzTAEgrz3RtpwaQ3Hzv/yxEbgEsGo9ISSPAABCT0Kg0RQBYp9isVoMISADb
+sHi6VDwWgMZ4zfYdrEx4e06v2+/4vH7P7/tHAn+CfAUFgYOIdYUPAgWJj2uLEo2Q
+lVmSkxKOlpxHmBOHm52jPJ+gE6Kkqi2mFIcPqauyJq2uFLGzuR+1Fa+wusAevL0W
+uMHHsMYYvprIzskgzM3PwMMZ0r/Us9bXGMrakNwa2NngnOLjGd/mfugb5NPsg+7v
+G+vydvQc8PH4evr7ONzzNwZgB379CM4xeLDDQIVTGHpAiApipIclKFa0uEVitF3+
+HC9hPKFxY0goHkWUTHgSSEqVIUa2XPESkAiZM0/gVLHyVs5SO3mOCPpTGNEUPX0W
+ZXVU6NClNJs6fQpVp9QVSZXmzGHlSsyrWHX+9PLAwYAdu8CyyFpBbbABMYyGYdt2
+qQEDcsXQ1TrzAAGHbmXs5XsywQCBgWcMNnlyQQAHEsi2TayY5swAXQH8vUWZxmLC
+S2v++Aw6p2ggpBmb3iQgNQ/XLEO2aj0HdrmT1lrbDsuqJT3aW3bfJsgQ+BThw+W9
+NA4Feed5bnUnQZ6c2mkLzEfXeE6IOyjqF8B7x3P9YHbPN8bTKR/i/NpSyNiTcP8B
+Tde4mdJbGGDF/oFK8pH+tJcBfyEARn76VeBAADsQ8N8jAfJEnwYOfnEKfPsJgReE
+dUx4AYMPEIhgghXctRkiEdbg4QRNYHbYiDYYY8CL0PEhXQYH0AijYrrhAleNgtA3
+wIMXrqUbc7E0AVk76hmRHWYH7qjSkR6m8gYAOuaR4nH8JEXlisUksqUWN9ryDpUo
+NNnDmGMwx8yXu6kZo5xtBgKnD3QyhQyc4KnzT55S3GkmmL3dwWagXwb03Q+AlnDo
+EYm2F16fsYXxaA+CmgBPmTM0CsKlPKLZgkaEkuApYnlEesNKpcZk6anRqKpde606
+pAWotB55XEapwcoZmbJi8Vmt3kiBK3bBtikhLSj3NZosHbZxCpInambaB3LEVjen
+is/+0WetcrLXLSSUMkJokzVZK0u5riA0XnHj5sJuL/DgpEBmRF7wm6jyzDupvhdU
+EUAXFuT4QAJRTjZOvOb4u0x2sQyAl4EbUlDhAZKhEou6Jzl8JmN+TaCDBVAGoIbG
+5upaVZFZ0JYKiBkw4IWBt/RYyM0456zzzjz37PPPQAct9NA8N0L00UjnTInIG4T8
+QMIrJwJ1hg8YHDUkBGyYQMWRdTUAA1dXwp9mYZ9gIAB+WXFi2aMQrMDAbMuiwwBP
+xK3KAEzYvUoCAaytNyeG8f33KH5BFkDdgz9ixWFc5Zv44yNEAAA7
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center4.gif
+Content-Type: image/gif; name=center4.gif
+Content-Location: http://www.jimloy.com/geometry/center4.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhFQGBALMAAAAAAAAA/60AAP8AAP//////////////////////////////
+/////////////////yH5BAEAAAQALAAAAAAVAYEAAAT+kMhJq7046827/2AojmRp
+nmiqrmzrvnAsz3Rth0BOAHfv/8CgSbfjCY/IpFJGlBiX0Kh0imlSr9js0arter8t
+LnhMLnPE5rQ6m3s6n+61fC4EDO7xdpzO79PseH6Cgz6AA3uEiYooAQFFiIuRkh2N
+Eo6Wk5maGZeYnpugmZUTnZ+hp4OjFKWmqK5rqqsXrK+1Y7Stsra7XrEVuKS8wlS+
+vxvAw8k+xRbIwcrQP87Px9HWNcyzHtPX3SPZ2h/c3uTH49Tb5eoi57og7evk4Jzf
+8faz8O4h+ffC89Ul+PWrJVAfu4Hl/nEoaBBhMoULUzB0uAgiJRUTKaZakdGYRoL+
+HRuaCPkxjUVxLkiWBHPy3QuVK7XAFCkxZqSWLmPMtLkE5z4ZO3ke8flzRlCh0rAp
+RWryqEcaTpnqjPoUqtQvRAP2oHq15takXYlxbQZkbFhxZqt+PZskq9eybIfKFZI2
+7qq64ejaveGWoxK8Xfv6/bsXKBTA9Aq3EMwCsQbHJRkvlgKZouTJUyoP1JyYsmIS
+l1Ni4ZyQNAbTnT8DHC1TtbnWXVAPC214xZ42J2TvcpsHzdsUXPRAQuk6FwgxvnOH
+aQJnOPHPgnFTSH5B+HCYPNBQT6eYcfbeOIygmSn+Nsa9l8tPd15dPVkWwiuwz8kW
+u5714d+8tz3ByvyigWH+158b21kQ334qEFiedL8JRZsT+Ol33HXLLWjdf9w5GJR0
+9933gW+6geYgGCDyEaIcDzLBIDooRnaiiH28eIuM4WHIkkM04iDAjjZi1U+KW+wo
+QI8+rgNkWY0EAICQABwZRI5ROMlXkvI1QSUdUBKmRpL8XLllN1JOpRA3XpaRJZJk
+cAlDmTfOdiYBah7EzpvGuZJlnEi+SedUWeA5EkZhNhhKoKCxmRmhWp2C6DuGnrfm
+ogBqIpufW0J6kaSkUVqbDY0+OYmlzXRKiKhrJQIqKaRaNdSpLPqBmKYgObYnJXXB
+OhcOVUhk6ayPmWVrGtoR+RpfWHL1awm3FXjaCCv+PpISorzSBKiTwXn4RxFVCosW
+VdHCGdSxtjE3oJy4Yguhsrk5OeuD4IZhrnw3HOgeNinSGVq7MMzrLH3lmmvdMrSd
+GRK+Mxw4oLYiKBhhno6ONhHBNTRnoI0FccggukAJJmNWEPegMBEYi+JWiD51/IPF
+/z4ncpeebdvtPamqRdc4Jgvy8rQZPjlNzcUZRebMnMQMys0vzfMqPqz2HFA2tZbC
+89Dy+BIVbqM8vRiNzbZFo5dZ99vfHYdY/SgWS/IY5Z1Kgq2gwe0ZqDaXcMct99x0
+12333XjnrXcjZQ+599+ABy744HEbAp6E7eWhtsNkM3k2iYsv7Nt3EyPMKdZHIdM7
+RtYgD6ev0teknHjmoKPCHCISr+Rh1/2cXt3CH/mneurrWRgTyLOzbRfrpSNkee/R
+8A58PJ8Pb4/rxt/TofDJN39KBAAAOw==
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center7.gif
+Content-Type: image/gif; name=center7.gif
+Content-Location: http://www.jimloy.com/geometry/center7.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhrwCVALMAAAAAAAAA/60AAP//////////////////////////////////
+/////////////////yH5BAEAAAMALAAAAACvAJUAAAT+cMhJq7046827/2AojmRp
+nmiqrmzrvnAsz3Rt33iu77we9MDgLPATGo8oYhHJbHZ+RKd0WilGqdjm8prtArlQ
+r3i3lFjH6FrZzE67X+t2/E0vzbf1vGk+wOv/IHx9E4KAhoQafoeLVYkUhYx5kGWQ
+kW+VlJaHXBlrlZpen4OPoHqio6Sll4EWp6pIrnevaK6oqbNdtbaIuFm6u229U798
+v8JqJMXHTsbAwctGzc7T0DmcIoLS1Sna1N3bdtyd4GTijuQ339TP6DLq6/Dt5iqT
+8u4smPYw7+wX/Pr9knD4p49gPIPtDH5CCO7aioUABcaAGDHcvYEVkw3xwPBYx4D+
+GD7OEhmPV8YnyD6QBLUy1kmMNly+HNdJic2bIWTObNXK5hOf51TurELJYU6jJW8N
+3YLUzrVaKwFZ+Qgm59BBTV0owbY060SoO73eA3tS7EWdEc1OfCQqqhgAcN2G5AlT
+HgABeAEIkbVBbpa7eYNk66sPsAC9X4L6s0cELgC/jRRHRvc0MeHFlPn64Ii54eDN
+nCdXC0MTx6k4kGEdtMZKqcekUXV5gkY6NA1irkeCLH3RqklcZ7huHKFI9+7L+ywm
+/VNVudY9xzeJJp7cYmrT0zU+h349Jl2JDwV2v90Z/Lxw43vnPvHum1o3ylq4p5ce
+Du/w7OlH+mwfun7p98n+5x839dGDXHXC/cdcXWslSCBzFA3XmoJ0tJWOb/hVKNSF
+tqngmIYbcsggCoYhRguGIkp2QolpyFbOgXsEwOIYuL04V4xcfEijdjZ+d1R8YjTT
+HZAcefWeYAPygFqRah3ZgzbpzZaIk30UWJN5T65XpZBWlpdkYjoSQmVPVLSHRIlA
+PSjFPwXOiM9y2Am4l5vhdRkdjz5sNYBjBNV2BEJ+6XkLm3CSh+BtTWVSp2rqaSXo
+feoEt5eh8h25pET1kcTPox1qOeF4sSUx5m7SKEqGW8ak6ZyPKKYW6I8ZBtghZK7+
+1CdKKBZ6HmshcfomriHeKWeWbGkaLIy6fvmirw3wHhtgqHuNquyIXgq7qzVb0Uqd
+isk6aJpDr25brbXTDpEVqtPyd6i5TaYo7nEdaUoltEnW4yi75W6X32rDwiFtdvqK
+CqyBjv57Y7MCU5tvMgYrHKt/+RBMIL391ossngw3/O7DGK8zn1NRBtwxqViqpPFD
+m8bIbbe/2Wqnp7nGPG6pJr988MIX30wuq73a3BeUxJHVcpE/+2zyqgOlCvDKWxod
+tLc/77vzHScP895CJxcHI7MsiVUI1xCHpuoyOFEQphljC4h11YvYhCbY/iZ909x0
+12333XjnrffefL/N9996X+UBnYJPcXbhiCfeRQQAADs=
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center8.gif
+Content-Type: image/gif; name=center8.gif
+Content-Location: http://www.jimloy.com/geometry/center8.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh1gDfALMAAAAAAAAA/6Wl/60AAP8AAP//////////////////////////
+/////////////////yH5BAEAAAUALAAAAADWAN8AAAT+sMhJq7046827/2AojmRp
+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
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center5.gif
+Content-Type: image/gif; name=center5.gif
+Content-Location: http://www.jimloy.com/geometry/center5.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhlAB8ALMAAAAAAAAA//8AAP//////////////////////////////////
+/////////////////yH5BAEAAAMALAAAAACUAHwAAAT+cMhJq7046827/2AojmRp
+nmiqrmzrvnAsz3Qc1HgOB7fu/6VeD0gsZoZDo9KYTC6fPqcTSpVNp9UsC4vVek3d
+7ncMEg/M5DQGjVa7Je32Oy0/z++Veh1f3e/5T392gGqCg4RjhoeIWoqLjFSOcJB9
+J5KULpePmESak5xFnp+gP6KjpDmmE6qoHKynrTYvr7EWtLC1Lbe4uSm7vL1gM7+o
+xKvBvjjGkDypyMI6y4Q30sfPIULR19jWNdV3Tdrbrnni40cX3990a+bnFGbq7+Ua
+8vPA9N73m+nK65UdpFGb98dYtnOCDHZ7puhXuGuOdkmBGGRWv2CaaHFBllFXu17+
+olTFy2Wq5IZ/zlZ4ihPr1cqAxTJZ8oDSyo6KNEE5JFGQk0JuQJkNE2GopsehZUYY
+Vansg6SlKOyRw8nnn5xLUKmmrBcVj9GRXecsFWPyDY9mpT4mM7vq7Fl9tra4YeP2
+1pWjZIrWDQlPZl4Ve4sulPuFWOCT+MI2KlXXAoDHshYvqQtAgGUAkQFWqXzZLV4o
+WTFwFoC5bWOtkws/Ll1vr9NIhQfTPK2WSWzZSl0nburlbqa3tntfzJz2dlziUYwf
+vwkkdO3lzN1pRoechvPhXKvbVJ7dIm/hObX7BR8+uvhARM8D/hvUu/ksEdXP5J70
+PVP67T+vx5+f8H3+9blktxaA/e03IHmKjQcNgUrZ1yCDDyrIE3v+SVggbAJWeCFo
+8qH2WiJIWTgViNuJ2B2EB/4HE4UhaogYiXCZCJ1kW7mIHYIx2pgPijIumE5gQAYp
+5JBEFmnkkUgmSds+TDbpJCERAAA7
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center6.gif
+Content-Type: image/gif; name=center6.gif
+Content-Location: http://www.jimloy.com/geometry/center6.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh1QC1ALMAAAAAAAAA/60AAMbG////////////////////////////////
+/////////////////yH5BAEAAAQALAAAAADVALUAAAT+kMhJq7046827/2AojmRp
+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
+ohr1qEiNQQQAADs=
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center9.gif
+Content-Type: image/gif; name=center9.gif
+Content-Location: http://www.jimloy.com/geometry/center9.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhkwB7ALMAAAAAAAAA/60AAP//////////////////////////////////
+/////////////////yH5BAEAAAMALAAAAACTAHsAAAT+cMhJq7046827/2AojmRp
+nmiqrmzrvnAsz3Rt33g+BXrvgwHeb0is8ITFpE+IVDptyOZzCmtKqdhU0JjtajFX
+r7gTlpTHaMt5sE6n2223OB6XZ+t1+zSf1yv7fX5EgYGCSyGFhjmJiYpQI42OMlsk
+kZIulmaXRZmamz+dnp86oaKjN6WmpzSpqqsxra6vmLSzsC+xthS5O7q1uL4svLvB
+WsNcxSXHasmVqM0iyxfSitTM0B7W19gb2tvcYIfg4eLjyOXmsjjec5zpbOwa8VTz
+3eP19tz4+dD7/Mn+/gULKFAXwYKzDiJcpXDhqIYON0GMKGkiRUNBMmrcyLGjx4/+
+IENmZAgPjcZTTNh0GXnkYS+VT0Z6smjCyktOUqJIPAdzCSViN6t967kuzE91cowO
+nXQUKE8/Z65Qk0luaVJ504Y1nZaB5gc4XVdQxRoWKoc1ncZS9HqWzEUwhejY2Vq1
+bDa6b4m2++r2bCRAbxBl64q37+AxjL4CWGym8GG+ewV7ACCgMoBQjuti+fuBsmUU
+nFcq61xZAIATltjqlTyZcc3Xm1EDAS2b3hfDo2vHVMFHN2wnrXrnpv0nFp7fxN21
+OO5MmPLluGdDH3JMLiRgoG7l3VU9u3a7kKugww4++q91rLavPv8ofXn1w9u710x2
+fg12UcPbnzGvjHD5/JGFQh9X6PGHj1JtCfidgk8RyCB7iziYlXcQRtigU+Px9lxQ
+F1ro3IbrIVWgWH902JBxwF0IUXC7cSjig8glYVOHFMYoo4s0YRabKl6lJRpRbKWm
+mkpRDNnIkJqkFJl+orWEGGtzOPkkk16oVSWVVSJJoxEidenll2CGKeaYHr1j5plo
+uhEBAAA7
+
+------------441wmDcKh0VJfu8KyI7hr5
+Content-Disposition: inline; filename=center11.gif
+Content-Type: image/gif; name=center11.gif
+Content-Location: http://www.jimloy.com/geometry/center11.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh2QBrALMAAAwMDElJSRCcSn9/fwAA/4yMjJSUlKSkpLW1tb29vcbGxtbW
+1ufn5+/v7/f39////yH5BAEAAA8ALAAAAADZAGsAAAT+8MlJq7046827/2AojmRp
+nmiqruzTAEkrz3RtpwOg3Hzv/yxEbgEsGo9IyYsBICaf0GgqAKg6pNisNoMISADb
+sFjaCBAXgMZ4zfYZqgBmtU2v2+/4vH7P7/v/IwKAg30EBIKEiXaGDwIEipBrjBKO
+kZZZk5QSj5edR5kTiJyepDygoROjpastpxSID6qssyaurxSytLofthWwsbvBHr2+
+FrnCyLHHGL+byc/KIM3O0MHEGdPA1bTX2BjL25HdGtna4Z3j5Bng53/pG+XU7YTv
+8Bvs83f1HPHy+Xv7+HHA929MwA79/BWkcxBhB4ILpTT0kDBVREkQS1S0eHHLRGn+
+vDpiynhiI0eRTz6KMKkQJRCVK0OQdLkCZiARM2meyKmCJS6dpnj2HCEU6LCiKXz+
+NNoK6VCiTGs6fQo16s6pK5QutUoUa9adXGV6ZaG1wtiONmWUNRt24NkWa7e2NfYW
+boq659LaiCt3rt69NedGq8OXbdi/PAobjoq4h+K+NCcJeOy4lVFXk+lQPony2uTN
+di13Jpl5C2jOBRuWlnIa9TyYq5+0bhnu7+cks2lDaxwqtz0aeN0F9+X7QvHhAJEb
+j12juDlkvD8wD21DOUPrFPmigYPg1g3sBsFLi1vACwIwmkztit5zOocBBr6gUs/N
+jvsMOh4M8NLIh3iJ/7X+14EcAPDXXw8BJsGeY/dJcICB6e31WYJFLFjEfQEcUAxc
+n8VGoX8f3sAcHN6Z0OFt64gTog8NHijdiUqtOIOFWqBYIjYnoiAjCzSOEVszMLa2
+411DQpFZkP4VUiRuSBqxpFi6NDlfizPm0WMUUnrT2w9PunUJjDFZQKUKXa5Tpolg
+loTjcW1c2VyaZCHk25mb0AlPjom9WKVHdhKHJxBa2XiXFm4G8qdsGlG2ZKFyHoqF
+YmMOFAWjyznqo4AlyEgpJZYSxmFZIbqZZR+5RboYiG92Cohzpuo2Y11wkuIcpxuB
+Z9OorMxK3D3fCYWrMLqKGU9O21URn5kvdvhPsMyNZJOLAznAgB4FBnihwLRmsfNr
+PsyueeoDAQzgwHkDWACfA9XS5aeyQHXLDyyqpPvFDhXAEYAaqTwSq1XuyvlcAPRi
+wMQD5+EyoSEIJ6zwwgw37PDDEEcs8cQUN+xIxRhnrHAlE2B7wQHlPuCxYH8AcEUG
+AcQgL8mDhHuFAgXUay8DLBPiABUFnlxzMBEAADs=
+
+------------441wmDcKh0VJfu8KyI7hr5--

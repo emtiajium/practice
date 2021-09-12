@@ -1,0 +1,297 @@
+<!doctype>
+<html>
+<head>
+	<title>jsPDF</title>
+	<style type="text/css">
+		* { padding: 0; margin: 0; }
+		body {
+			padding: 30px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1 {
+			margin-bottom: 1em;
+			border-bottom: 1px solid #ccc;
+		}
+		
+		h2 {
+			margin-bottom: 1em;
+			border-bottom: 1px solid #ccc;
+		}
+		
+		pre {
+			border: 1px dotted #ccc;
+			background: #f7f7f7;
+			padding: 10px;
+			margin-bottom: 1em;
+		}
+        
+        h1 {
+            margin-bottom: 0.7em;
+        }
+        
+        h2 {
+            margin-top: 1em;
+        }
+	</style>
+	<script type="text/javascript" src="js/jspdf.js"></script>
+</head>
+
+<body>
+<h1>Admit Card</h1>
+<a href="javascript:demo1()">Print Money Receipt</a>
+
+<script type="text/javascript">
+
+function demo1() {
+	var doc = new jsPDF();
+	doc.setLineWidth(.7);
+	doc.line(10, 125, 10, 238); // vertical line
+	doc.line(80, 125, 80, 238); // vertical line
+	doc.line(100, 125, 100, 238); // vertical line
+	doc.line(115, 125, 115, 238); // vertical line
+	doc.line(185, 125, 185, 238); // vertical line
+	doc.line(205, 125, 205, 238); // vertical line
+	doc.setFontType("bold");
+	doc.text(8, 10, 'Chittagong University of Engineering');
+	doc.text(55,16,'&')
+	doc.text(43,21,'Technology');
+	doc.setFontType("normal");
+	doc.text(10,30,'Money Receipt');
+	doc.text(10,40,'Bank Copy (1)');
+	doc.text(10,50,'Name: ')
+	doc.text(10,60,'ID No: ');
+	doc.text(10,70,'Dept: ');
+	doc.text(10,80,'Level: ');
+	doc.text(10,90,'Term: ');
+	doc.text(10,100,'Session: ');
+	doc.text(10,110,'Submission Date: ');
+	doc.line(10, 115, 100, 115); // horizontal line
+	doc.text(30,121,'ACC No: 34129302');
+	doc.line(10,123,100,123);
+	doc.line(10,125,100,125);
+	doc.text(30,130,'Description');
+	doc.text(82,131,'TAKA');
+	doc.line(10,133,100,133);
+	doc.text(12,138,'Student fees');
+	doc.line(10,141,100,141);
+	doc.text(12,146,'Admission fees');
+	doc.line(10,149,100,149);
+	doc.text(12,154,'Bus rent');
+	doc.line(10,157,100,157);
+	doc.text(12,162,'Student welfare fees');
+	doc.line(12,165,100,165);
+	doc.text(12,170,'Religious program');
+	doc.line(10,173,100,173);
+	doc.text(12,178,'Library fees');
+	doc.line(10,181,100,181);
+	doc.text(12,186,'Convocation');
+	doc.line(10,189,100,189);
+	doc.text(12,194,'Medical fees');
+	doc.line(10,197,100,197);
+	doc.text(12,202,'Registration');
+	doc.line(10,205,100,205);
+	doc.text(12,210,'Character certificate');
+	doc.line(10,213,100,213);
+	doc.text(12,218,'Course duration certificate');
+	doc.line(10,220,100,220);
+	doc.text(12,225,'Donation');
+	doc.line(10,228,100,228);
+	doc.line(10,230,100,230);
+	doc.text(12,235,'Total amount');
+	doc.line(10,238,100,238);
+	doc.text(10,248,'Signature')
+	doc.text(15,260,'.............');
+	doc.text(15,265,'Student');
+	doc.text(75,260,'.............');
+	doc.text(75,265,'Cashier');
+	
+	doc.setFontType("bold");
+	doc.text(110, 10, 'Chittagong University of Engineering');
+	doc.text(155,16,'&')
+	doc.text(143,21,'Technology');
+	doc.setFontType("normal");
+	doc.text(115,30,'Money Receipt');
+	doc.text(115,40,'Bank Copy (2)');
+	doc.text(115,50,'Name: ')
+	doc.text(115,60,'ID No: ');
+	doc.text(115,70,'Dept: ');
+	doc.text(115,80,'Level: ');
+	doc.text(115,90,'Term: ');
+	doc.text(115,100,'Session: ');
+	doc.text(115,110,'Submission Date: ');
+	doc.line(115, 115, 205, 115); // horizontal line
+	doc.text(135,121,'ACC No: 34129302');
+	doc.line(115,123,205,123);
+	doc.line(115,125,205,125);
+	doc.text(135,130,'Description');
+	doc.text(187,131,'TAKA');
+	doc.line(115,133,205,133);
+	doc.text(117,138,'Student fees');
+	doc.line(115,141,205,141);
+	doc.text(117,146,'Admission fees');
+	doc.line(115,149,205,149);
+	doc.text(117,154,'Bus rent');
+	doc.line(115,157,205,157);
+	doc.text(117,162,'Student welfare fees');
+	doc.line(115,165,205,165);
+	doc.text(117,170,'Religious program');
+	doc.line(115,173,205,173);
+	doc.text(117,178,'Library fees');
+	doc.line(115,181,205,181);
+	doc.text(117,186,'Convocation');
+	doc.line(115,189,205,189);
+	doc.text(117,194,'Medical fees');
+	doc.line(115,197,205,197);
+	doc.text(117,202,'Registration');
+	doc.line(115,205,205,205);
+	doc.text(117,210,'Character certificate');
+	doc.line(115,213,205,213);
+	doc.text(117,218,'Course duration certificate');
+	doc.line(115,220,205,220);
+	doc.text(117,225,'Donation');
+	doc.line(115,228,205,228);
+	doc.line(115,230,205,230);
+	doc.text(117,235,'Total amount');
+	doc.line(115,238,205,238);
+	doc.text(115,248,'Signature')
+	doc.text(120,260,'.............');
+	doc.text(120,265,'Student');
+	doc.text(175,260,'.............');
+	doc.text(175,265,'Cashier');
+
+	doc.addPage();
+	
+	doc.setLineWidth(.7);
+	doc.line(10, 125, 10, 238); // vertical line
+	doc.line(80, 125, 80, 238); // vertical line
+	doc.line(100, 125, 100, 238); // vertical line
+	doc.line(115, 125, 115, 238); // vertical line
+	doc.line(185, 125, 185, 238); // vertical line
+	doc.line(205, 125, 205, 238); // vertical line
+	doc.setFontType("bold");
+	doc.text(8, 10, 'Chittagong University of Engineering');
+	doc.text(55,16,'&')
+	doc.text(43,21,'Technology');
+	doc.setFontType("normal");
+	doc.text(10,30,'Money Receipt');
+	doc.text(10,40,'Academic Copy');
+	doc.text(10,50,'Name: ')
+	doc.text(10,60,'ID No: ');
+	doc.text(10,70,'Dept: ');
+	doc.text(10,80,'Level: ');
+	doc.text(10,90,'Term: ');
+	doc.text(10,100,'Session: ');
+	doc.text(10,110,'Submission Date: ');
+	doc.line(10, 115, 100, 115); // horizontal line
+	doc.text(30,121,'ACC No: 34129302');
+	doc.line(10,123,100,123);
+	doc.line(10,125,100,125);
+	doc.text(30,130,'Description');
+	doc.text(82,131,'TAKA');
+	doc.line(10,133,100,133);
+	doc.text(12,138,'Student fees');
+	doc.line(10,141,100,141);
+	doc.text(12,146,'Admission fees');
+	doc.line(10,149,100,149);
+	doc.text(12,154,'Bus rent');
+	doc.line(10,157,100,157);
+	doc.text(12,162,'Student welfare fees');
+	doc.line(12,165,100,165);
+	doc.text(12,170,'Religious program');
+	doc.line(10,173,100,173);
+	doc.text(12,178,'Library fees');
+	doc.line(10,181,100,181);
+	doc.text(12,186,'Convocation');
+	doc.line(10,189,100,189);
+	doc.text(12,194,'Medical fees');
+	doc.line(10,197,100,197);
+	doc.text(12,202,'Registration');
+	doc.line(10,205,100,205);
+	doc.text(12,210,'Character certificate');
+	doc.line(10,213,100,213);
+	doc.text(12,218,'Course duration certificate');
+	doc.line(10,220,100,220);
+	doc.text(12,225,'Donation');
+	doc.line(10,228,100,228);
+	doc.line(10,230,100,230);
+	doc.text(12,235,'Total amount');
+	doc.line(10,238,100,238);
+	doc.text(10,248,'Signature')
+	doc.text(15,260,'.............');
+	doc.text(15,265,'Student');
+	doc.text(75,260,'.............');
+	doc.text(75,265,'Cashier');
+	
+	doc.setFontType("bold");
+	doc.text(110, 10, 'Chittagong University of Engineering');
+	doc.text(155,16,'&')
+	doc.text(143,21,'Technology');
+	doc.setFontType("normal");
+	doc.text(115,30,'Money Receipt');
+	doc.text(115,40,'Student Copy');
+	doc.text(115,50,'Name: ')
+	doc.text(115,60,'ID No: ');
+	doc.text(115,70,'Dept: ');
+	doc.text(115,80,'Level: ');
+	doc.text(115,90,'Term: ');
+	doc.text(115,100,'Session: ');
+	doc.text(115,110,'Submission Date: ');
+	doc.line(115, 115, 205, 115); // horizontal line
+	doc.text(135,121,'ACC No: 34129302');
+	doc.line(115,123,205,123);
+	doc.line(115,125,205,125);
+	doc.text(135,130,'Description');
+	doc.text(187,131,'TAKA');
+	doc.line(115,133,205,133);
+	doc.text(117,138,'Student fees');
+	doc.line(115,141,205,141);
+	doc.text(117,146,'Admission fees');
+	doc.line(115,149,205,149);
+	doc.text(117,154,'Bus rent');
+	doc.line(115,157,205,157);
+	doc.text(117,162,'Student welfare fees');
+	doc.line(115,165,205,165);
+	doc.text(117,170,'Religious program');
+	doc.line(115,173,205,173);
+	doc.text(117,178,'Library fees');
+	doc.line(115,181,205,181);
+	doc.text(117,186,'Convocation');
+	doc.line(115,189,205,189);
+	doc.text(117,194,'Medical fees');
+	doc.line(115,197,205,197);
+	doc.text(117,202,'Registration');
+	doc.line(115,205,205,205);
+	doc.text(117,210,'Character certificate');
+	doc.line(115,213,205,213);
+	doc.text(117,218,'Course duration certificate');
+	doc.line(115,220,205,220);
+	doc.text(117,225,'Donation');
+	doc.line(115,228,205,228);
+	doc.line(115,230,205,230);
+	doc.text(117,235,'Total amount');
+	doc.line(115,238,205,238);
+	doc.text(115,248,'Signature')
+	doc.text(120,260,'.............');
+	doc.text(120,265,'Student');
+	doc.text(175,260,'.............');
+	doc.text(175,265,'Cashier');
+	// Output as Data URI
+	
+	doc.output('datauri');
+}
+</script>
+
+
+<script type="text/javascript">
+// Google Analytics
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2746979-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

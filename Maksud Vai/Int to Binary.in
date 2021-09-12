@@ -1,0 +1,13 @@
+void wwww(int x){
+    if(x==0)return ;
+    wwww(x/2);
+    if(x&1) cout<<1;
+    else cout<<0;
+}
+
+void i2b(int x)
+{
+    if(!x)  cout<<0;
+    else wwww(x);
+    cout<<endl;
+}

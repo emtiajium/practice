@@ -1,0 +1,28 @@
+Problems List of Trie Algorithms
+By Forhad Ahmed in SUST Programming Training Camp 2012 (Files) · Edit Doc
+1. LOJ 1114 - Easily Readable http://www.lightoj.com/volume_showproblem.php?problem=1114 
+2. LOJ 1129 - Consistency Checker http://www.lightoj.com/volume_showproblem.php?problem=1129
+ 
+3. LOJ 1224 - DNA Prefix http://www.lightoj.com/volume_showproblem.php?problem=1224
+ 
+4. What Are You Talking About http://acm.hdu.edu.cn/showproblem.php?pid=1075
+ 
+5. Hat’s Words http://acm.hdu.edu.cn/showproblem.php?pid=1247
+ 
+6. T9 http://acm.hdu.edu.cn/showproblem.php?pid=1298
+ 
+7. Colored Sticks http://poj.org/problem?id=2513
+ 
+8. Flying to the Mars http://acm.hdu.edu.cn/showproblem.php?pid=1800
+ 
+9. Phone List http://poj.org/problem?id=3630
+ 
+10. Babelfish http://poj.org/problem?id=2503
+ 
+11. Shortest Prefixes http://poj.org/problem?id=2001
+ 
+12. Word Puzzles http://poj.org/problem?id=1204
+ 
+13. The Social Network http://acm.hdu.edu.cn/showproblem.php?pid=4039
+ 
+14. Keywords Search http://acm.hdu.edu.cn/showproblem.php?pid=2222

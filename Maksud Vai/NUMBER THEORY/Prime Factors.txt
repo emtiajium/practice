@@ -1,0 +1,53 @@
+#define SIZE_N 1001000
+#define SIZE_P 81000
+
+bool flag [SIZE_N];
+int prime [SIZE_P];
+vector<int>pf;
+
+void sieve ()
+{
+	int i, j, r, c = 1 ;
+
+
+	for ( i = 3; i <SIZE_N; i += 2 )
+        flag[i] = true ;
+	flag [2] = true ;
+
+	prime [c++] = 2 ;
+
+
+	for ( i = 3; i <SIZE_N; i += 2 )
+	        if ( flag[i] )
+		{
+			prime[c++] = i ;
+
+	            if ( SIZE_N/i >= i )
+            		{
+	                	r = i * 2 ;
+	                	for ( j = i * i; j <SIZE_N; j += r )
+        		            flag[j] = false ;
+		        }
+		}
+
+	//printf("%d %d\n",prime[c-1],c);
+}
+
+
+void P_F(int x)
+{
+    int re,i;
+
+    for(i=1;prime[i]<=x/prime[i];i++)
+        if(x%prime[i]==0)
+        {
+            re=prime[i];
+            while(x%prime[i]==0)
+            {
+                pf.PB(prime[i]);
+                x/=prime[i];
+            }
+        }
+    if(x>1) pf.PB(x);
+
+}

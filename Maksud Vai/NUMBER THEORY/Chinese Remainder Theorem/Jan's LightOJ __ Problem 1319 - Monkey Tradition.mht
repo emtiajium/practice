@@ -1,0 +1,1636 @@
+Content-Type: multipart/related; start=<op.mhtml.1320078984061.015ad7437b452f86@172.17.0.42>; boundary=----------HFStG25NAEtgYtbUbR6zmr
+Content-Location: http://www.lightoj.com/volume_showproblem.php?problem=1319
+Subject: =?utf-8?Q?Jan's=20LightOJ=20::=20Problem=201319=20-=20Monkey=20Tradition?=
+MIME-Version: 1.0
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline; filename=volume_showproblem.htm
+Content-Type: text/html; charset=utf-8; name=volume_showproblem.htm
+Content-ID: <op.mhtml.1320078984061.015ad7437b452f86@172.17.0.42>
+Content-Location: http://www.lightoj.com/volume_showproblem.php?problem=1319
+Content-Transfer-Encoding: 8bit
+
+
+<html>
+	<head>
+		<title>Jan's LightOJ :: Problem 1319 - Monkey Tradition</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+	<body>
+		<div class="topDiv">
+			<img src="./images/main.png" class="topImage" style="float: left;">
+			<div class="topMenuMessage" style="display: block; float: right; padding: 50 5 0 0;">
+				Server Time: Mon Oct 31, 2011 10:30 pm			</div>
+		</div>
+		<div class="topMenu" align="center">
+			<table width="100%">
+				<tr>
+					<td width="10%">
+						<div class="topMenuMessage">
+							&nbsp;<a class="top_link" href="index.php">
+								Home
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="volume_problemset.php">
+								Volume
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="contest_index.php">
+								Contest
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="article_showcategory.php">Training</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="forum_index.php">Community</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="credits_index.php">Credits</a>
+						</div>
+					</td>
+					<td width="60%" align="right">
+						<div class="topMenuMessage">
+							Welcome
+								<a class="top_link" href="index_edituser.php">
+									Md. Maksud Hussain Shibly								</a>
+							(<a class="top_link" href="login_logout.php">
+								logout
+							</a>)&nbsp;
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	<div id="wrapper">
+		<div id="problem">
+			<div id="problem_name">
+				1319 - Monkey Tradition			</div>
+			<div align="center" style="border-top: 1px solid #eeeeee;">
+				<table id="mytable" cellspacing="0" style="width:450;padding: 5 0 0 0;">
+					<td class="one" style="border-top: 1px solid #C1DAD7; border-left: 1px solid #C1DAD7;padding:2 6 0 12;" width=100 title="normal judge">
+						<a class="user_link" href="volume_submit.php?problem=1319">
+							<img src="images/submit1.png">
+						</a>
+					</td>
+					<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+						<a class="user_link" href="volume_showproblem.php?problem=1319&language=english&type=pdf">
+							PDF (English)						</a>
+					</td>
+					<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+						<a class="user_link" href="volume_problemstat.php?problem=1319">
+							Statistics						</a>
+					</td>
+					<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+						<a class="user_link" href="forum_showproblem.php?problem=1319">
+							Forum						</a>
+					</td>
+				</table>
+			</div>
+			<div align="center" style="border-bottom: 1px solid #eeeeee;">
+				<table id="mytable" cellspacing="0" style="width:450;padding: 0 0 5 0;">
+					<td class="two" style="border-left: 1px solid #C1DAD7;" width=100>
+						Time Limit: <span style="color: #B45F04;">2 second(s)</span>
+					</td>
+					<td class="two" width=100>
+						Memory Limit: <span style="color: #B45F04;">32 MB</span>
+					</td>
+				</table>
+			</div>
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Bernard MT Condensed";
+	panose-1:2 5 8 6 6 9 5 2 4 4;}
+@font-face
+	{font-family:"Bookman Old Style";
+	panose-1:2 5 6 4 5 5 5 2 2 4;}
+@font-face
+	{font-family:"Courier 10 Pitch";}
+@font-face
+	{font-family:"DejaVu Sans";}
+@font-face
+	{font-family:"\@Courier 10 Pitch";}
+@font-face
+	{font-family:"\@DejaVu Sans";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:green;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";
+	color:#4F81BD;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:115%;
+	font-size:24.0pt;
+	font-family:"Bookman Old Style","serif";
+	letter-spacing:.75pt;
+	font-weight:bold;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{mso-style-link:"Body Text 3 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial","sans-serif";
+	color:black;
+	font-weight:bold;}
+span.BodyText3Char
+	{mso-style-name:"Body Text 3 Char";
+	mso-style-link:"Body Text 3";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:green;
+	font-weight:bold;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Bookman Old Style","serif";
+	letter-spacing:.75pt;
+	font-weight:bold;}
+p.SampleIO, li.SampleIO, div.SampleIO
+	{mso-style-name:SampleIO;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:16.4pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Courier 10 Pitch";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoNormal>In 'MonkeyLand', there is a traditional game called
+&quot;Bamboo Climbing&quot;. The rules of the game are as follo<span
+style='line-height:115%'>ws:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-align:justify;text-indent:-.25in'><span
+style='font-family:"Garamond","serif"'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>There
+are <b>N</b> monkeys who play this game and there are <b>N</b> bamboos of equal
+heights. Let the height be <b>L</b> meters.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-indent:-.25in'><span
+style='font-family:"Garamond","serif"'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>Each
+monkey stands in front of a bamboo and every monkey is assigned a different
+bamboo.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-indent:-.25in'><span
+style='font-family:"Garamond","serif"'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>When
+the whistle is blown, the monkeys start climbing the bamboos and they are not
+allowed to jump to a different bamboo throughout the game.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-indent:-.25in'><span
+style='font-family:"Garamond","serif"'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>Since
+they are monkeys, they usually climb by jumping. And in each jump, the <b>i<sup>th</sup></b>
+monkey can jump exactly <b>p<sub>i</sub></b> meters (<b>p<sub>i</sub></b> is a
+prime). After a while when a monkey finds that he cannot jump because one more
+jump may get him out of the bamboo, he reports the remaining length <b>r<sub>i</sub></b>
+that he is not able to cover.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-indent:-.25in'><span
+style='font-family:"Garamond","serif"'>5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>And
+before the game, each monkey is assigned a distinct <b>p<sub>i</sub></b>. </span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-align:justify;text-indent:-.25in'><span
+style='font-family:"Garamond","serif"'>6)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>The
+monkey, who has the lowest <b>r<sub>i</sub></b>, wins.</span></p>
+
+<p class=MsoNormal>Now, the organizers have found all the information of the
+game last year, but unluckily they haven't found the height of the bamboo. To
+be more exact, they know <b>N</b>, all <b>p<sub>i</sub></b> and corresponding <b>r<sub>i</sub></b>,
+but not <b>L</b>. So, you came forward and found the task challenging and so,
+you want to find <b>L</b>, from the given information.</p>
+
+<h1>Input</h1>
+
+<p class=MsoNormal>Input starts with an integer <b>T (</b><b>&#8804; 10000)</b>,
+denoting the number of test cases.</p>
+
+<p class=MsoNormal>Each case starts with a line containing an integer <b>n (1
+&#8804; n &#8804; 12)</b>. Each of the next <b>n</b> lines contains two
+integers <b>p<sub>i</sub> (1 &lt; p<sub>i</sub> &lt; 40, p<sub>i</sub> is a
+prime)</b> and <b>r<sub>i</sub> (0 &lt; r<sub>i</sub> &lt; p<sub>i</sub>)</b>. All
+<b>p<sub>i</sub></b> will be distinct.</p>
+
+<h1>Output</h1>
+
+<p class=MsoNormal>For each case, print the case number and the minimum
+possible value of <b>L</b> that satisfies the above conditions. If there is no
+solution, print <b>'Impossible'</b>.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1>Sample Input</h1>
+  </td>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <h1>Output for Sample Input</h1>
+  </td>
+ </tr>
+ <tr style='height:36.85pt'>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:36.85pt'>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>2</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>3</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>5 4</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>7 6</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>11 3</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>4</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>2 1</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>3 2</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>5 3</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>7 1</span></p>
+  </td>
+  <td width=319 valign=top style='width:239.4pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:36.85pt'>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>Case 1: 69</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>Case 2: 113</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+			<hr style="color: #717171; height: .5px;">
+
+			<div id="problem_setter">
+				Problem Setter: Tanvir Hassan			</div>
+			<div id="problem_setter">
+				Special Thanks: Jane Alam Jan			</div>
+		</div>
+	</div>
+<div class="bottomDiv" align="center">
+	<table width="100%">
+		<tr>
+			<td width="50%">
+				<div class="midMessage">
+					Developed and Maintained by
+					<br><b>JANE ALAM JAN</b>
+				</div>
+
+			</td>
+			<td width="50%">
+				<div class="midMessage">
+					Copyright &copy; 2011
+					<br><b>LightOJ, Jane Alam Jan</b>
+				</div>
+
+			</td>
+		</tr>
+	</table>
+</div>
+	</body>
+</html>
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/gif
+Content-Location: http://www.lightoj.com/images/bottom.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhBQBCAKIAAAAAAP///wAuVQIzXCmJzCeCwQAKC////yH5BAEAAAcALAAA
+AAAFAEIAAAMxCKrWTbAQQQetV9i7Mc+dBo5f6Z2imaJhS7LvKrsqDdexPec87t/A
+3W8HIUgWyOQiAQA7
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/gif
+Content-Location: http://www.lightoj.com/images/middle.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhBQAfAKIAAAAAAP///wAuVQIzXCmJzCeCwQAKC////yH5BAEAAAcALAAA
+AAAFAB8AAAMeSFokPu5FAWOVdl6qe/5YyIGjuJ2emXIKwQBwLM8JADs=
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/gif
+Content-Location: http://www.lightoj.com/images/top.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhBQBGAKIAAAAAAP///wAuVQIzXCmJzCeCwQAKC////yH5BAEAAAcALAAA
+AAAFAEYAAAMyCKrWTbAQQQetV9i7Mc+dBo5f6Z2imaJhS7LvKrsqDdexPec87t/A
+3U8Y1LkgBMlCkQAAOw==
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.lightoj.com/images/bullet1.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAACXBIWXMAAAsTAAAL
+EwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAA
+dTAAAOpgAAA6mAAAF2+SX8VGAAAAbUlEQVR42mL8//8/AyEAEEBMaHw2IGaEYjgA
+CCAWGOP1uVV/sWhiEDUKYwQIICYkE7EqANEAAcSEbiK6AhAACCCYIlZcCkAAIICY
+8JkA8wxAADERUAACfwACiBEaTpxA/B1XOAEEECMxgQkQYACZ6hI4xTUViwAAAABJ
+RU5ErkJggg==
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.lightoj.com/images/bullet2.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAACXBIWXMAAAsTAAAL
+EwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAA
+dTAAAOpgAAA6mAAAF2+SX8VGAAAAWElEQVR42mL8//8/AyEAEEBMDEQAgABigTFW
+XXmN1cgwHVFGgADCaxJIAYgGCCAmQgpAACCAmAgpAAGAAGIipAAEAAKIiZACEAAI
+IEZiwgkggIgKJ4AAAwCCTA0HZvGuvgAAAABJRU5ErkJggg==
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.lightoj.com/images/tr_header.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAC4AAAAYCAIAAAAK+FjQAAAACXBIWXMAAAsTAAAL
+EwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAA
+dTAAAOpgAAA6mAAAF2+SX8VGAAAAm0lEQVR42mJ89O8/w+AAAAHExDBoAEAADSKn
+AATQIHIKQAANIqcABNAgcgpAAA0ipwAE0CByCkAADSKnAATQIHIKQAANIqcABNAg
+cgpAALG8GDROAQggFsZB4xSAAGIZPDEEEEAszIPGKQABNIicAhBAg8gpAAE0iJwC
+EECDyCkAATSInAIQQIPIKQABNIicAhBALEyDprgFCDAAQfcELTWw/UIAAAAASUVO
+RK5CYII=
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.lightoj.com/images/bg_header.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAQAAAAjCAIAAAA8OjynAAAACXBIWXMAAAsTAAAL
+EwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAA
+dTAAAOpgAAA6mAAAF2+SX8VGAAAA60lEQVR42mL8//8/AwwABBDL7ffv4ByAAGJi
+QAIAAYTCAQggFA5AAKFwAAIIhQMQQCgcgABC4QAEEBPEUggJEEAs/xkZ/gMhmAQI
+IKgyiAxAALH8/8cI4jGCOAABxALV+x+omQEggFiQXQ0QQCxAVUA+IyNIMUAAsSAb
+DRBAIKPhACCAQJbCJQECCGgaxBFABYwAAcQENw3IAAgglr9gDkQjQAChOAcggEB6
+YBxGgAAC2vMXJskAEEBAexD+AwggFJ8CBBCK0QABxAI3CggAAghFGUAAoXAAAgiF
+AxBAKByAAELhAAQQCgcgwAC9ZVHbE+AzXQAAAABJRU5ErkJggg==
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.lightoj.com/images/stat_header.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAIAAACn2JBZAAAACXBIWXMAAAsTAAAL
+EwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAA
+dTAAAOpgAAA6mAAAF2+SX8VGAAAAc0lEQVR42mLc9D2BgUoAIICYGKgHAAKImmYB
+BBA1zQIIIGqaBRBA1DQLIICoaRZAAFHTLIAAoqZZAAHE8uE91cwCCCBqugsggFgY
+/1PNLIAAYvn/j2pmAQQQNf0IEEDUNAsggFj+Uc+PAAHE8p96YQ8QYACPRAsLQ1Z1
+wwAAAABJRU5ErkJggg==
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline; filename=style.css
+Content-Type: text/css; charset=utf-8; name=style.css
+Content-Location: http://www.lightoj.com/styles/style.css
+Content-Transfer-Encoding: 8bit
+
+.bottomDiv{
+	clear: left;
+	height: 100px;
+	background-image: url('../images/bottom.gif');
+	background-repeat:repeat-x;
+}
+
+.topMenu {
+	height: 31px;
+	background-image: url('../images/middle.gif');
+	background-repeat:repeat-x;
+}
+
+.topMenuMessage {
+	color: #7bd0e0;
+	font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	padding: 2px 0px 0px 0px;
+}
+
+.topDiv{
+	height: 70px;
+	background-image: url('../images/top.gif');
+	background-repeat:repeat-x;
+}
+
+.midMessage {
+	color: #7bd0e0;
+	font: 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding: 15px 0px 0px 0px;
+}
+
+.topImage {
+	padding: 5px 0px 0px 5px;
+}
+
+.green_link{
+	text-decoration:none;
+	color:Green;
+}
+a.green_link:link{
+	color:Green;
+}
+a.green_link:visited{
+	color:Green;
+}
+a.green_link:hover{
+	color:Green;
+	text-decoration:underline;
+}
+
+.red_link{
+	text-decoration:none;
+	color:#E32E0A;
+}
+a.red_link:link{
+	color:#E32E0A;
+}
+a.red_link:visited{
+	color:#E32E0A;
+}
+a.red_link:hover{
+	color:#E32E0A;
+	text-decoration:underline;
+}
+
+.blue_link{
+	color:Blue;
+	text-decoration:none;
+}
+a.blue_link:link{
+	color:Blue;
+}
+a.blue_link:visited{
+	color:Blue;
+}
+a.blue_link:hover{
+	color:Blue;
+	text-decoration:underline;
+}
+
+.black_link{
+	color:Black;
+	text-decoration:none;
+}
+a.black_link:link{
+	color:Black;
+}
+a.black_link:visited{
+	color:Black;
+}
+a.black_link:hover{
+	color:Black;
+	text-decoration:underline;
+}
+
+.gray_link{
+	color:Gray;
+	text-decoration:none;
+}
+a.gray_link:link{
+	color:Gray;
+}
+a.gray_link:visited{
+	color:Gray;
+}
+a.gray_link:hover{
+	color:Gray;
+	text-decoration:underline;
+}
+
+.user_link{
+	color: #4f6b72;
+	text-decoration:none;
+}
+a.user_link:link{
+	color: #4f6b72;
+	text-decoration:none;
+}
+a.user_link:visited{
+	color: #4f6b72;
+	text-decoration:none;
+}
+a.user_link:hover{
+	text-decoration:underline;
+	color: #c75f3e;
+}
+
+.colored_link{
+	color: #c75f3e;
+	text-decoration:none;
+}
+a.colored_link:link{
+	color: #c75f3e;
+	text-decoration:none;
+}
+a.colored_link:visited{
+	color: #c75f3e;
+	text-decoration:none;
+}
+a.colored_link:hover{
+	text-decoration:underline;
+	color: #c75f3e;
+}
+
+.user_link_one, .user_link_newone{
+	color: #4f6b72;
+	text-decoration:none;
+}
+a.user_link_one:link, a.user_link_newone:link{
+	color: #4f6b72;
+	text-decoration:none;
+}
+a.user_link_one:visited, a.user_link_newone:visited{
+	color: #4f6b72;
+	text-decoration:none;
+}
+a.user_link_one:hover, a.user_link_newone:hover{
+	text-decoration:underline;
+	color: #c75f3e;
+}
+
+.user_link_two, .user_link_newtwo{
+	color: #797268;
+	text-decoration:none;
+}
+a.user_link_two:link, a.user_link_newtwo:link{
+	color: #797268;
+	text-decoration:none;
+}
+a.user_link_two:visited, a.user_link_newtwo:visited{
+	color: #797268;
+	text-decoration:none;
+}
+a.user_link_two:hover, a.user_link_newtwo:hover{
+	text-decoration:underline;
+	color: #c75f3e;
+}
+
+.top_link{
+	text-decoration:none;
+	color: #7bd0e0;
+}
+a.top_link:link{
+	color: #7bd0e0;
+	text-decoration:none;
+}
+a.top_link:visited{
+	color: #7bd0e0;
+	text-decoration:none;
+}
+a.top_link:hover{
+	text-decoration:underline;
+	color: #7bd0e0;
+}
+body {
+	font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	background: #001324;
+}
+
+#mytable {
+	width: 700px;
+	padding: 0;
+	margin: 0;
+}
+
+#mytable1 {
+	width: 350px;
+	padding: 0;
+	margin: 0;
+}
+
+#mytable2 {
+	width: 130px;
+	padding: 0;
+	margin: 0;
+}
+
+#mytable3 {
+	width: 100%;
+	padding: 5 5 5 5;
+	margin: 0;
+}
+
+caption {
+	padding: 0 0 5px 0;
+	width: 700px;
+	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+}
+
+tr.newone {
+	background: #fff;
+	color: #4f6b72;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+tr.newtwo {
+	background: #F5FAFA;
+	color: #797268;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+td.newone {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	padding: 6px 6px 6px 12px;
+	text-align: center;
+}
+
+td.newtwo {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	padding: 6px 6px 6px 12px;
+	text-align: center;
+}
+th.newone {
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: url(../images/bullet1.png) no-repeat;
+	padding: 6px 6px 6px 12px;
+	text-align: center;
+}
+
+th.newtwo {
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: url(../images/bullet2.png) no-repeat;
+	padding: 6px 6px 6px 12px;
+	text-align: center;
+}
+td.newoneLeft {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	padding: 6px 6px 6px 12px;
+	text-align: left;
+}
+
+td.newtwoLeft {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	padding: 6px 6px 6px 12px;
+	text-align: left;
+}
+tr.newone:hover, tr.newtwo:hover { background: #E2FEFF url(../images/tr_header.png) repeat-x; background-position:center; }
+
+td.one {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+td.two {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #F5FAFA;
+	padding: 6px 6px 6px 12px;
+	color: #797268;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+td.oneLeft {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+td.twoLeft {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #F5FAFA;
+	padding: 6px 6px 6px 12px;
+	color: #797268;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+td.showCode {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-left: 1px solid #C1DAD7;
+	text-align: left;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+}
+
+th.one {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff url(../images/bullet1.png) no-repeat;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	padding: 6px 6px 6px 12px;
+	text-align: center;
+}
+
+th.two {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #f5fafa url(../images/bullet2.png) no-repeat;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #797268;
+	padding: 6px 6px 6px 12px;
+	text-align: center;
+}
+th.top {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA url(../images/bg_header.png) repeat-x;
+}
+
+h1 {
+	font: bold 22px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+h2 {
+	font: bold 17px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+h3 {
+	font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+h3.bugreport {
+	font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #c75f3e;
+}
+
+td.verdictbar {
+	background: #fff;
+	padding: 5px 5px 0px 8px;
+	font: 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.verdictcont {
+	width: 25px;
+	height: 120px;
+	border: 1px solid #eeeeee;
+	display: block;
+}
+
+.percentcont {
+	width: 120px;
+	height: 14px;
+	border: 1px solid #99CC99;
+	display: block;
+	background-color: #fcfcfc;
+}
+
+.perfill {
+	background: #aaff99 url(../images/stat_header.png) repeat-x 50% 50%;
+	height: 14px;
+}
+
+.pertext {
+	position: relative;
+	top: -15px;
+	text-align: center;
+	font-weight: bold;
+}
+
+div#wrapper {
+	float:left;
+	width:100%;
+}
+div#content {
+	min-height: 360px;
+	margin:0 3px 0 200px;
+	padding-bottom:4em;
+	padding-left:1em;
+	padding-right:1em;
+	padding-top:1em;
+	border-left:2px solid #002E55;
+	border-right:2px solid #002E55;
+	border-top:2px solid #002E55;
+	border-bottom:2px solid #002E55;
+	background: #E6EAE9;
+	color: #4f6b72;
+	overflow-x: auto;
+}
+div#problem {
+	min-height: 280px;
+	margin:3px 3px 3px 3px;
+	padding-bottom:2em;
+	padding-left:1em;
+	padding-right:1em;
+	padding-top:2em;
+	border-left:2px solid #002E55;
+	border-right:2px solid #002E55;
+	border-top:2px solid #002E55;
+	border-bottom:2px solid #002E55;
+	background: white;
+	color: black;
+	text-decoration: none;
+	overflow-x: auto;
+}
+div#problem_name {
+	color: green;
+	padding-bottom:5pt;
+	font-size:14pt;
+	font-family:"Cambria","serif";
+	font-weight:bold;
+	text-align:center;
+}
+div#problem_setter {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #1f551f;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+}
+div#navigation {
+	float:left;
+	width:200px;
+	margin-left:-100%;
+	margin-top: 2px;
+	color:#fff;
+}
+
+.navcontainer {
+	position: fixed;
+	width:198px;
+	border-right:1px solid #000;
+	padding:0;
+	margin-bottom:1em;
+	background-color:transparent;
+	text-align:center;
+}
+.navcontainer ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	border:none;
+	width:198px;
+	min-width:198px;
+}
+.navcontainer li {
+	margin:0;
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navcontainer li a,.navcontainer li a:visited {
+	display:block;
+	padding:5px 5px 5px 5px;
+	border-left:10px solid #000;
+	border-right:10px solid #000;
+	background-color: #002E55;
+	text-decoration:none;
+	font-weight:bold;
+	width:168px;
+	border-bottom:1px solid #1C85CA;
+	color: #7BD0E0;
+}
+
+.navcontainer li#active a, .navcontainer li a:hover {
+	border-left:10px solid #CCE8EB;
+	border-right:10px solid #CCE8EB;
+	background-color:#CCE8EB;
+	color: #4f6b72;
+}
+
+a.submenu:link, a.submenu:visited, .navcontainer a.submenu:hover, .navcontainer li#active a.submenu {
+	width: 150;
+	border-left: 20px solid black;
+	border-right: 20px solid black;
+	background-color: transparent;
+	font-size: 10;
+}
+
+.navcontainer li#active a.submenu {
+	color: #c75f3e;
+}
+
+.navcontainer li#active a.submenu:hover {
+	color: #4f6b72;
+}
+
+.navcontainer li.menutitle {
+	font-size: 12px;
+	border-left:10px solid #156396;
+	border-right:10px solid #156396;
+	border-top:10px solid #156396;
+	text-align:center;
+	color: #7BD0E0;
+	padding:5px 5px 5px 5px;
+	text-transform:uppercase;
+	border-bottom:1px solid #1C85CA;
+	background-color: #000;
+}
+.navcontainer li.menubottom {
+	border-left:10px solid #156396;
+	border-right:10px solid #156396;
+	border-bottom:10px solid #156396;
+	background-color: #000;
+}
+
+.buttons {
+	text-align: center;
+	background: white;
+	border:1px solid #C1DAD7;
+	color:black;
+	padding: 3px;
+}
+
+.buttons:hover {
+	background: #ddd;
+}
+
+span.forum_title {
+	font: bold 13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #006597;
+}
+
+.forum_link{
+	text-decoration:none;
+	color: #006597;
+}
+a.forum_link:link{
+	color: #006597;
+	text-decoration:none;
+}
+a.forum_link:visited{
+	color: #006597;
+	text-decoration:none;
+}
+a.forum_link:hover{
+	text-decoration:underline;
+	color: #c75f3e;
+}
+
+th.top_forum {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA url(../images/bg_header.png) repeat-x;
+}
+
+span.forum_button {
+	font: bold 12pt garamond, Arial, Helvetica, sans-serif;
+	text-align: left;
+	border: 1px solid #C1DAD7;
+	border-radius: 10;
+	padding: 5 5 5 12;
+	background: #d4e0f7;
+	color: red;
+}
+.bbcode_quote {
+	margin: 1em 0% 1em 4%;
+	background-color: #EBEADD;
+	padding: 0.5em;
+	position: relative;
+	line-height: 1.5em;
+	border: 1px solid #DBDBCE;
+	border-radius: 5;
+}
+.bbcode_quote_head {
+	background: url('../images/forum/quote.gif') no-repeat;
+	padding: 0 0 0 18;
+	background-color: #EFEED9;
+	border: 1px solid #DBDBDB;
+	border-radius: 5;
+}
+.bbcode_quote_body {
+	background-color: #EFEED3;
+	padding: 5;
+	border: 1px solid #DBDBDB;
+	border-radius: 5;
+}
+
+.bbeditor-button{
+	display:block;
+	float:left;
+	padding: 5 12 5 12;
+	line-height:0;
+	margin:1px;
+	margin-right:0px;
+}
+
+.bbeditor-button:hover{
+	padding:1 11 4 11;
+	border:1px solid #ccc;
+}
+
+.bbeditor-button img{
+	line-height:0;
+}
+
+.bbeditor-button.inactive{
+	background:#ccc;
+}
+
+.bbeditor-frame {
+	padding:0px;
+	display:inline-block;
+	width: inherit;
+	text-align: left;
+	border:1px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	background:#eee;
+	position:relative;
+	vertical-align:middle;
+}
+.bbcode_fixed {
+	width: inherit;
+	border: 1px solid #C1DAD7;
+	border-radius: 5px;
+	padding: 5px;
+	overflow: auto;
+	max-height: 250px;
+}
+
+.bbcode_url{
+	color: #c75f3e;
+	text-decoration:none;
+}
+
+a.bbcode_url:hover{
+	text-decoration:underline;
+	color: #c75f3e;
+}
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline; filename=main.png
+Content-Type: image/png; name=main.png
+Content-Location: http://www.lightoj.com/images/main.png
+Content-Transfer-Encoding: Base64
+
+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
+
+------------HFStG25NAEtgYtbUbR6zmr
+Content-Disposition: inline; filename=submit1.png
+Content-Type: image/png; name=submit1.png
+Content-Location: http://www.lightoj.com/images/submit1.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAC0AAAAPCAYAAABwfkanAAAACXBIWXMAAAsTAAAL
+EwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAA
+dTAAAOpgAAA6mAAAF2+SX8VGAAABuUlEQVR42mJkYGC4zzDEAEAAsYCI////Kw4V
+BzMyMt4HCCAmhiEIAAJoSDoaIIBYYAynh4ZKQGomlAti7wHi1VAxEP/sPvnzJlC1
+Z6BinUCchqReEIpdoWIgvYJAfULIlgL1lwOpDiCeBcT3oGYIQu1TgioD8Y2h5oIB
+0ByQuQwAAYQc0qugFrjCLAWy90ANZoA5GIkN8kQnkrwrVBzsWKhekIMEgY6ciRZY
+5VA96VAz7kHtTgexoW5YjWSuK1QNGAAEELKjQb4yBlqQBlQE00gSAOp1gTJXIwnv
+gYYkciifxWUG1OF4xQECCNnRnVB6JtDg/0D8jkQH74ZG+Xs0qXSoPCy0XZCjnBwA
+EEBMSD6pAGJGaNJYDY3WcmINQkoe96COh4nfg5qXBjSvg1IHgwBAADGhhRQDNC1W
+QIXPwkIOKL8KTe09POa+R/NQGJSZBk3DFAGAAAKF7H1Q5QJ1VCg0JECZaTUo9JEc
+6YKkD70kMUbSB8r1sAy5G2pOGDR5vAeZCWTfhcrPQouZWaC0C80bq6BmnUUuBECV
+C0AAwR09lGpEgAAakpULQAANSUcDBBDjUGzlAQQYAECusE8SQKzpAAAAAElFTkSu
+QmCC
+
+------------HFStG25NAEtgYtbUbR6zmr--

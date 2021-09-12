@@ -1,0 +1,22 @@
+//HAVERSINE FORMULA.
+
+//lat1,lat2 lon1,lon2 all are in degree. Radius is R.
+
+template<class T>T sqr(T a){return a*a;}
+double pi=2*acos(0),R=6378;
+
+double SphericalDistance(double lat1,double lon1,double lat2,double lon2)
+{
+    double dlon,dlat,a,d,c;
+    //convertino from degree to radian.
+    lat1 *= 2.*pi/360.;lat2 *= 2.*pi/360.;
+    lon1 *= 2.*pi/360.;lon2 *= 2.*pi/360.;
+    dlon = lon2 - lon1;
+    dlat = lat2 - lat1;
+
+    a = (sqr(sin(dlat/2))) + cos(lat1) * cos(lat2) * sqr(sin(dlon/2));
+    c = 2 * atan2(sqrt(a), sqrt(1-a));
+    d = R * c;
+    return d;
+}
+

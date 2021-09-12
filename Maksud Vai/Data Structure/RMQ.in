@@ -1,0 +1,66 @@
+long long a[1000000];
+
+int tr[1<<21];
+
+void ini(int nod,int b,int e)
+{
+    if(b==e)    {tr[nod]=b;return;}
+    ini(2*nod,b,(b+e)/2);
+    ini(2*nod+1,(b+e)/2+1,e);
+    if(a[tr[2*nod]]>=a[tr[2*nod+1]])
+        tr[nod] = tr[2*nod];
+    else tr[nod] = tr[2*nod+1];
+}
+
+int que(int nod,int b,int e,int i,int j)
+{
+    if(b>j || e<i)  return -1;
+    if(i<=b && e<=j)    return tr[nod];
+    int p1 = que(nod*2,b,(b+e)/2,i,j);
+    int p2 = que(nod*2+1,(b+e)/2+1,e,i,j);
+    if(p1==-1)  return p2;
+    if(p2==-1)  return p1;
+    if(a[p1]>=a[p2])    return p1;
+    return p2;
+}
+
+int main()
+{
+    long long i,j,k,x,y,n,m;
+    bool c[1000000];
+
+    for(i=1;i<1000000;i++)  c[i] = true ;
+    for(i=1;i<1000000;i++)
+        if(c[i])
+        {
+            x=1;
+            n=i;
+            while(n != 1)
+            {
+                if(n & 1) n = 3 * n + 1 ;
+                else    n >>= 1 ;
+                if( n < 1000000 && !c[n] )
+                {
+                    x += a[n] ;
+                    break ;
+                }
+				x ++ ;
+            }
+            for(j = i ; j <1000000; j <<= 1, x++ )
+            {
+                a[j] = x ;
+                c[j] = false ;
+            }
+        }
+
+    ini(1,1,999999);
+    int x1,y1;
+    while(scanf("%d%d",&x1,&y1)==2)
+    {
+        printf("%d %d ",x1,y1);
+        if(x1>y1)swap(x1,y1);
+        cout<<a[que(1,1,999999,x1,y1)]<<endl;
+        //printf(" %d\n",n);
+    }
+    return 0;
+}

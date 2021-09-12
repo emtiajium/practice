@@ -1,0 +1,8 @@
+{
+"name":"Hello World!",
+"description": "my first webapp",
+"launch_path":"/index.html",
+"icons":{
+"128":"/image/inco.png"
+}
+}

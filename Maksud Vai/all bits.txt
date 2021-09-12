@@ -1,0 +1,19 @@
+fii(1,p2(n))
+        {
+            tmsk=i;
+            do{
+                tmsk &=i;
+                if(tmsk==0)break;
+                dp[i] >?= pc[tmsk]+dp[i^tmsk];
+            }while(tmsk --);
+        }
+
+
+
+
+#############################################
+
+	if(!(msk&msk-1))	dp[msk]=1;
+	else 	
+		
+		for(int p=msk;p=msk&p-1;)	dp[msk]<?=dp[p]+dp[msk^p];

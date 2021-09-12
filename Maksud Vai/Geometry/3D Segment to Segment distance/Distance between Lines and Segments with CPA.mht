@@ -1,0 +1,1062 @@
+Content-Type: multipart/related; start=<op.mhtml.1285765199968.2091481f4228f8c5@172.17.0.42>; boundary=----------6XT0ew0XvXHYR0EvGdb0ez
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/algorithm_0106.htm
+Subject: =?utf-8?Q?Distance=20between=20Lines=20and=20Segments=20with=20CPA?=
+MIME-Version: 1.0
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=algorithm_0106.htm
+Content-Type: text/html; charset=windows-1252; name=algorithm_0106.htm
+Content-ID: <op.mhtml.1285765199968.2091481f4228f8c5@172.17.0.42>
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/algorithm_0106.htm
+Content-Transfer-Encoding: 8bit
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="reply-to" content="webmaster@softsurfer.com">
+<title>Distance between Lines and Segments with CPA</title>
+<meta name="language" content="en-us">
+<meta name="description" content="Algorithm for Distance between Lines, Segments with their Closest Point of Approach">
+<meta name="keywords" content="geometry, algorithm, C++, software, computational geometry, mathematics, Euclidean metric, distance, line, two lines, segment, ray, closest point of approach, closest approach, CPA, time of closest approach">
+<meta name="classification" content="Internet">
+<meta name="distribution" content="GLOBAL">
+<meta name="rating" content="SAFE FOR KIDS">
+<meta name="copyright" content="2001 SoftSurfer Company">
+<meta name="author" content="Dan Sunday">
+<meta name="robots" content="INDEX, NOFOLLOW">
+<meta name="revisit-after" content="30 days">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+
+
+<meta name="Microsoft Theme" content="geometry 011, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body background="../../_themes/geometry/blutextb.gif" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#B500B5" alink="#000066"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="Times New Roman">
+
+<p align="left"><font size="6"><strong><a href="../../index.html">
+<img border="0" src="../../images/Logos/Logo_SS.com-sm.png" align="left" hspace="30" width="85" height="70"></a>Algorithm 7</strong></font><br>
+<nobr>[<A HREF="../../" TARGET="" STYLE="{text-decoration: none;}">Home</A>]</nobr>&nbsp;<nobr>[<A HREF="../../overview.htm" TARGET="" STYLE="{text-decoration: none;}">Overview</A>]</nobr>&nbsp;<nobr>[<A HREF="../../history.htm" TARGET="" STYLE="{text-decoration: none;}">History</A>]</nobr>&nbsp;<nobr>[<A HREF="../../algorithm_archive.htm" TARGET="" STYLE="{text-decoration: none;}">Algorithms</A>]</nobr>&nbsp;<nobr>[<A HREF="../../books.shtml" TARGET="" STYLE="{text-decoration: none;}">Books</A>]</nobr>&nbsp;<nobr>[<A HREF="../../websites.htm" TARGET="" STYLE="{text-decoration: none;}">Web&nbsp;Sites</A>]</nobr>&nbsp;<nobr>[<A HREF="../../gifts.htm" TARGET="" STYLE="{text-decoration: none;}">Gift&nbsp;Shop</A>]</nobr></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="Times New Roman">
+
+<h1 align="center" style="text-align: center"><!--mstheme--><font face="Arial" color="#660066"><b><u><font size="5"><br>
+</font>Distance between Lines and Segments<br>
+with their Closest Point of Approach</u></b><!--mstheme--></font></h1>
+<p align="center" style="text-align: center">by Dan Sunday</p>
+<div align="center">
+  <center>
+  <!--mstheme--></font><table border="0">
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><b><u><a href="#Distance between Lines">Distance between 
+      Lines</a></u></b><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman">
+      <img border="0" src="../../images/Widgets/trans5x025.gif" width="25" height="5"><font size="2"><b><a href="#Segments and Rays">Distance 
+      between Segments and Rays</a></b></font><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><b><u><a href="#Closest Point of Approach">Closest Point 
+      of Approach (CPA)</a></u></b><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><b><a href="#Implementation"><u>Implementations</u></a></b><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><font size="2">
+      <img border="0" src="../../images/Widgets/trans5x025.gif" width="25" height="5"></font><font face="Courier" size="2"><a href="#dist3D_Line_to_Line()">dist3D_Line_to_Line()</a></font><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><font size="2">
+      <img border="0" src="../../images/Widgets/trans5x025.gif" width="25" height="5"></font><font face="Courier" size="2"><a href="#dist3D_Segment_to_Segment()">dist3D_Segment_to_Segment()</a></font><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><font size="2">
+      <img border="0" src="../../images/Widgets/trans5x025.gif" width="25" height="5"></font><font face="Courier" size="2"><a href="#cpa_time()">cpa_time()</a></font><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><font size="2">
+      <img border="0" src="../../images/Widgets/trans5x025.gif" width="25" height="5"></font><font face="Courier" size="2"><a href="#cpa_distance()">cpa_distance()</a></font><!--mstheme--></font></td>
+    </tr>
+    <tr>
+      <td align="left"><!--mstheme--><font face="Times New Roman"><b><a href="#References"><u>References</u></a></b><!--mstheme--></font></td>
+    </tr>
+  </table><!--mstheme--><font face="Times New Roman">
+  </center>
+</div>
+<p style="text-align: left">We considered the distance from a point to a line in 
+Algorithm 2 about the
+<a href="../algorithm_0102/algorithm_0102.htm">Distance of a Point to a Line, 
+Ray or Segment</a>.&nbsp; We now consider the minimum distance between lines.&nbsp; 
+One sometimes has to compute the distance separating two geometric objects; for 
+example, in collision avoidance algorithms.&nbsp; These objects could be 
+polygons (in 2D) or polyhedra (in 3D which are composed of linear edges and 
+faces.&nbsp; The Euclidean distance between any two geometric objects is defined 
+as the minimum distance between any two of their points.&nbsp; That is, for two 
+geometric sets <b>G</b><sub>1</sub> and <b>G</b><sub>2</sub> (in any 
+n-dimensional space), the distance between them is defined as:</p>
+<p align="center"><img border="0" src="Eqn_dGG.gif" width="231" height="40"></p>
+<p style="text-align: left">In this month's algorithm we show how to efficiently 
+compute this distance between lines, rays and segments (in any dimension).&nbsp; 
+We also show how to find the two points, P and Q, where this minimum occurs; 
+that is, where d(<b>G</b><sub>1</sub>,<b>G</b><sub>2</sub>) = d(P,Q).&nbsp; It 
+is not true that these points always exist for arbitrary geometric sets.&nbsp; 
+But, they exist for many well-behaved geometric objects such as lines, planes, 
+polygons, polyhedra, and closed &amp; bounded (i.e.: &quot;compact&quot;) objects.</p>
+<p style="text-align: left">Additionally, we show how to compute the closest 
+point of approach (CPA) between two points that are dynamically moving in a 
+straight line.&nbsp; This is also important an important computation in 
+collision detection, for example to determine how close two planes or two ships, 
+represented as point &quot;tracks&quot;, will get as they pass each other.</p>
+<p style="text-align: left">We use the parametric equation to represent lines, 
+rays and segments, as described in the Algorithm 2 section on&nbsp;
+<a href="../algorithm_0102/algorithm_0102.htm#Lines">Lines</a>, which also shows 
+how to convert between this and other representations.</p>
+<h2 align="left" style="text-align: left"><!--mstheme--><font face="Arial" color="#660066"><b><a name="Distance between Lines">
+</a>Distance between Lines</b><!--mstheme--></font></h2>
+<p align="left">We first consider two infinite lines <font color="#000000"><b>L</b><sub>1</sub>: 
+P(<i>s</i>) = P<sub>0 </sub>+ <i>s </i>(P<sub>1</sub><font face="Symbol">-</font>P<sub>0</sub>) 
+= P<sub>0 </sub>+ <i>s</i><b>u</b> and <b>L</b><sub>2</sub>: Q(<i>t</i>) = Q<sub>0
+</sub>+ <i>t </i>(Q<sub>1</sub><font face="Symbol">-</font>Q<sub>0</sub>) = Q<sub>0
+</sub>+ <i>t</i><b>v</b></font>.&nbsp; Let <b>w</b>(<i>s,t</i>) =
+<font color="#000000">P(<i>s</i>)<font face="Symbol">-</font>Q(<i>t</i>) be a 
+vector between points on the two lines.&nbsp; We want to </font>find the <b>w</b>(<i>s,t</i>) 
+that has a minimum length for all <i>s</i> and <i>t</i>.&nbsp; This can be 
+computed using calculus [Eberly, 2001].&nbsp; Here, we use a more geometric 
+approach, and end up with the same result as he does.&nbsp; A similar geometric 
+approach was used by [Teller, 2000], but he uses a cross product which restricts 
+his method to 3D space whereas the method we use works in any dimension.&nbsp; 
+Also, the solution given here and by Eberly are faster than Teller's which 
+computes intermediate planes and gets their intersections with the two lines.</p>
+<p align="left">In any <i>n</i>-dimensional space, the two lines
+<font color="#000000"><b>L</b><sub>1</sub></font> and <font color="#000000"><b>L</b><sub>2</sub></font> 
+are closest at unique points <font color="#000000">P(<i>s</i><sub>c</sub>)</font> 
+and <font color="#000000">Q(<i>t</i><sub>c</sub>)</font> for which <b>w</b>(<i>s</i><font color="#000000"><sub>c</sub></font>,<i>t</i><font color="#000000"><sub>c</sub></font>) 
+attains its minimum length.&nbsp; Also, if <font color="#000000"><b>L</b><sub>1</sub></font> 
+and <font color="#000000"><b>L</b><sub>2</sub></font> are not parallel, then the 
+line segment <font color="#000000">P(<i>s</i><sub>c</sub>)Q(<i>t</i><sub>c</sub>) 
+joining the closest points</font> is uniquely perpendicular to both lines at the 
+same time.&nbsp; No other segment between <font color="#000000"><b>L</b><sub>1</sub></font> 
+and <font color="#000000"><b>L</b><sub>2</sub></font> has this property.&nbsp; 
+That is, the vector <b>w</b><font color="#000000"><sub>c</sub></font><b> = w</b>(<i>s</i><font color="#000000"><sub>c</sub></font>,<i>t</i><font color="#000000"><sub>c</sub></font>) 
+is uniquely perpendicular to the line direction vectors <b>u</b> and <b>v</b>, 
+and this is equivalent to it satisfying the two equations: <b>u · w</b><font color="#000000"><sub>c</sub></font> 
+= 0 and <b>v · w</b><font color="#000000"><sub>c</sub></font> = 0.</p>
+<p align="center"><img border="0" src="Pic_d2lines.gif" width="280" height="186"></p>
+<p align="left">We can solve these two equations by substituting <b>w</b><font color="#000000"><sub>c</sub></font> 
+= <font color="#000000">P(<i>s</i><sub>c</sub>)<font face="Symbol">-</font>Q(<i>t</i><sub>c</sub>)</font> 
+= <b>w</b><sub>0</sub> <font color="#000000">+ <i>s</i><sub>c</sub><b>u</b><sub>
+</sub><font face="Symbol">-</font> <i>t</i><sub>c</sub><b>v</b>, where </font>
+<b>w</b><sub>0</sub><font color="#000000"> = P<sub>0</sub><font face="Symbol">-</font>Q<sub>0</sub>, 
+into each one to get </font>two simultaneous linear equations<font color="#000000">:</font></p>
+<p align="center"><img border="0" src="Eqn_lines1.gif" width="223" height="60"></p>
+<p align="left">Then, letting <i>a</i> = <b>u · u</b><font color="#000000">, <i>
+b </i>= </font><b>u · v</b><font color="#000000">, <i>c</i> = </font><b>v · v</b><font color="#000000">,
+<i>d</i> = </font><b>u · w</b><sub>0</sub>, and <i>e</i> = <b>v · w</b><sub>0</sub>, 
+we solve for <i>s</i><font color="#000000"><sub>c</sub></font> and <i>t</i><font color="#000000"><sub>c</sub></font> 
+as:</p>
+<p align="center"><img border="0" src="Eqn_lines2.gif" width="258" height="51"></p>
+<p align="left">whenever the denominator <i>ac</i><font face="Symbol" color="#000000">-</font><i>b</i><sup>2</sup>&nbsp; 
+is nonzero.&nbsp; Note that <i>ac</i><font face="Symbol" color="#000000">-</font><i>b</i><sup>2</sup> 
+= |<b>u</b>|<sup>2</sup>|<b>v</b>|<sup>2</sup>-(|<b>u</b>||<b>v</b>|cos
+<font face="Symbol" color="#000000">q</font>)<sup>2</sup> = (|<b>u</b>||<b>v</b>|sin
+<font face="Symbol" color="#000000">q</font>)<sup>2</sup> &gt;=0 is always 
+nonnegative.&nbsp; When <i>ac</i><font face="Symbol" color="#000000">-</font><i>b</i><sup>2</sup> 
+= 0, the two equations are dependant, the two lines are parallel, and the 
+distance between the lines is constant.&nbsp; We can solve for this parallel 
+distance of separation by fixing the value of one parameter and using either 
+equation to solve for the other.&nbsp; Selecting <i>s</i><font color="#000000"><sub>c</sub></font><i>
+</i>= 0, we get <i>t</i><font color="#000000"><sub>c</sub></font> = <i>d</i> /
+<i>b</i> = <i>e</i> / <i>c</i>.</p>
+<p align="left">Having solved for <i>s</i><font color="#000000"><sub>c</sub></font> 
+and <i>t</i><font color="#000000"><sub>c</sub></font>, we have the points
+<font color="#000000">P(<i>s</i><sub>c</sub>)</font> and <font color="#000000">
+Q(<i>t</i><sub>c</sub>) where the two lines <b>L</b><sub>1</sub></font> and
+<font color="#000000"><b>L</b><sub>2 </sub>are closest.&nbsp; Then the distance 
+between them is given by:</font></p>
+<p align="center"><img border="0" src="Eqn_lines3.gif" width="508" height="56"></p>
+<h3 align="left" style="text-align: left"><!--mstheme--><font face="Arial" color="#660066"><b><a name="Segments and Rays"></a>
+Distance between Segments and Rays</b><!--mstheme--></font></h3>
+<p align="left">The distance between segments and rays may not be the same as 
+the distance between their extended lines.&nbsp; The closest points on the 
+extended infinite line may be outside the range of the segment or ray which is a 
+restricted subset of the line.&nbsp; We represent a segment
+<font color="#000000"><b>S</b><sub>1</sub></font> (between endpoints
+<font color="#000000">P<sub>0 </sub>and<i> </i>P<sub>1</sub></font>) as the 
+points on <font color="#000000"><b>L</b><sub>1</sub>: P(<i>s</i>) = P<sub>0
+</sub>+ <i>s </i>(P<sub>1</sub><font face="Symbol">-</font>P<sub>0</sub>) = P<sub>0
+</sub>+ <i>s</i><b>u</b></font> with 0&lt;=<i>s</i>&lt;=1.&nbsp; Also, a positive ray
+<font color="#000000"><b>R</b><sub>1</sub></font> (starting from
+<font color="#000000">P<sub>0</sub></font>) is given by the points P(<i>s</i>) 
+with <i>s</i>&gt;=0.&nbsp; Similarly, the segment <font color="#000000"><b>S</b><sub>2</sub></font> 
+on <font color="#000000"><b>L</b><sub>2</sub> </font>from <font color="#000000">
+Q<sub>0 </sub>to<i> </i>Q<sub>1</sub></font> <font color="#000000">is given by 
+the points Q(<i>t</i>) with 0&lt;=<i>t</i>&lt;=1.</font></p>
+<p align="left"><font color="#000000">The first step in computing a distance 
+involving segments and/or rays is to get the closest points for the lines they 
+lie on.&nbsp; So, we first compute </font><i>s</i><font color="#000000"><sub>c</sub></font> 
+and <i>t</i><font color="#000000"><sub>c</sub> for <b>L</b><sub>1</sub></font> 
+and <font color="#000000"><b>L</b><sub>2</sub>, and if these are in the range of 
+the involved segment or ray, then they are also the closest points for them.&nbsp; 
+But if they lie outside the range, then they are not and we have to determine 
+new points that minimize <b>w</b>(<i>s,t</i>)=P(<i>s</i>)<font face="Symbol">-</font>Q(<i>t</i>) 
+over the ranges of interest.&nbsp; To do this, we first note that minimizing the 
+length of <b>w</b> is the same as minimizing |<b>w</b>|<sup>2</sup> = <b>w · w</b> 
+= (</font><b>w</b><sub>0</sub> <font color="#000000">+ <i>s</i><b>u</b><sub>
+</sub><font face="Symbol">-</font> <i>t</i><b>v</b>)<b> · </b>(</font><b>w</b><sub>0</sub>
+<font color="#000000">+ <i>s</i><b>u</b><sub> </sub><font face="Symbol">-</font>
+<i>t</i><b>v</b>) which is a quadratic function of <i>s</i> and <i>t</i>.&nbsp; 
+In fact, it defines a parabaloid over the (<i>s,t</i>)-plane with a minimum at 
+C=(</font><i>s</i><font color="#000000"><sub>c</sub></font>,<i>t</i><font color="#000000"><sub>c</sub>), 
+and which is strictly increasing along rays in the (<i>s,t</i>)-plane that start 
+from C and go in any direction.&nbsp; However, when segments and/or rays are 
+involved, we need the minimum over a subregion <b>G</b> of the (<i>s</i>,<i>t</i>)-plane, and 
+the global minimum at C may lie outside of <b>G</b>.&nbsp; In these cases, the 
+minimum always occurs on the boundary of <b>G</b>, and in particular, on the 
+part of <b>G</b>'s boundary that is visible to C (that is, a line from C to the 
+boundary point is exterior to <b>G</b>).&nbsp; We say that C can &quot;see&quot; points on 
+this visible boundary of <b>G</b>.</font></p>
+<p align="left">To be specific, suppose that we want the minimum distance 
+between two finite segments <font color="#000000"><b>S</b><sub>1</sub></font> 
+and <font color="#000000"><b>S</b><sub>2</sub></font>.&nbsp; Then, we have that
+<b>G</b> = {(<i>s,t</i>) | 0&lt;=<i>s</i>&lt;=1 and 0&lt;=<i>t</i>&lt;=1}<b> </b>= 
+[0,1]×[0,1] is the unit square as shown in the diagram.&nbsp; The four edges of 
+the square are given by <i>s</i>=0, <i>s</i>=1, <i>t</i>=0, and <i>t</i>=1.&nbsp; 
+If C=<font color="#000000">(</font><i>s</i><font color="#000000"><sub>c</sub></font>,<i>t</i><font color="#000000"><sub>c</sub>) 
+is outside <b>G</b>, then it can see at most two edges of <b>G</b>.&nbsp; If
+</font><i>s</i><font color="#000000"><sub>c</sub>&lt;0, C can see the s=0 edge; if
+</font><i>s</i><font color="#000000"><sub>c</sub>&gt;1, C can see the s=1 edge; and 
+similarly for </font><i>t</i><font color="#000000"><sub>c</sub>.&nbsp; Clearly, 
+if C is not in <b>G</b>, then at least 1 and at most 2 of these inequalities are 
+true, and they determine which edges of <b>G</b> are candidates for a minimum of&nbsp; 
+|<b>w</b>|<sup>2</sup>.</font></p>
+<p align="center"><img border="0" src="Pic_d2segments.gif" width="330" height="252"></p>
+<p align="left"><font color="#000000">For each candidate edge, we use basic 
+calculus to compute where the minimum occurs on that edge, either in its 
+interior or at an endpoint.</font>&nbsp; <font color="#000000">Consider the edge 
+s=0, along which |<b>w</b>|<sup>2</sup> = (</font><b>w</b><sub>0</sub>
+<font color="#000000"><font face="Symbol">-</font> <i>t</i><b>v</b>)<b> · </b>(</font><b>w</b><sub>0</sub>
+<font color="#000000"><font face="Symbol">-</font> <i>t</i><b>v</b>).&nbsp; 
+Taking the derivative with <i>t</i> we get a minimum when:</font></p>
+<p align="center"><img border="0" src="Eqn_segs1.gif" width="226" height="51"></p>
+<p align="left"><font color="#000000">which gives a minimum on the edge at (0,<i>t</i></font><sub>0</sub><font color="#000000">) 
+where:</font></p>
+<p align="center"><img border="0" src="Eqn_segs2.gif" width="86" height="51"></p>
+<p align="left"><font color="#000000">If 0&lt;=<i>t</i></font><sub>0</sub><font color="#000000">&lt;=1, 
+then this will be the minimum of |<b>w</b>|<sup>2</sup> on <b>G</b>, and P(0) 
+and Q(<i>t</i></font><sub>0</sub><font color="#000000">) are the two closest 
+points of the two segments.&nbsp; However, if <i>t</i></font><sub>0</sub><font color="#000000"> 
+is outside the edge, then an endpoint of the edge, (0,0) or (0,1), is the 
+minimum; plus, we will have to check a second visible edge in case the true 
+minimum is on it.&nbsp; The other edges are treated in a similar manner.</font></p>
+<p align="left"><font color="#000000">Putting it all together by testing all 
+candidate edges, we end up with a relatively simple algorithm that only has a 
+few cases to check.&nbsp; An analogous approach is given by [Eberly, 2001], but 
+it has more cases which makes it more complicated to implement.</font></p>
+<p align="left"><font color="#000000">Other distance algorithms, such as 
+line-to-ray or ray-to-segment, are similar in spirit, but have fewer boundary 
+tests to make than the segment-to-segment distance algorithm.</font></p>
+<h2 align="left" style="text-align: left"><!--mstheme--><font face="Arial" color="#660066"><b><font color="#800080"><br>
+</font><a name="Closest Point of Approach"></a>Closest Point of Approach (CPA)</b><!--mstheme--></font></h2>
+<p align="left">The &quot;Closest Point of Approach&quot; refers to the positions at which 
+two dynamically moving objects reach their closest possible distance.&nbsp; This 
+is an important calculation for collision avoidance.&nbsp; In many cases of 
+interest, the objects, referred to as &quot;tracks&quot;, are points moving in two fixed 
+directions at fixed speeds.&nbsp; That means that the two points are moving 
+along two lines in space.&nbsp; However, their closest distance is not the same 
+as the closest distance between the lines since the distance between the points 
+must be computed at the same moment in time.&nbsp; So, even in 2D with two lines 
+that intersect, points moving along these lines may remain far apart.&nbsp; But 
+if one of the tracks is stationary, then the CPA of another moving track is at 
+the base of the perpendicular from the first track to the second's line of 
+motion.</p>
+<p align="left">Consider two dynamically changing points whose positions at time
+<i>t</i> are <font color="#000000">P(<i>t</i>) and Q(<i>t</i>).&nbsp; Let their 
+positions at time <i>t</i>=0 be P<sub>0</sub> and Q<sub>0</sub>; and let their 
+velocity vectors per unit of time be <b>u</b> and <b>v</b>.&nbsp; Then, the 
+equations of motion for these two points are P(<i>t</i>) = P<sub>0 </sub>+ <i>t</i><b>u</b></font> 
+and <font color="#000000">Q(<i>t</i>) = Q<sub>0 </sub>+ <i>t</i><b>v</b></font> 
+which are the familiar parametric equations for the lines.&nbsp; However, the 
+two equations are coupled by having a common parameter <i>t</i>.&nbsp; So, at 
+time <i>t</i>, the distance between them is d(<i>t</i>) = |
+<font color="#000000">P(<i>t</i>)<font face="Symbol">-</font>Q(<i>t</i>)</font> 
+| = | <b>w</b>(<i>t</i>) | where <b>w</b>(<i>t</i>) =&nbsp; <b>w</b><font color="#000000"><sub>0</sub></font> 
++ <i>t</i>(<b>u</b><font face="Symbol" color="#000000">-</font><b>v</b>) with <b>
+w</b><font color="#000000"><sub>0</sub></font> = <font color="#000000">P<sub>0</sub><font face="Symbol">-</font>Q<sub>0</sub></font>.</p>
+<p align="center"><img border="0" src="Pic_cpa.gif" width="280" height="140"></p>
+<p align="left">Now, d(<i>t</i>) is a minimum when D(<i>t</i>) = d(<i>t</i>)<sup>2</sup> 
+is a minimum, and we can compute:</p>
+<p align="center"><img border="0" src="Eqn_cpa1.gif" width="495" height="31"></p>
+<p align="left"><font color="#000000">which has a minimum when</font></p>
+<p align="center"><img border="0" src="Eqn_cpa2.gif" width="375" height="51"></p>
+<p align="left"><font color="#000000">which can be solved to get the time of CPA 
+to be:</font></p>
+<p align="center"><img border="0" src="Eqn_cpa3.gif" width="143" height="61"></p>
+<p align="left"><font color="#000000">whenever </font>|<b>u</b><font face="Symbol" color="#000000">-</font><b>v|</b> 
+is nonzero.&nbsp; If |<b>u</b><font face="Symbol" color="#000000">-</font><b>v|</b>=0, 
+then the two points are traveling in the same direction at the same speed, and 
+will always remain the same distance apart, so one can use <i>t<sub>c</sub></i> 
+= 0.&nbsp; In both cases we have that:</p>
+<p align="center"><img border="0" src="Eqn_cpa4.gif" width="256" height="33"></p>
+<p align="left">Note that when <i>t<sub>c</sub></i> &lt; 0, then the CPA has 
+already occurred in the past, and the two points are getting further apart as 
+they move on in time.</p>
+<h2 style="text-align: left"><!--mstheme--><font face="Arial" color="#660066"><b><font color="#800080"><br>
+<a name="Implementation"></a>Implementations</font></b><!--mstheme--></font></h2>
+<p style="text-align: left">Here are some sample &quot;C++&quot; implementations of these 
+algorithms.</p>
+<p style="text-align: left"><font face="Courier">// Copyright 2001, softSurfer (www.softsurfer.com)<br>
+// This code may be freely used and modified for any purpose<br>
+// providing that this copyright notice is included with it.<br>
+// SoftSurfer makes no warranty for this code, and cannot be held<br>
+// liable for any real or imagined damage resulting from its use.<br>
+// Users of this code must verify correctness for their application.<br>
+</font></p>
+<p style="text-align: left"><font face="Courier">// Assume that classes are 
+already given for the objects:<br>
+//&nbsp;&nbsp;&nbsp; <b>Point</b> and <b>Vector</b> with<br>
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; coordinates {float x, y, z;}<b><br>
+</b>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operators for:<br>
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Point&nbsp; 
+= Point ± Vector<br>
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector = 
+Point - Point<br>
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector = 
+Vector ± Vector<br>
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector = 
+Scalar * Vector<br>
+//&nbsp;&nbsp;&nbsp; <b>Line</b> and <b>Segment</b> with defining points {Point 
+P0, P1;}<br>
+//&nbsp;&nbsp;&nbsp; <b>Track</b> with initial position and velocity vector<br>
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {Point P0; 
+Vector v;}<br>
+//===================================================================<br>
+</font></p>
+<p style="text-align: left"><font face="Courier">#define SMALL_NUM&nbsp; 
+0.00000001 // anything that avoids division overflow<br>
+// dot product (3D) which allows vector operations in arguments<br>
+#define dot(u,v)&nbsp;&nbsp; ((u).x * (v).x + (u).y * (v).y + (u).z * (v).z)<br>
+#define norm(v)&nbsp;&nbsp;&nbsp; sqrt(dot(v,v))&nbsp; // norm = length of 
+vector<br>
+#define d(u,v)&nbsp;&nbsp;&nbsp;&nbsp; norm(u-v)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// distance = norm of difference<br>
+#define abs(x)&nbsp;&nbsp;&nbsp;&nbsp; ((x) &gt;= 0 ? (x) : -(x))&nbsp;&nbsp; // 
+absolute value<br>
+</font></p>
+<p style="text-align: left"><font face="Courier">//<a name="dist3D_Line_to_Line()"></a>
+</font><b><font face="Courier">dist3D_Line_to_Line():</font></b><font face="Courier"><br>
+//&nbsp;&nbsp;&nbsp; Input:&nbsp; two 3D lines L1 and L2<br>
+//&nbsp;&nbsp;&nbsp; Return: the shortest distance between L1 and L2<br>
+float<br>
+dist3D_Line_to_Line( Line L1, Line L2)<br>
+{<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; u = L1.P1 - L1.P0;<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; v = L2.P1 - L2.P0;<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; w = L1.P0 - L2.P0;<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; a = dot(u,u);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// always &gt;= 0<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; b = dot(u,v);<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; c = dot(v,v);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// always &gt;= 0<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; d = dot(u,w);<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; e = dot(v,w);<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; D = a*c - b*b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// always &gt;= 0<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; sc, tc;<br>
+<br>
+&nbsp;&nbsp;&nbsp; // compute the line parameters of the two closest points<br>
+&nbsp;&nbsp;&nbsp; if (D &lt; SMALL_NUM) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// the lines are almost parallel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sc = 0.0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tc = (b&gt;c ? d/b : e/c);&nbsp;&nbsp; 
+// use the largest denominator<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sc = (b*e - c*d) / D;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tc = (a*e - b*d) / D;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+<br>
+&nbsp;&nbsp;&nbsp; // get the difference of the two closest points<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; dP = w + (sc * u) - (tc * v);&nbsp; // = 
+L1(sc) - L2(tc)<br>
+<br>
+&nbsp;&nbsp;&nbsp; return norm(dP);&nbsp;&nbsp; // return the closest distance<br>
+}<br>
+//===================================================================</font></p>
+<p style="text-align: left"><font face="Courier">//<a name="dist3D_Segment_to_Segment()"></a>
+<b>dist3D_Segment_to_Segment():</b><br>
+//&nbsp;&nbsp;&nbsp; Input:&nbsp; two 3D line segments S1 and S2<br>
+//&nbsp;&nbsp;&nbsp; Return: the shortest distance between S1 and S2<br>
+float<br>
+dist3D_Segment_to_Segment( Segment S1, Segment S2)<br>
+{<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; u = S1.P1 - S1.P0;<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; v = S2.P1 - S2.P0;<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; w = S1.P0 - S2.P0;<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; a = dot(u,u);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// always &gt;= 0<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; b = dot(u,v);<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; c = dot(v,v);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// always &gt;= 0<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; d = dot(u,w);<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; e = dot(v,w);<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; D = a*c - b*b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// always &gt;= 0<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; sc, sN, sD = D;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// sc = sN / sD, default sD = D &gt;= 0<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; tc, tN, tD = D;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// tc = tN / tD, default tD = D &gt;= 0<br>
+<br>
+&nbsp;&nbsp;&nbsp; // compute the line parameters of the two closest points<br>
+&nbsp;&nbsp;&nbsp; if (D &lt; SMALL_NUM) { // the lines are almost parallel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = 0.0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// force using point P0 on segment S1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sD = 1.0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// to prevent possible division by 0.0 later<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tN = e;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tD = c;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; else {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// get the closest points on the infinite lines<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = (b*e - c*d);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tN = (a*e - b*d);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (sN &lt; 0.0) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// sc &lt; 0 =&gt; the s=0 edge is visible<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = 0.0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tN = e;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tD = c;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (sN &gt; sD) {&nbsp; // sc &gt; 1 
+=&gt; the s=1 edge is visible<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = sD;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tN = e + b;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tD = c;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; }<br>
+<br>
+&nbsp;&nbsp;&nbsp; if (tN &lt; 0.0) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// tc &lt; 0 =&gt; the t=0 edge is visible<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tN = 0.0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // recompute sc for this edge<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (-d &lt; 0.0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = 0.0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (-d &gt; a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = sD;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = -d;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sD = a;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; else if (tN &gt; tD) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // tc &gt; 1 
+=&gt; the t=1 edge is visible<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tN = tD;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // recompute sc for this edge<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((-d + b) &lt; 0.0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if ((-d + b) &gt; a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = sD;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sN = (-d + 
+b);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sD = a;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; // finally do the division to get sc and tc<br>
+&nbsp;&nbsp;&nbsp; sc = (abs(sN) &lt; SMALL_NUM ? 0.0 : sN / sD);<br>
+&nbsp;&nbsp;&nbsp; tc = (abs(tN) &lt; SMALL_NUM ? 0.0 : tN / tD);<br>
+<br>
+&nbsp;&nbsp;&nbsp; // get the difference of the two closest points<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; dP = w + (sc * u) - (tc * v);&nbsp; // = 
+S1(sc) - S2(tc)<br>
+<br>
+&nbsp;&nbsp;&nbsp; return norm(dP);&nbsp;&nbsp; // return the closest distance<br>
+}<br>
+//===================================================================</font></p>
+<p style="text-align: left"><font face="Courier">//<a name="cpa_time()"></a> <b>
+cpa_time():</b> compute the time of CPA for two tracks<br>
+//&nbsp;&nbsp;&nbsp; Input:&nbsp; two tracks Tr1 and Tr2<br>
+//&nbsp;&nbsp;&nbsp; Return: the time at which the two tracks are closest<br>
+float<br>
+cpa_time( Track Tr1, Track Tr2 )<br>
+{<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; dv = Tr1.v - Tr2.v;<br>
+<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; dv2 = dot(dv,dv);<br>
+&nbsp;&nbsp;&nbsp; if (dv2 &lt; SMALL_NUM)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // the 
+tracks are almost parallel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0.0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// any time is ok.&nbsp; Use time 0.<br>
+<br>
+&nbsp;&nbsp;&nbsp; Vector&nbsp;&nbsp; w0 = Tr1.P0 - Tr2.P0;<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; cpatime = -dot(w0,dv) / dv2;<br>
+<br>
+&nbsp;&nbsp;&nbsp; return cpatime;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// time of CPA<br>
+}<br>
+//===================================================================</font></p>
+<p style="text-align: left"><font face="Courier">//<a name="cpa_distance()"></a>
+<b>cpa_distance():</b> compute the distance at CPA for two tracks<br>
+//&nbsp;&nbsp;&nbsp; Input:&nbsp; two tracks Tr1 and Tr2<br>
+//&nbsp;&nbsp;&nbsp; Return: the distance for which the two tracks are closest<br>
+float<br>
+cpa_distance( Track Tr1, Track Tr2 )<br>
+{<br>
+&nbsp;&nbsp;&nbsp; float&nbsp;&nbsp;&nbsp; ctime = cpa_time( Tr1, Tr2);<br>
+&nbsp;&nbsp;&nbsp; Point&nbsp;&nbsp;&nbsp; P1 = Tr1.P0 + (ctime * Tr1.v);<br>
+&nbsp;&nbsp;&nbsp; Point&nbsp;&nbsp;&nbsp; P2 = Tr2.P0 + (ctime * Tr2.v);<br>
+<br>
+&nbsp;&nbsp;&nbsp; return d(P1,P2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// distance at CPA<br>
+}<br>
+//===================================================================</font></p>
+<h2 style="text-align: left"><!--mstheme--><font face="Arial" color="#660066"><br>
+<b><a name="References"></a>References</b><!--mstheme--></font></h2>
+<p style="text-align: left"><font size="2">David Eberly, <u>
+<a href="http://www.amazon.com/exec/obidos/ASIN/1558605932/softsurfergeomet">3D 
+Game Engine Design</a></u>, Section 2.6 &quot;Distance Methods&quot; (2001)</font></p>
+<p style="text-align: left"><font size="2">Seth Teller,
+<a href="http://graphics.lcs.mit.edu/~seth/geomlib/linelinecp.c">
+line_line_closest_points3d()</a> (2000) cited in the
+<a href="http://www.faqs.org/faqs/graphics/algorithms-faq/"><u>Graphics 
+Algorithms FAQ</u></a> Subject 5.18 (2001)</font></p>
+
+&nbsp;<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="Times New Roman">
+
+<!--msthemeseparator--><p align="center"><img src="../../_themes/geometry/bluhorsa.gif" width="600" height="10"></p>
+<p align="center"><font size="1" face="Arial" color="#C0C0C0">Copyright © 
+2001-2006 softSurfer.&nbsp; All rights reserved.<br>
+Email comments and suggestions to </font>
+<font size="1" face="Arial" color="#008080">
+<a href="mailto:feedback@softsurfer.com"><font color="#808080">
+feedback@softsurfer.com</font></a></font></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body></html>
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=blutextb.gif
+Content-Type: image/gif; name=blutextb.gif
+Content-Location: http://softsurfer.com/_themes/geometry/blutextb.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhdABuAPABAMz//////yH/C01TT0ZGSUNFOS4wDQAAAAFzUkdCAK7OHOkA
+If8LTVNPRkZJQ0U5LjAYAAAADG1zT1BNU09GRklDRTkuMALxmbSWACH/C01TT0ZG
+SUNFOS4wGAAAAAxjbVBQSkNtcDA3MTICAAAIddtivwAsAAAAAHQAbgAAAv+Mj4mg
+7e8YnPTIit/NfPVvbGAmjlVpQmiqsaR7wrE8rXR4q3m7K3b+uwVlQ2KvUXQllUdf
+0/O0RKXTJcuawo602ymu6g1wQeNO2Rw+v7zqdbSNgc/e6TqYbafj93oz4A8YKDhI
+WGh4iJiouHhIlvckRxFZw9dn2TSpU4n5SGmSGdHJeUd6eQQaunkquloKybqDigQL
+RFvrOorbI+ukumsr5PsrfKs7bNpqXIx8/Eq8nMsc+xxMbWR9LQ0dzd1Ns8ELpfwt
+hg0TLu48Xq3N3p79Du/drF5vP7+dHM9kzr/v/y8LGUYECxo8iLDRB3RUAgrs93Ad
+OYny8Lm7p8/iRY2rFTNyPAdsosNPIUFCjIiR3keAKadRNPnySkmYLfOpvInT5cgu
+J3nGlPkTZU2RQmf1dHQU6U6lS9EkXfjUaVCfTaUOJXqVZlatHrvm3OhV51aWK4FO
+pVrWbFU3a9mmLRoWrKSEdOvavct0LNyvcm2K1UsyKgeG5QS7jdvXb+LFWBE3dswV
+cuS/bwO3jTNTLWDLm9FWzvsZNN/HoydTlqw5NNSzokuTRZ3adYICADs=
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Logo_SS.com-sm.png
+Content-Type: image/png; name=Logo_SS.com-sm.png
+Content-Location: http://softsurfer.com/images/Logos/Logo_SS.com-sm.png
+Content-Transfer-Encoding: Base64
+
+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
+AElFTkSuQmCC
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=trans5x025.gif
+Content-Type: image/gif; name=trans5x025.gif
+Content-Location: http://softsurfer.com/images/Widgets/trans5x025.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhGQAFAPcAAAAAADMAAGYAAJkAAMwAAP8AAAAzADMzAGYzAJkzAMwzAP8z
+AABmADNmAGZmAJlmAMxmAP9mAACZADOZAGaZAJmZAMyZAP+ZAADMADPMAGbMAJnM
+AMzMAP/MAAD/ADP/AGb/AJn/AMz/AP//AAAAMzMAM2YAM5kAM8wAM/8AMwAzMzMz
+M2YzM5kzM8wzM/8zMwBmMzNmM2ZmM5lmM8xmM/9mMwCZMzOZM2aZM5mZM8yZM/+Z
+MwDMMzPMM2bMM5nMM8zMM//MMwD/MzP/M2b/M5n/M8z/M///MwAAZjMAZmYAZpkA
+ZswAZv8AZgAzZjMzZmYzZpkzZswzZv8zZgBmZjNmZmZmZplmZsxmZv9mZgCZZjOZ
+ZmaZZpmZZsyZZv+ZZgDMZjPMZmbMZpnMZszMZv/MZgD/ZjP/Zmb/Zpn/Zsz/Zv//
+ZgAAmTMAmWYAmZkAmcwAmf8AmQAzmTMzmWYzmZkzmcwzmf8zmQBmmTNmmWZmmZlm
+mcxmmf9mmQCZmTOZmWaZmZmZmcyZmf+ZmQDMmTPMmWbMmZnMmczMmf/MmQD/mTP/
+mWb/mZn/mcz/mf//mQAAzDMAzGYAzJkAzMwAzP8AzAAzzDMzzGYzzJkzzMwzzP8z
+zABmzDNmzGZmzJlmzMxmzP9mzACZzDOZzGaZzJmZzMyZzP+ZzADMzDPMzGbMzJnM
+zMzMzP/MzAD/zDP/zGb/zJn/zMz/zP//zAAA/zMA/2YA/5kA/8wA//8A/wAz/zMz
+/2Yz/5kz/8wz//8z/wBm/zNm/2Zm/5lm/8xm//9m/wCZ/zOZ/2aZ/5mZ/8yZ//+Z
+/wDM/zPM/2bM/5nM/8zM///M/wD//zP//2b//5n//8z//////wAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAEAANcALAAAAAAZAAUAQAgVAK8JHEiwoMGDCBMqXMiw
+ocOHBQMCADs=
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_dGG.gif
+Content-Type: image/gif; name=Eqn_dGG.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_dGG.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh5wAoAPAAAP///wAAACH5BAEAAAAALAAAAADnACgAAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyPAd0Y996kpt999shgkIZkXS8JIXLIqsZgi4C
+ROnNCqP6qk8KNahlfL8GrGIcxoadaxF5+EO/JWOxGdDG28H5yLzcZ+ekkne0FngW
+V3VXOBWIiPNodjeY0ZgI99C36aXomET5NzQBWenRJpnpYLioqYW6uMQIOUmp8ZpW
+2INre0AG66gqGCxM/LdZ2tmLySMnWlGHl+ubO21RXUyd3Tys3S29/Ywhfr2stIsu
+fGgL7M0N6PoN/t0Ox4dGp4sPkQyy7j4vYD9m8ABSi7YKFJ9IxZCxmvWQlLly7ur9
+g+bJYMF8//JoZdy4TVocfhHtEbPnbMPFgALTYWzI6uUZgjTrmWzmMmGsUWVonlhp
+MadEmCc5vgvpDSEiUceOHsQpxueWih9XdgJkVaNWm1pNXtqD0BfURPui8lhRJ+0b
+tbx6/QKDU5zcsGdvTTTEgYupFgNnflql8q7fW1L3/mQXr+g4wjwZ17VL7qmayFj1
+WILmhxOQy/56NnYsq+tjy1NE00GC6tS4vpmbbvY8GDaO2GI/KyHUudLExzmiIa6b
+1g2K3YZL+I5NmbRYuE+LO2cTt/dos6PwMX+OXcf12stDn91OmnX28bm5f5Y+u7Ze
+zzaIk3+f756iQxrDKmUKP7+pkaVv6yD/X8QuOmEGYIE0JGeJeAYuyGCDDj4IYYQS
+TkhhhRgUAAAh/wtNYXRoVHlwZTAwMf8FAQAEAERTTVQ0AAATV2luQWxsQmFzaWND
+b2RlUGFnZXMAEQVUaW1lcyBOZXcgUm9tYW4AEQNTeW1ib2wAEQVDb3VyaWVyIE5l
+dwARBE1UIEV4dHJhABIACCEvRY9EL0FQ9BAPR19BUPIfHkFQ9BUPQQD0RfQl9I9C
+X0EA9BAPQ19BAPSPRfQqX0j0j0EA9BAPQPSPQX9I9BAPQSpfRF9F9F9F9F9BDwwB
+AAEAAQICAgIAAgABAQEAAwABAAQAAAoBAAIAgmQAAwABAwABAAIAh0cAAwAbAAAL
+AQACAIgxAAABAQAKAgCCLAACAIdHAAMAGwAACwEAAgCIMgAAAQGqAAAKAgCWKAAC
+AJYpAAACBIY9AD0DABcQAAEAAgKCbQACAIJpAAIAgm4AAAsBAAIAgVAAAgSGCCLO
+AgCBRwADABsAAAwBAAIAgTEAAAEBAAsCAIEsAAIAgSAAAgCBUQACBIYIIs4CAIFH
+AAMAGwAADAEAAgCBMgAAAQEAAAsBAQAKAgCCZAADAAEDAAEAAgCBUAACAIIsAAIA
+gVEAAAIAligAAgCWKQAAAAAAOw==
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Pic_d2lines.gif
+Content-Type: image/gif; name=Pic_d2lines.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Pic_d2lines.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhGAG6ALMAAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//
+AAAA//8A/wD//////yH5BAkIAA8ALAAAAAAYAboAAAT+8MlJq7046827/2AojmRp
+nmiqrmzrvnAsz3Rt33iu73zv/8CgcEgsGo/IpHLJbDpJgKg0+qxaryCqRIrterva
+bfhLLh/HD7R5zeah1e24XPYGzO/41xie7/uzdmKBf4SFHFN8hoqKiYuOho2Pkn2R
+k5ZyfFyXm2Zwg4OcoVWIoGkTpaKpXp+qrV+srrFWsLK1TLQnU4Kotr1ZpyuaaZW+
+xRfCKcLIxsw6ysTN0S3PvNK90Llhy9aS2xakM9Tcorrf4HTa2OOQ1Ijon+rri6Tn
+elrl8rL09cFc+Pmt9gkESBCQu2ECqxVcuOtYQoUMI2J4CNFRxWMSTVCcsy/DxYn+
+GVFsbJMO1UePIVWM3HCyx549IlOyWGlOSZ1TLT3mlOmBJsIkN8WI3MnTIEVvQIKa
+mkjlItGiIo7Gq/ESJ1OhLJ9CHeEzKTx4V5dm3Zpj4BB+w8L21EoWitkgieK2nNrW
+7UO4CuWepFs36j8Kf3HI1QCNb19AHwKHg2jSage2h2kodtGoKtaxkZdMzjYZ5t9t
+hjM7Q0rncaDGoq9spnwIZepXpIMRdv26U+xctCtArg309kxg3HZ38z1U+KTQoVb3
+Re5KMVqGzK9p6hgxerOE0I0Hp0eQeMq722tTR6i9kPWCzxvqK5+dmPJ57CVOfU8p
+fkbvDs83wS+a/iH+qtn+J9NBKgGomYADEjiNgUToRxZ37yAIg4MPQkgVgzdQ2NZb
+GWJoj4RbYeeSh0PxNhOIdqEImIqRadiPi2mZSBmLyZCoG4394fgiWzDKGCMY+PXo
+449k+DdkDELuYOSR5Nnhzm1J+rCkjOJs8R8hU6ZWpVg6wRdlPro8adoaT2VZoZM/
+ffQlOsXpaIw/aY65in1myjedd2suKJmNYJa0VoCj5ZnKlpjtJ2h+bl5imZwHnsGn
+L6XklU6jtzw6zj2OOYpFnevwcuh/idoTolp4MXkLqVKGampUwF024qpPLPNpprDO
+qeSsteopmKq5imoDrr36uliwcfRoKbENIggssmz+6sosR+wt++ywNU5bH2fW+mGY
+tNn+Wiav3Y4WArfhdrgWuOXeemW68BGGLruvOgTvcDXNa9GT5Np7q4L6eslvv+yk
+B/Af4w1MsIgGX7sLpwkbag7DDdv0bsSBUszIxBbvmjE7siW2sbjuKkcUxvb6tug3
+UHzcbGv16obRYyrPmFg1SgH2Z8zV/pIbka66i7NG8zEGSqT+kRzstkLT2nOhqx4E
+MWJA+7y0OvlCevLKUXc5dU5VW40LkuVVBtaK4xrtdasfOitvz/F0LV1TYMe9Nts7
+uQ3k01mhKTO1LvetNMudDg0inCd6K7hJYM1lNhhzp11gogL7eaOniwPa+ILZxi0b
+W9Jcom0NY3KDymGqoIO0szRiIzlzwXjl9bLpgUv9A8LJ0owy7LFr7ZXAqnneHeek
+876p3WykPuLoP8t+eYe0J79uyz9FiM+xFHtis5Uf8kt9xMh073ubnTmfohpfc4a3
++Ex5+j1XwqNfI2qd+9W++y9eH//q/9K/2Gnr552//mUJ2v8AWKn5EdBRBjxgEVin
+wAKer4HMeyAE95TACe5ugBYMXvMyKISucPAsyPsgCC0kQgRWsIQaYyAKU4UTDK6Q
+eQ8j3gRl+MKl1TBZN+xNDpFAwxxGAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_lines1.gif
+Content-Type: image/gif; name=Eqn_lines1.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_lines1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh3wA8APAAAP///wAAACH5BAEAAAAALAAAAADfADwAAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jQWmDvOkj7MBf6/hyBjsqZC75YKZPEJD
+gSnV+qkqsFGPNvUFczthQ7lb8lW1a2wb8N4+2dnDO/5o89YJoH7Jh9fwd3cGUcYH
+Zzi3t3jWOHbo95Uo6bd1KaH3R5FY6VAZFmk3CRnh6TikllVqtsgQiokw6kX52mdL
+Z4GYKzvb6zurufnp+muKy2g2RypFrINqZBgYeMGL/IuLnS0Hcu0qzVQdTFu7bawN
+p6i+26rIFc0cTOZenKebvDzxfAsLfPqPlJVv7wCeQ6ePXa1j4CrYQ1iO3sFBARUO
+ZCiIIrSH/5PsUMH4ENSrVQoBbeyXrqCwhP5AomyYEZHKZhq+ZTzUsiG3HWxCPlkJ
+dGBEa/BKEgUEyiiaQR7vgTnF6inTpfua5kExZigsrFeparLalchXpTmadNUqBKxX
+hGsltb2H9q3cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO37szWwRyZC3
+nohb9nJly1xZYB7b5/HLhUjFdGs8mt6K1BwefbarKo7PdyelKXttlNNs2ttKsTZX
+UVvP4fvCZRJ58JHO1saBIne+Ti1yYjlkwqVJlqIylv6Sq5KeIRVJS2qt9xBFnnZ2
+7Zj25GM4Ezt4RtTfw4/dnXv0/d74pbPE3556tIyED1s62ePIFfkBeBs5NIwjn0Dq
+FAjQggYtF6GBGxAITScU7jcKP2hBmF4xs92ym4TxsTWeavk5lMp8LaR4n3lTQEFj
+QTd1pN+GGrWDBEm4VRdiQC3OE1pxte00oWsb4pjZewgOCZVD0B1pH09QxfVbTRdR
+6QKWWYoVFnNSTaWXmElSllQdmpWJl5prHlHVelamUSWYM8rYRZde+RlFjpsNSmih
+hh6KaKKKLopoAQAh/wtNYXRoVHlwZTAwMf8FAQAEAERTTVQ0AAATV2luQWxsQmFz
+aWNDb2RlUGFnZXMAEQVUaW1lcyBOZXcgUm9tYW4AEQNTeW1ib2wAEQVDb3VyaWVy
+IE5ldwARBE1UIEV4dHJhABIACCEvRY9EL0FQ9BAPR19BUPIfHkFQ9BUPQQD0RfQl
+9I9CX0EA9BAPQ19BAPSPRfQqX0j0j0EA9BAPQPSPQX9I9BAPQSpfRF9F9F9F9F9B
+DwwBAAEAAQICAgIAAgABAQEAAwABAAQAAAoEAAEBAQACAIIoAAIAh3UAAgSGxSLX
+AgCHdQACAIIpAAIAmALvAgCDcwADABsAAAsBAAIAg2MAAAEBAAoCBIb/EiItAgCC
+KAACAId1AAIEhsUi1wIAh3YAAgCCKQACAJgC7wIAg3QAAwAbAAALAQACAINjAAAB
+AQAKAgSGPQA9AgSGEiItAgCHdQACBIbFItcCAId3AAMAGwAACwEAAgCIMAAAAQEA
+AAoBAAIAgigAAgCHdgACBIbFItcCAId1AAIAgikAAgCYAu8CAINzAAMAGwAACwEA
+AgCDYwAAAQEACgIEhhIiLQIAgigAAgCHdgACBIbFItcCAId2AAIAgikAAgCYAu8C
+AIN0AAMAGwAACwEAAgCDYwAAAQEACgIEhj0APQIEhhIiLQIAh3YAAgSGxSLXAgCH
+dwADABsAAAsBDQACAIgwAAABAQAAAAAAOw==
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_lines2.gif
+Content-Type: image/gif; name=Eqn_lines2.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_lines2.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhAgEzAPAAAP///wAAACH5BAEAAAAALAAAAAACATMAAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyTNf2vQQBreP+2YMEebXd7zgyCm3KWBMJ7TwZ
+U1jVdY1qKdlEl/VVhbdkqmSc2ummazR17YWXrb1nO6MeHu7FodKPAWggONfyh0BY
+IQfwd1jkNQhpYReJWGhoWbkXKEn5mNlk1zYqqRB6CVZ6ijjKl7nJ+DrDFjvoVopb
+i4riqaunaKqrOdu5eHHVu2vS68oJmuvUKSVtq5zGCsvh2ciEPfx79mqkNux0C7Q3
+LgweEepILkwH3jxpzDjOjpUvf9+4327vnq1z1i79M1MwocINB3MsfAhxQsM4EbXV
+qZjEVZ15/xu50MMYrh/AVhMT+skTRE/KktlGknzoCOSHk9VqCkwHTKYznSTk0LR5
+8wxBnuVmkjyKNKnSpXg6Bv0JdEnPpVSrWiXVgGVSok/x4QTKMp4QpAtjctXwE6rK
+W0NlJjobCB/KrzU/ImxbcS4rvD4CxkV5pxkcrb/8KjPcrugus9bUlW0pUSffbpKP
+Ne4y+dNhzJbFksmS+VPoF6D/HkaoEPEWZHChVRrdWgRrzzyrYI3dN4fdWRf34tWL
+W0rvdGEhqb5h9q1E5cEntWQ+EvKPVfHaJmvuPNv1yLKmq3KwNRfss8zAkxUPpfw0
+19ilavdAC4l6bezbP5jPsL7mp/rB9zO37xBd24UkHQ7cxEJdTlEBmFhd6+wUVHob
++cPXbgyOBZyFLl3IYYcefghiiCKOSCIKBQAAIf8LTWF0aFR5cGUwMDH/BQEABABE
+U01UNAAAE1dpbkFsbEJhc2ljQ29kZVBhZ2VzABEFVGltZXMgTmV3IFJvbWFuABED
+U3ltYm9sABEFQ291cmllciBOZXcAEQRNVCBFeHRyYQASAAghL0WPRC9BUPQQD0df
+QVDyHx5BUPQVD0EA9EX0JfSPQl9BAPQQD0NfQQD0j0X0Kl9I9I9BAPQQD0D0j0F/
+SPQQD0EqX0RfRfRfRfRfQQ8MAQABAAECAgICAAIAAQEBAAMAAQAEAAAKAQACAINz
+AAkAoAMAGwAACQGgAQACAINjAAABAQAKAgSGPQA9AwALAAABAAIAg2IAAgCDZQAC
+BIYSIi0CAINjzwACAINkAAABAAIAg2EAAgCDYwACBIYSIi0CAINiAAMAHAAACwEB
+AQACAIgyAAAAAAAKAgCBIAACAIEgAAIAgSAAAgCBYQACAIFuAAIAgWQAAgCBIAAC
+AIEgAAIAgSAAAgCDdAAJAKADABsAAAkBoAEAAgCDYwAAAQEACgIEhj0APQMACwAA
+AQACAINhAAIAg2UAAgSGEiItAgCDYgACAINkAAABAAIAg2EAAgCDYwACBIYSIi0C
+AINiAAMAHAAACwEBAQACAIgyAAAAAAAAAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_lines3.gif
+Content-Type: image/gif; name=Eqn_lines3.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_lines3.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh/AE4APAAAP///wAAACH5BAEAAAAALAAAAAD8ATgAAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8SiMRY4KpfMRLIJjTqe
+0qoVR71ql9mt93vqgsc9MfmQDZhbajRrXWpD5HBJ/YyX3b/ifSqt4iciSCXIYJiX
++KdoYIZI0ofy+OHXNenGmInEKIdwOajQOSK6Quj0+ampqpHKFUnTl6aWNJtKGmh3
+GlrbKNq6Ckzxe+QIMLt7K3zsuRx6+tRsAXdsGV1Be8vrjOzpFPxtMlyU3VlYiFGO
+dr7gS5cc8b7eiymdPt/I7mhPD95PqZjNmzGBvWpp4zcwIUJ1zKCRMmhQ1zZ8FPlB
+PIgQGkFm//k0bvQHkhXAV5gAXVhjMl/DguhIVkwpTSBMjh0VLlQlzoutkR8HmkN3
+qCdDdQ5RWSL4E6i3oyprugSWc8vORA9lWrsWtNshWUVbfjT3bgJTprsaXLUJNeTN
+XFTJUhQ3dujWlRiVbdy3Ie69pjUnTnmqp8OlSVHFCvOLVagNuFr3yjrZWKPHntTO
+wkMqmWZix/gmr127x1rRumIhbs4wmnTF06wsr2b7eY5V0yBUm+XQjlxYeKK7lo1T
+DRvYVqTdxVL6wNcz3Lun5NUcEHXex4hNxU7e2HHOdoZbD2k+nQj4rMmTEmVuVKRc
+Y9S9ute897VZeTHjs4f/fv1f5+WFFP+e6590c5jH0nTpCRgfd6hNJdF6490nX3cQ
+OjiMPnbUUUkQ/92moXpO0VdgawxCRmF254WWH3xcjQfiYfIpuCCAsnE4YxlvAPEL
+Sr7phl6MDV3kF4zRuabfhTJWVdprF13l0G/21SNjf+SptYqFQ/FooI8kaoefQpUM
+pqN+iNAhIDlFQsmXlOxQGYyV92Apopb1FdTbmkkSBWSXXJ45X4Rs6ebakmamuR+e
+ebJJVZrucINYecUMiOCETipGqJF8KWcXWi4OSkmYvNGIjKCijkpqqaaeimqqqq7K
+6qg3KQgnn1sdB+mPtGUXVjyEHHjXTLUGd2hJtNb26KdTIsqJok3/LqcLi4Na9qCd
+T4p5naxqllitRFNxutJJw7LnqbTIJtuUNrFUk9G52r7qoaRBtnjsNe3R4xl2fl72
+Ikm8SgovhuNqMk0b5Qy3ZLoEB5uverc2KFy3DbYErW8hMozgwBjBeyGTC+22YZXR
++kAYYeKy5i7JhXLo5oIBZxUugyxmO1+x3/5bMRRgkjwizKAaO3Kjcj58r0WRgodx
+ppH5TPPJPRuBCms5Bw2bhEhDXQ9KUysZqaYTwYUpWh2D428TT/OH22qMzSnT1XFW
+FyFgUkNddNUvmZh01JSK98fHs+qNrwdE6hHt2AN+PXHdW6r9XT+E25y14VZYrfU4
+irMpuON5kNPyzE7NRCS25XUv7jl57RkVNxeh0wz66bhmhBzVxKg+buqwk4WhoGxr
+ITvsTOQeOu1+I/667pQLHwdSv9MtBe/ES748KHK55aLOzDfvj/KWJ4W59LhafyP1
+1XsfQmXDicg9G+BPfn76h6sPMPvu2/1+ovHPvzT9Y5RvP9j5789///7/D8AACnCA
+BCygAQtYAAAh/wtNYXRoVHlwZTAwMf8FAQAEAERTTVQ0AAATV2luQWxsQmFzaWND
+b2RlUGFnZXMAEQVUaW1lcyBOZXcgUm9tYW4AEQNTeW1ib2wAEQVDb3VyaWVyIE5l
+dwARBE1UIEV4dHJhABIACCEvRY9EL0FQ9BAPR19BUPIfHkFQ9BUPQQD0RfQl9I9C
+X0EA9BAPQ19BAPSPRfQqX0j0j0EA9BAPQPSPQX9I9BAPQSpfRF9F9F9F9F9BDwwB
+AAEAAQICAgIAAgABAQEAAwABAAQAAAoBAAICgmQAAgKCKAACAIdMAAMAGwAACwEA
+AgCIMQAAAQEACgIAgiwAAgCHTAADABsAAAsBAAIAiDIAAAEBAAr/AgCCKQACBIY9
+AD0DAAQDAAEAAgCBUAACAIIoAAIAg3MAAwAbAAAJAaABAAIAg2MAAAEBAAoCAIIp
+AAIEhhIiLQIAgVEAAgCCKAACAIN0AAMAGwAACQGgAQACAINjAAABAQAKAgCCKQAA
+AgCWB+wCAJYI7AACBIY9AD0DAAQDAAEAAgCCKAACAIJQAAMAGwAACwEAAgCIMAAA
+AQEACgIEhhIiLQIAglEAAwAbAAALAQACAIgwAAABAQAKAgCCKQACBIYrACsDAAsA
+AAEAAgCCKAACAINiAAIAg2UAAgSGEiItAgCDYwACAINkAAIAgikAAgCYAu8CAId1
+AAIEhhIiaS0CAIIoAAIAg2EAAgCDZQACBIYSIi0CAINiAAIAg2QAAgCCKQACAJgC
+7wIAh3YAAAEAAgCDYQACAINjAAIEhhIiLQIAg2IAAwAcAAALAQEBAAIAiDIAAAAA
+AAAKAgCWB+wCAJYI7AAAAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Pic_d2segments.gif
+Content-Type: image/gif; name=Pic_d2segments.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Pic_d2segments.gif
+Content-Transfer-Encoding: Base64
+
+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
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_segs1.gif
+Content-Type: image/gif; name=Eqn_segs1.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_segs1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh4gAzAPAAAP///wAAACH5BAEAAAAALAAAAADiADMAAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyPAcBjef6d+/+D2z0gsTibmhMKl3IpfMJstmg
+1KpmamhGsdYurKn1DMPesglJDqXNbF5i7W7LR2AIfIEu34+x8X7/dgBINKhTGJUF
+0LN2qJjoWNWI8ye1lcXF0HgjhVlSGUcFh9XJosnEKalA2pK6KoiQ2mFaKuhaEQt6
+m4ZpezK7gob7KtP7sBv8pcipPPUJ+eX36ZwJtmxdTIEKu8z8RsZbjTote+k3/Ggn
+Pn7rnWes5cwlrErtvk19/7I4WlkHrSovHcB9zUQcGwMQX61k5ZhtCrRFHTw8oxLm
+a+fwWTqJ6RcHouvYEZsQiSTt9VOmMSWwkQ+9ufS4qWUuijJBLrxZiyOinA0hblR3
+gVFBgTR77mSpEmUmWH22EaTHyifPCK6kdVqXbaNCipeaTl03zwJQjFS/8TOJYZED
+rErrhc3g7+M5FWOhlhXCNG/SsneOJfnlpdXcqH/FshFp923QGn0Nm0HsU7EuGo3Z
+HV4sd2UNvVIlSN4sFrJBypxLU5XzOUVqzG07n0b9ZPUEbg5lz7nNA+Fg3Lz5cLbd
+O3ja38CFG/cstfjx5WuTM39OuPVe6NTVJFKrtrp2Ok+7bf8OPrz48eTLmz+PfkIB
+ACH/C01hdGhUeXBlMDAx/wUBAAQARFNNVDQAABNXaW5BbGxCYXNpY0NvZGVQYWdl
+cwARBVRpbWVzIE5ldyBSb21hbgARA1N5bWJvbAARBUNvdXJpZXIgTmV3ABEETVQg
+RXh0cmEAEgAIIS9Fj0QvQVD0EA9HX0FQ8h8eQVD0FQ9BAPRF9CX0j0JfQQD0EA9D
+X0EA9I9F9CpfSPSPQQD0EA9A9I9Bf0j0EA9BKl9EX0X0X0X0X0EPDAEAAQABAgIC
+AgACAAEBAQADAAEABAAACgEAAgCIMAACBIY9AD0DAAsAAAEAAgCDZAAAAQACAINk
+AAIAg3QAAAADAAQDAAEAAgCHdwAAAgCWB+wCAJYI7HAAAwAcAAALAQEBAAIAiDIA
+AAAKAgSGPQA9AgSGEiItAgCIMgACAId2AAIEhsUi1wMAAQMAAQACAId3AAMAGwAA
+CwEAAgCIMAAAAQEACgIEhhIiLQIAg3QAAgCYAu8CAId2AAACAJYoAAIAlikAAAAA
+ADs=
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_segs2.gif
+Content-Type: image/gif; name=Eqn_segs2.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_segs2.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhVgAzAPAAAP///wAAACH5BAEAAAAALAAAAABWADMAAALShI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrZpAMNG7MSyDdBuLR8BpMv9ZjtgL2cc4oZFnlJx9N1o
+zGaDCq3ObkKk1emN6ILfazS51QrVRTJ6nWCyd/MaQi0HljH5R31vR8QDaNHHYPNH
+GOfjN4GI2OS2kKiYcVbpQcn3yNnp+QkJRfGJuXh3WeooaJg6esTayscYqwFLW2F7
+qyqoeyHZCxwsLBL6ezqGukemuRwbpAnHWzqWNdkDbYUVN6ftzOX4TWsMpjtuhl2G
+fjfM3u7+flEAACH/C01hdGhUeXBlMDAx/wUBAAQARFNNVDQAABNXaW5BbGxCYXNp
+Y0NvZGVQYWdlcwARBVRpbWVzIE5ldyBSb21hbgARA1N5bWJvbAARBUNvdXJpZXIg
+TmV3ABEETVQgRXh0cmEAEgAIIS9Fj0QvQVD0EA9HX0FQ8h8eQVD0FQ9BAPRF9CX0
+j0JfQQD0EA9DX0EA9I9F9CpfSPSPQQD0EA9A9I9Bf0j0EA9BKl9EX0X0X0X0X0EP
+DAEAAQABAgICAgACAAEBAQADAAEABAAACgEAAgCDdAADABsAAAsBAAIAiDAAAAEB
+AAoCBIY9AD0DAAsAAAEAAgCHdgACBIbFItcCAId3AAMAGwAACwEAAiAAiDAAAAEB
+AAAKAQACAId2AAIEhsUi1wIAh3YAAAAAAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Pic_cpa.gif
+Content-Type: image/gif; name=Pic_cpa.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Pic_cpa.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhGAGMALMAAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//
+AAAA//8A/wD//////yH5BAkIAA8ALAAAAAAYAYwAAAT+8MlJq7046827/2AojmRp
+nmiqrmzrvnAsz3Rt33iu73zv/8CgcEgsGo/IpHLJbDo1gKg0mptKrM+s1kW9dm3S
+SXhLLpe+j3FNrTa731BABT1j0+F4PP0es8vzgHp/YoM0foGIbmh8fV9tiZBOjoyE
+jyOHkZlNU5SVWGeThS+imqUhnRacliBjn6Oko6ZaqHOqsKxhrlxrsll8lrackoa3
+vUd3g6LBy8U/zSjCxkzIYrXRXszPN9ontNJAqhTJF7qp2dyxMt7fSOMq5+hzl3Xx
+7EXur9kdq1Dq9fZE8BHTZ25dGoMiEAIcIrDKuYOr+MFQuFCIRB3w/FxsQRHDxor+
+vfQFWyOn0Ed5V0CqhJjxH4k2f1xWW1lx5DIeMlHSBHgNGzMwKXLuFJTBlqdy76AN
+XXqU0c2gKV8ynXrwlFFQZ6hqFZfwqqGoW8OCCscFqdizVsmaOom2Tlm1Rc0aadg2
+0UhxcDfVLZWr5ROheyX9ejoNcOCkEyn91HvYWb644bzeawzpYt6mhldkpqyUxUa5
+BUGr44zIMjTJbzeT7hy0o4m7qzNlZtvo8j7XsZdIVJ22p0fRubfQ3kHY5/Dgup0e
+84uc4UvcQRY3d57WTMni04X/8kXWdvZtuHjjUCbX9/eA1LTH835es4fjPcSTM9+e
+NWSq7Otr3kPdInD9Xcn+B1Vy/wEIFl4mOUZGfgYWlB10q5EnYIN1sUEchd8kA+Fr
+GPIE0YFudQgSfByKqBKJCZm4Uy4qGojiBxO2WIYVMcq44oap2MgUTDo+iGONPcIB
+DIxBhsUPkEWG5BqSSQrZCSxMNunkelKi9RGOVa71YVFcZWmkcl7udVyUYS6IJU/0
+9WhhhSaRaWUlWS0EpZts0gmIU3YauWWcGfajo4Z5OhlHki92mcdlTwY6lITuTelb
+oibeUmhlqEGKYTOTkjPLQ3gN6mKO1rDTki6W1rfemUqMChshv5nqZ6h94DRqaHhq
+CqeMme7SGzy3KbaIIzNF+ByTp3LDXG2P0PWdpKj+vodMRBkRl14alG2W6z4saXQd
+p9HxB+Ky920T2bHtAPvtVgJe2+us6lF77lQxqsuBqnoEG2mz1qhKUTQFPqanP+Ih
+CleaG8CkaFuzzQsdg8a1eom5UtI5HMNc+usuoRglSrB/VBzcpMEbl1tSkBOGvOpE
+9IyMK7LJokbPQGW+Fq0PxOIrJsAUj0dMzAFiFx0vHabbncsegceztAQTbSvQRxd8
+WsgInmp000U/DPU7/XZDdWtZc+SmvKYusq7ND29NEo2QgY3gc2YPRGrXfLpEdtuY
+5RyrVXTjfDVQeOftGUEWdeW3zG/vzTSMKmMz+Hyi2X24swle7Lfha/endd4yjg8j
++TxUZ64ehB6LabPak22+OJHv3hk6yaeLtXrrycHuuuzo0q7V67Yfk/uNc++eQQQA
+Ow==
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_cpa1.gif
+Content-Type: image/gif; name=Eqn_cpa1.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_cpa1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh7wEfAPAAAP///wAAACH5BAEAAAAALAAAAADvAR8AAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8SiURdIHpfMpvMJBQQO
+06j1is1qTdWtt9hVhFtj6qlsBqHPlzXX4h7GSfNv8o5vzOujOB+z9/EnMmhQqEZx
+yHAHo+jhaKVEJYlQZkkmlgD5cKnZsfk5AcqxNjZqiHdaoZqBxvpDOVnZObsSa6j5
+ipqZu3FLxvfLIhxWFag3qQshbEu7CPUbexut7DBtqnwtNsqs0l0bQ538LWUN7l2d
+iM0J7dqFzVipkSrFGF8+e49vnddPCT/NV74peQAV1BdsYD1y/OIhzKUvwqBr9ipu
+KmYREr2F/57GufnoT0lEUSEJMjwHLtoigKncvXsnq2MvTv9g7pI50+NGlBx7GiyW
+cyVEVKAe8tQoasG9f63gEW0KNGgdPzXT/Iy5TwIxY854rpLUz6u7ZWDtiRVqcKjP
+q7i8Bu058qtNrG3haHVJlOA8p2vhMJW6rGHerG3KivSrlOtbuoVNHma81W3GrNoS
+N1U7smVBzNuO8s2seauxzowbhka20rHeu28dUtSceDTperFPDw3LeptqwhLH0paH
+Fmq5xzetSsVrkrIpPRc/n6S5GmXlZE99Ead7UaLg5BPX5asu3DdvpdCHRycb2/x4
+mrMDBs/bkjlX78bdpu/r3vLA+K0Nk/+6Xtx7cD233WzracdOeX0h9t2Cco33V4KC
+OdgYeOq0t5yAFeKXoYETRpSfhxc2GJdf4gnomipxSdOKhHWRSBFJmBEoX3AJKQgi
+jdXluAdGHeLjyif+4SQbcL3Nx0tbQc5zW4kPJmnOd5vttaSSbUA3JXVrzRWYlE6S
+VEoax3zI4otHWsjlflkWtyIrUeUEWiJGntOmdU3q+IyI+lG35pUGfhllan2+2GF3
+d55SyktTIWhmmowS5iiD7KGDnhrBcJOOjJU2kmkJkWo4TKeBZlNfWi6mQE46DKko
+6qn8hGPEp6B600ipApnZYqDD6BrCmKTUKucLrdJhK6+2wIrrrQdE2pWnsM0S+2wo
+mDC76xGyolYtsMv6ue0X3n77LaDg3qUqnuOei2666q7LbrvuvgtvvPLOS2+99t6L
+b7767stvv/5GUAAAIf8LTWF0aFR5cGUwMDH/BQEABABEU01UNAAAE1dpbkFsbEJh
+c2ljQ29kZVBhZ2VzABEFVGltZXMgTmV3IFJvbWFuABEDU3ltYm9sABEFQ291cmll
+ciBOZXcAEQRNVCBFeHRyYQASAAghL0WPRC9BUPQQD0dfQVDyHx5BUPQVD0EA9EX0
+JfSPQl9BAPQQD0NfQQD0j0X0Kl9I9I9BAPQQD0D0j0F/SPQQD0EqX0RfRfRfRfRf
+QQ8MAQABAAECAgICAAIAAQEBAAMAAQAEAAAKAQACAoJEAAICgigAAgCDdAACAIIp
+AAIEhj0APQIAh3cAAgCCKAACAIN0AAIAgikAAgSGxSLXAgCHdwACAIIo8wACAIN0
+AAIAgikAAgSGPQA9AgCCKAACAId1AAIEhhIiLQIAh3YAAgCCKQACBIbFItcCAIIo
+AAIAh3UAAgSGEiItAgCHdgACAIIpAAIAmALvAgCDdAADABwAAAsBAQEAAgCIMgAA
+AAoCBIYrACsCAIgyAAIAmALvAgCHdwADABsAAAsBAAIAiDAAAAEBAAoCBIbFItcC
+AIIoAAIAh3UAAgSGEiItAgCHdgACAIIpAAIAmALvAgCDdAACBIYrACsCAId3AAMA
+GwAACwEAAgCIMAAAAQEACgIEhsUi1wIAh3cAAwAbAAALAQACAIgwAAABAQAAAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_cpa2.gif
+Content-Type: image/gif; name=Eqn_cpa2.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_cpa2.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhdwEzAPAAAP///wAAACH5BAEAAAAALAAAAAB3ATMAAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwyGAgGh8YhM6orKpvMJ/TCj
+1Kr1aphit9xuT+sNi8coIpGMTqs35+z6DY8rwGC5/e7V1vH8PpTuFyjYBDhoeOgz
+1YbI2FjDVAQ5xLB3Yrbo1lL5sFlCd+nUSSJ6ACoFiblwudrQSTphxrn3OkJbCjNr
+O5e6ogtC2sarqcdbiOBLyXpbWof8CyvT7AywOp1h3SGqN1NMnCDNxrzN/I3NIbwb
+/UnpoIg+as62ifme0n3sXR5OnpXPj/uqXpl1qtrhYyHQ0jx/L4QtIhbr2C9UEVO5
+O2PqgrKI/8s4iYvE0cJGi/oKSqAHKmVCg/0whqww0li6fy2rxVOVq9+3ZOVsApN4
+kGbFla3ozSyKj6KGkOBoAo0gzV1HjRBbLjVa8ii1m9dybt2J0wNWoVW3muPYFKk4
+q1cVaUVHqxvFSPKSsu3qNqteovDCfnUKGAPDvzrXmt3lE6ektwTZvjRrU3GmvRcT
+s5OcElbaw5yTRkY8OShjvD4tiw46Vus1sKdRKpVHd3TrYHyLxqZ82WMyuhg1M37d
+lppf2R+r1UqbWi9k47mnFn7O+bHI3qp/38UrnDjrVrKAd7XbGbtXk6EbIh83XPDO
+za6vY0+ffuhN6YTrP22eHfxj+vFpz/KHuxB05oHX0WLbCfbZYFVlFBx5LFnF4Htz
+KOccYhFGR1J5Dx52IVWVaMOfPaah5tBZxr1k0YIhQgMfT2t1KJKLgeWnGIzoFejb
+iyueJGMVCdVW12kurATkEI01VKFaAG0hEFcnbaZJjkhSiFCSSg5JQ5EQuDKMg1VS
+4CRMLX5JI1S42BCmlWlCFeGaW2qEpWduslimmVE+cp8jesIzZx557glooLXMKGih
+hmr2EIyHLsroczc2CimkMvUZaaVp3KilpZriMemmngba6aeiNiLVn6Oe2ockqmqI
+aqty+Oeeq7LOSmuttt6Ka6667sprrxQUAAAh/wtNYXRoVHlwZTAwMf8FAQAEAERT
+TVQ0AAATV2luQWxsQmFzaWNDb2RlUGFnZXMAEQVUaW1lcyBOZXcgUm9tYW4AEQNT
+eW1ib2wAEQVDb3VyaWVyIE5ldwARBE1UIEV4dHJhABIACCEvRY9EL0FQ9BAPR19B
+UPIfHkFQ9BUPQQD0RfQl9I9CX0EA9BAPQ19BAPSPRfQqX0j0j0EA9BAPQPSPQX9I
+9BAPQSpfRF9F9F9F9F9BDwwBAAEAAQICAgIAAgABAQEAAwABAAQAAAoBAAIAiDAA
+AgSGPQA9AwALAAABAAIAg2QAAAEAAgCDZAACAIN0AAAAAgKCRAACAoIoAAIAg3QA
+AgCCKQACBIaaPQA9AgCIMgACAIN0AAIAglsAAgCCKAACAId1AAIEhhIiLQIAh3YA
+AgCCKQACBIbFItcCAIIoAAIAh3UAAgSGEiItAgCHdgACAIIpAAIAgl0AAgSGKwAr
+AgCIMgACAJgC7wIAh3cAAwAbAAALAQACAIgwAAABAQAKAgSGxSLXAgCCKAACAId1
+AAIEhhIiLQIAh3YAAgCCKQAAAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_cpa3.gif
+Content-Type: image/gif; name=Eqn_cpa3.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_cpa3.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhjwA9APAAAP///wAAACH5BAEAAAAALAAAAACPAD0AAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabq2gWs4b6yFMv1jCu3nfdHsHsBfb1hzkhkAJeApYuJqTmb
+0IszVoUlHVVkcIKkYsOWbJC8/RmnX/ANmrV6de3T9Up/MusJdBjudxcHs7aAlkb4
+RNVEc/a2dlixZ8i3BVgJ8QeJmTn0FYl42QdKhyDKMUiIqLRp+gNm6plaFsmZ9Nb3
+2hirRwpL+WDrI+VWVClcpLuLc4x8pEzDHDy1mqslyZNJITgb0l0d4Qw+Hi5Ofq5U
+wr3O3u7+Dh/Pbii5jj5ufq/PyL/v37nj278MAkVgGegNmh2EKPJZWeWQoLUUB29l
+u6ai4IqIfFEUMtzA8SG/kB/7bRTjq2S4iyo9kMTW8gMeanJOvYzJ6FSUPx5xdtS5
+kxhGnxp6JcojiFLFoUR/tgLpyVXTomKOQlXUcyosoATJ3IxplGZRr1olVhVrVmrZ
+MizX/mLxtWXclW5hwq1r9yTet3r30r3rN7DgwYQLGz48owAAIf8LTWF0aFR5cGUw
+MDH/BQEABABEU01UNAAAE1dpbkFsbEJhc2ljQ29kZVBhZ2VzABEFVGltZXMgTmV3
+IFJvbWFuABEDU3ltYm9sABEFQ291cmllciBOZXcAEQRNVCBFeHRyYQASAAghL0WP
+RC9BUPQQD0dfQVDyHx5BUPQVD0EA9EX0JfSPQl9BAPQQD0NfQQD0j0X0Kl9I9I9B
+APQQD0D0j0F/SPQQD0EqX0RfRfRfRfRfQQ8MAQABAAECAgICAAIAAQEBAAMAAQAE
+AAAKAQACAIN0AAkAoAMAGwAACQGgAQACAINjAAABAQAKAgSGPQA9AwALAAABAAIE
+hhIiLQIAmALvAgCHdwADABsAaQALAQACAIgwAAABAQAKAgSGxSLXAgCCKAACAId1
+AAIEhhIiLQIAh3YAAgCCKQAAAQADAAQDAAEAAgCHdQACBIYSIi0CAId2AAACAJYH
+7AIAlgjsAAMAHAAACwEBAQACAIgyAAAAAAAAAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=Eqn_cpa4.gif
+Content-Type: image/gif; name=Eqn_cpa4.gif
+Content-Location: http://softsurfer.com/Archive/algorithm_0106/Eqn_cpa4.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhAAEhAPAAAP///wAAACH5BAEAAAAALAAAAAAAASEAAAL/hI+py+0Po5y0
+2ouz3rz7D4biSJbmiabqyrbuC8fyTNf2Hdxdvus1LwP6NMJMceg6LgLK3qUJgBIZ
+SunEuqRgQ9vDEcvsWoThcvUhLjuk5w3PHM5WxOg4dZzYMkf7PLDvpfAFARjVFpgn
+SCdnAFgYJRixqIjwCJlIWCk5KblE9jfot/ZV9EgqOuX1qRpJyNl4yopZh0grUrUK
+i1rJ5rlrSDmLkatbLGv75HtsPFqrmGPJEV3o6Gfn/MurqXrdGDysfVyqhjbcVM3b
+feetrL6DG255Pk8FKhy+DAsnjw/sv73pCb1/2Jpd+hXNDTxj/JR922WqXrY5+ByF
+CjhmYEOM/wuZeZhmph9BkfnEEcuWUMInch5TPtynLmEfU2neOBz57qZIKDIHEuQ5
+LpXHfHRcNujZUovNl68MTkwqMaowakeDWtvXaihUla+mEVXKDuHKNywP6tQ6EmhV
+pgAf4tRCcivGjN8iXlkajNyfWnvXum2LdxtIkn0PlYR7OOylLk1/lhKssiA3f+cQ
+QfPLzd0/zTNBaqY8+OkVfZxBrTw7p6zJ03UpMrLZK/Vcs+kw21acjOtR3GiV+mzV
+cdG8amwmGTVrJaVRw7l1Z12XE3Xytp0YkVaLZw31epV3/3U9+rl4aV7HUzfOd1bs
+7NZTM5dMu3l4yPc+uAt1EX4d05M/8zVGwp4R7zRmgn/1JQGgUAomyAKBHzEY4IIQ
+puDghBZeiGGGGm7IYYcefghiiCKOSGKJJnpQAAAh/wtNYXRoVHlwZTAwMf8FAQAE
+AERTTVQ0AAATV2luQWxsQmFzaWNDb2RlUGFnZXMAEQVUaW1lcyBOZXcgUm9tYW4A
+EQNTeW1ib2wAEQVDb3VyaWVyIE5ldwARBE1UIEV4dHJhABIACCEvRY9EL0FQ9BAP
+R19BUPIfHkFQ9BUPQQD0RfQl9I9CX0EA9BAPQ19BAPSPRfQqX0j0j0EA9BAPQPSP
+QX9I9BAPQSpfRF9F9F9F9F9BDwwBAAEAAQICAgIAAgABAQEAAwABAAQAAAoBAAIC
+gmQAAwAbAAALAQACAoJDAAIAglAAAgCCQQAAAQEACgMAAQMAAQACAoJQAAICgigA
+AgCDdAACAIIpAAKYAIIsAAICglEAAgKCKAACAIN0AAIAgikAAAIAligAAgCWKQAA
+AgSGPQA9AwAEAwABAAICglAAAgKCKAACAIN0AAkAoAMAGwAACQGgAQACAINjAAAB
+AQAKAgCCKQACBIYSIi0CAoJRAAICgigAAgCDdAADABsAAAkBoAEAAgCDYwAAAQEA
+CgIAgikAAAIAlgfsAgCWCOwAAAAAOw==
+
+------------6XT0ew0XvXHYR0EvGdb0ez
+Content-Disposition: inline; filename=bluhorsa.gif
+Content-Type: image/gif; name=bluhorsa.gif
+Content-Location: http://softsurfer.com/_themes/geometry/bluhorsa.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhWAIKAHcAACH/C01TT0ZGSUNFOS4wDQAAAAFzUkdCAK7OHOkAIf8LTVNP
+RkZJQ0U5LjAYAAAADG1zT1BNU09GRklDRTkuMAr/QjykACH/C01TT0ZGSUNFOS4w
+GAAAAAxjbVBQSkNtcDA3MTICAAAIddtivwAh+QQBAAAAACwAAAAAWAIKAIPAwMAz
+Zv+Zmf/MzP9mmf+ZzP9mZv//////zP/M//8BAgMBAgMBAgMBAgMBAgMBAgME/xDI
+Sau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987/9AGKIQMCQyAU+ys+Q0N09N
+FKmsMq1OLFQr5VKv4Gx4O+6Wv+I0WW1mo9fwdrxiCAiOm8NgQAj4B3KBb4IYU4Ve
+h2eJbotzjYQXhpGIkxR8BgSAE5IWnBWeFKCblJ2kn6ahqKOKlYytjq8WA352AgN4
+EgMCBH20fgSwpazCrsTBp8PIxcrHqcnOy9BxvXbSkMbXzNnWg92P3rHg2OLa5Nzf
+FAXUfpgCtgMF7kW+Ar729/j5+vv8/f7/AAMKHEiwoMGDCBMqXMiwocOHECNKRFiP
+Vp9dBTRJ0MOHlsZw6JtAihwXkuTIciVRnjy3clU0l81gAqAGTKY5mylZmtypkqfO
+nkB/CsXZUoIoo6Zm/dqDK8OBituI+pQalOpQpM+sasX6kmtMr1HBDtIVINNVAEfR
+qhKbc6varGyLvu0692vdsHfJ+RGAwEXav2vzto07lXBVw2cBwxUsVzFdx3Yh45V8
+E7FbyoMZF9Z8OIjnz6BDix5NurTp0x8iAAA7
+
+------------6XT0ew0XvXHYR0EvGdb0ez--
